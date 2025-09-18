@@ -5,13 +5,15 @@
 \usepackage{hyperref}
 \usepackage{booktabs}
 \usepackage{graphicx}
-\usepackage[numbers,sort&compress]{natbib}
+\usepackage[style=nature,]{biblatex}
+
+\addbibresource{11_ref.bib}
 \newcommand{\bfit}[1]{\textit{\textbf{#1}}}
 \begin{document}
 \textbf{\Large Chapter 11\\
 Electron Spin Qubit in Semiconductor-Implementation, Initialization, and Readout}
-\\\\\\
-\textbf{\large 11.1 Introduction}\\\\
+\medskip
+\textbf{\large 11.1 Introduction}\\\\ 
 We have learned how to rotate an electron spin state using external magentic fields.
 We have been assuming that the electron floats in space. In reality, it will interaction
 with matters and we need to decide how to set the electron in place. We will use an electron
@@ -41,10 +43,10 @@ architechture is not long enough. Although they are long enough for maby gate
 operations, there are still fininte errors due to interactions with the environment and
 due to errors from gate operations (see Chap.25). As a result, quantum computing
 is unreliable because most quantum computing algorithms rely on interference
-and  interference fails even with tiny errors (e.g., \cite{1zaman2023step}). The qubit we have been
+and  interference fails even with tiny errors (e.g., [1]\cite{1zaman2023step}). The qubit we have been
 discussing is called the \textbf{physical qubit}. In order to achieve \textbf{fault-tolerant quantum
 computing}, we need to use special algorithms and multiple physical qubits to create
-an error-free \textbf{logical qubit} (e.g., \cite{2google2023suppressing}\cite{2google2023suppressing}). However, it is expected that each error-free
+an error-free \textbf{logical qubit} (e.g., \cite{2google2023suppressing}). However, it is expected that each error-free
 logical qubit will consist of 100-1000 physical qubits.
 
 At the same time, many quantum algorithms are expected to outperform classical operations
@@ -307,7 +309,7 @@ Figure 11.6 shows the layout of a spin-to-charge conversion circuit. The electro
 reservoir and its interaction with aquantum dot in Sect. 11.5.2.
 
 QPC is a type of transistor that only has a constricted region for the carrier to
-transport from the source to the drain \cite{10van1996quantum}. It allows quantization transport which is 
+transport from the source to the drain \cite{1avan1996quantum}. It allows quantization transport which is 
 \textit{very sensitive} to the environmental charge. By capacitively coupling the QDOT to QPC,
 the current throught QPC depends strongly on the charge state of the QDOT.
 When there is one lectron in the QDOT, the current will increase the barrie for the carrie in the 
@@ -347,7 +349,7 @@ By measuring $I_{QPC}$, one can then determine if the electron is spin-up (no pu
 In this chapter, we have studied how an electron spin qubit is implemented on a silicon platform.
 Silicon spin qubit is one of the most promising platforms in terms of integration and scalability. We use a DC
 magentic field to create the Hilbert space for electron spin qubit through Zeeman splitting. We study various qubit initialization
-schemes. Finally, we study how to use spin-to-charge conversion to read/measure a silicon spin qubit.\\\\
+schemes. Finally, we study how to use spin-to-charge conversion to read/measure a silicon spin qubit.\\\\ \medskip
 \textbf{\large Problems}\\\\
 \textbf{11.1 Coulomb Blockade}\\
 Sweeping the capacitance from 1$aF$ to 1$pF$, plot the charging energy if there is only one
@@ -356,38 +358,9 @@ electron. How does it compare to the thermal energies at 10 mK, 100 mK, and 1 K?
 With $|\vec{B}|=1.4\, T$, it is found that the Zeeman splitting is 1.4 GHz. What is the corresponding energy splitting?
 What is the corrsponding $\frac{g}{m^*}$?\\\\
 \textbf{11.3 Initialization Through Higher Orbitals}\\
-Continuing from Problem 11.2, if before the splitting the energy difference between $n=2$ and $n=1$ is 31 GHz, what is the value of $\nu_{12}$?\\\\\\
-\textbf{\large References}\\\\
+Continuing from Problem 11.2, if before the splitting the energy difference between $n=2$ and $n=1$ is 31 GHz, what is the value of $\nu_{12}$?
+\medskip
+\printbibliography
 
-1. Anika Zaman, Hector Jose Morrell, and Hiu Yung Wong. A step-by-step hhl algorithm walkthrough to enhance understanding of critical quantum computing concepts. IEBE Access,
-11:77117-77131, 2023.\\
-
-2. R. Acharya, et al. Suppressing quantum errors by scaling a surface code logical qubit. Nature,
-614(7949):676-681, Feb 2023.\\
-
-3. Yatao Peng, Andrea Ruffino, and Edoardo Charbon. A cryogenic broadband sub-l-b nf cmos low noise amplifier for quantum applications. IEEE Journal of Solid-State Circuis,
-56(7):2040-2053, 2021.\\
-
-4. M. Veldhorst, J. C. C. Hwang, C. H. Yang, A. W. Leenstra, B. de Ronde, J. P. Dehollain, I. T Muhonen, F. E. Hudson, 
-K. M. Itoh, A. Morello, and A. S. Dzurak. An addressable quantum dor qubit with fault-tolerant control-fidelity. Nature Nanotechnology, 9(12):981-985, Dec 2014.\\
-
-5. S. F. H. L. Koppens, C. Buizert, K. J, Tieroij, I. T. Vink, K. C. Nowack, T. Meunier, L. P.
-Kouwenhoven, and L. M. K. Vandersypen. Driven coherent oscillations of a single electron spin in a quantum dot. Nature, 442(7104:766-771, Aug 2006.\\
-
-6. Yinan Fang, Pericles Philippopoulos, Dimitrie Culcer, W. A. Coish, and Stefano Chesi. Recent
-advances in hole-spin qubits, 2023.\\
-
-7. Ryan M. Jock, N. Tobias Jacobson, Patrick Harvey-Collard, Andrew M. Mounce, Srinivasa, Dan R. Ward. John Anderson. Ron Manginell. Joel p Wend. Martin Dudict. Tammy Pluym, John King Gamble. Andrew D. Baczewski. Wavne M. Witzel, and Malcolm S. Carroll. A silicon metal-oxide-semiconductor electron spin-orbit qubit. Name Communitcations, 9(1):1768, May 2018\\
-
-8. J. M. Elzerman. R. Hanson, L. H. Willeme van Beveren. B. Wirkamn. T. M. K. Vandersype and L. P. Kouwenhoven, 
-Single shot read-out of an individual electron spin in a quantum do Nature, 430(6998):431-435, Jul 2004.\\
-
-9. Mark Friesen, Charles Tahan, Robert Joynt, and M. A. Eriksson. Spin readout and initialization
-in a semiconductor quantum dot. Phys. Rev. Lett., 92:037901, Jan 2004.\\
-
-10. Henk van Houten and Carlo Beenakker. Quantum point contacts. Physics Today, 49(7):22-27, July 1996
-
-\bibliographystyle{plain}
-\bibliography{11_ref}
-
+was using by biblatex
 \end{document}
