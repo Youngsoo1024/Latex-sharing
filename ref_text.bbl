@@ -1,0 +1,13 @@
+\begin{thebibliography}{1}
+
+\bibitem{CiteDrive2022}
+Inc CiteDrive.
+\newblock Citedrive brings reference management to overleaf, 2022.
+\newblock \url{https://www.citedrive.com/overleaf} [Accessed: (Use the date of access)].
+
+\bibitem{smith201X}
+John Smith.
+\newblock An interesting article.
+\newblock {\em Journal of Interesting Articles}, 201X.
+
+\end{thebibliography}

@@ -1,0 +1,53 @@
+\begin{thebibliography}{10}
+
+\bibitem{8elzerman2004single}
+JM~Elzerman, R~Hanson, LH~Willems~van Beveren, B~Witkamp, LMK Vandersypen, and Leo~P Kouwenhoven.
+\newblock Single-shot read-out of an individual electron spin in a quantum dot.
+\newblock {\em nature}, 430(6998):431--435, 2004.
+
+\bibitem{6fang2023recent}
+Yinan Fang, Pericles Philippopoulos, Dimitrie Culcer, WA~Coish, and Stefano Chesi.
+\newblock Recent advances in hole-spin qubits.
+\newblock {\em Materials for Quantum Technology}, 3(1):012003, 2023.
+
+\bibitem{9friesen2004spin}
+Mark Friesen, Charles Tahan, Robert Joynt, and MA~Eriksson.
+\newblock Spin readout and initialization in a semiconductor quantum dot.
+\newblock {\em Physical review letters}, 92(3):037901, 2004.
+
+\bibitem{7jock2018silicon}
+Ryan~M Jock, N~Tobias Jacobson, Patrick Harvey-Collard, Andrew~M Mounce, Vanita Srinivasa, Dan~R Ward, John Anderson, Ron Manginell, Joel~R Wendt, Martin Rudolph, et~al.
+\newblock A silicon metal-oxide-semiconductor electron spin-orbit qubit.
+\newblock {\em Nature communications}, 9(1):1768, 2018.
+
+\bibitem{5koppens2006driven}
+Frank~HL Koppens, Christo Buizert, Klaas-Jan Tielrooij, Ivo~T Vink, Katja~C Nowack, Tristan Meunier, LP~Kouwenhoven, and LMK Vandersypen.
+\newblock Driven coherent oscillations of a single electron spin in a quantum dot.
+\newblock {\em Nature}, 442(7104):766--771, 2006.
+
+\bibitem{3peng2021cryogenic}
+Yatao Peng, Andrea Ruffino, and Edoardo Charbon.
+\newblock A cryogenic broadband sub-1-db nf cmos low noise amplifier for quantum applications.
+\newblock {\em IEEE Journal of Solid-State Circuits}, 56(7):2040--2053, 2021.
+
+\bibitem{2google2023suppressing}
+et~al. R.~Acharya.
+\newblock Suppressing quantum errors by scaling a surface code logical qubit.
+\newblock {\em Nature}, 614(7949):676--681, 2023.
+
+\bibitem{10van1996quantum}
+Henk Van~Houten and Carlo Beenakker.
+\newblock Quantum point contacts.
+\newblock {\em Physics today}, 49(7):22--27, 1996.
+
+\bibitem{4veldhorst2014addressable}
+M~Veldhorst, JCC Hwang, CH~Yang, AW~Leenstra, Bob de~Ronde, JP~Dehollain, JT~Muhonen, FE~Hudson, Kohei~M Itoh, A~t Morello, et~al.
+\newblock An addressable quantum dot qubit with fault-tolerant control-fidelity.
+\newblock {\em Nature nanotechnology}, 9(12):981--985, 2014.
+
+\bibitem{1zaman2023step}
+Anika Zaman, Hector~Jose Morrell, and Hiu~Yung Wong.
+\newblock A step-by-step hhl algorithm walkthrough to enhance understanding of critical quantum computing concepts.
+\newblock {\em IEEE Access}, 11:77117--77131, 2023.
+
+\end{thebibliography}
