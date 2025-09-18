@@ -48,6 +48,86 @@
       \field{title}{\textit{Introduction to Quantum Computing Holes}}
       \field{year}{2024}
     \endentry
+    \entry{veldhorst2014addressable}{article}{}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{10}{}{%
+        {{hash=436f6cc4dcbe5432e118cdbc3972cdfb}{%
+           family={Veldhorst},
+           familyi={V\bibinitperiod},
+           given={M},
+           giveni={M\bibinitperiod}}}%
+        {{hash=c99ad1f0198b9bd3c851274b7c4f935d}{%
+           family={Hwang},
+           familyi={H\bibinitperiod},
+           given={JCC},
+           giveni={J\bibinitperiod}}}%
+        {{hash=f4687e40a665d6a148ea4dd33ed9f687}{%
+           family={Yang},
+           familyi={Y\bibinitperiod},
+           given={CH},
+           giveni={C\bibinitperiod}}}%
+        {{hash=3e3ef6037b2e20cc68e956932504e61f}{%
+           family={Leenstra},
+           familyi={L\bibinitperiod},
+           given={AW},
+           giveni={A\bibinitperiod}}}%
+        {{hash=04b5b6fc9b5aed7ba0eb577b33e9364f}{%
+           family={Ronde},
+           familyi={R\bibinitperiod},
+           given={Bob},
+           giveni={B\bibinitperiod},
+           prefix={de},
+           prefixi={d\bibinitperiod}}}%
+        {{hash=a07d88ad2c2bb26066520531b32b1d15}{%
+           family={Dehollain},
+           familyi={D\bibinitperiod},
+           given={JP},
+           giveni={J\bibinitperiod}}}%
+        {{hash=815de6141a40d8cc1ebcfc61263fe5bb}{%
+           family={Muhonen},
+           familyi={M\bibinitperiod},
+           given={JT},
+           giveni={J\bibinitperiod}}}%
+        {{hash=5c18da544f762e93c7ba7e64e8ae14a8}{%
+           family={Hudson},
+           familyi={H\bibinitperiod},
+           given={FE},
+           giveni={F\bibinitperiod}}}%
+        {{hash=1f785565010d391548938e89c822afd2}{%
+           family={Itoh},
+           familyi={I\bibinitperiod},
+           given={Kohei\bibnamedelima M},
+           giveni={K\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=e626a22c2e2d86c31cdfed3e74267702}{%
+           family={Morello},
+           familyi={M\bibinitperiod},
+           given={A\bibnamedelima t},
+           giveni={A\bibinitperiod\bibinitdelim t\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Nature Publishing Group UK London}%
+      }
+      \strng{namehash}{df4d618cdc521938e2a04e4dd90a4336}
+      \strng{fullhash}{e9a94474348037c396915af0bff8d136}
+      \strng{fullhashraw}{e9a94474348037c396915af0bff8d136}
+      \strng{bibnamehash}{df4d618cdc521938e2a04e4dd90a4336}
+      \strng{authorbibnamehash}{df4d618cdc521938e2a04e4dd90a4336}
+      \strng{authornamehash}{df4d618cdc521938e2a04e4dd90a4336}
+      \strng{authorfullhash}{e9a94474348037c396915af0bff8d136}
+      \strng{authorfullhashraw}{e9a94474348037c396915af0bff8d136}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Nature nanotechnology}
+      \field{number}{12}
+      \field{title}{An addressable quantum dot qubit with fault-tolerant control-fidelity}
+      \field{volume}{9}
+      \field{year}{2014}
+      \field{pages}{981\bibrangedash 985}
+      \range{pages}{5}
+    \endentry
   \enddatalist
 \endrefsection
 \endinput
