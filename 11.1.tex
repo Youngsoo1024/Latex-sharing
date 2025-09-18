@@ -5,6 +5,7 @@
 \usepackage{hyperref}
 \usepackage{booktabs}
 \usepackage{graphicx}
+\usepackage[numbers,sort&compress]{natbib}
 \newcommand{\bfit}[1]{\textit{\textbf{#1}}}
 \begin{document}
 \textbf{\Large Chapter 11\\
@@ -40,10 +41,10 @@ architechture is not long enough. Although they are long enough for maby gate
 operations, there are still fininte errors due to interactions with the environment and
 due to errors from gate operations (see Chap.25). As a result, quantum computing
 is unreliable because most quantum computing algorithms rely on interference
-and  interference fails even with tiny errors (e.g., [1]). The qubit we have been
+and  interference fails even with tiny errors (e.g., \cite{1zaman2023step}). The qubit we have been
 discussing is called the \textbf{physical qubit}. In order to achieve \textbf{fault-tolerant quantum
 computing}, we need to use special algorithms and multiple physical qubits to create
-an error-free \textbf{logical qubit} (e.g., [2]). However, it is expected that each error-free
+an error-free \textbf{logical qubit} (e.g., \cite{2google2023suppressing}\cite{2google2023suppressing}). However, it is expected that each error-free
 logical qubit will consist of 100-1000 physical qubits.
 
 At the same time, many quantum algorithms are expected to outperform classical operations
@@ -66,7 +67,7 @@ it is also possible to integrate the control electonics on the same chip due to
 the mature technology. That means the control electronics (see Chap.23) such as low-noise
 amplifiers (LNAs), analog-to-digital converters (ADCs), digital-to-analog converters (DACs),
 filters, and even signal generators and processing units can be integrated
-on the same platform. Readers are encourgaed to take a look at Fig.1 in [3] to see one
+on the same platform. Readers are encourgaed to take a look at Fig.1 in \cite{3peng2021cryogenic} to see one
 of the possible integration schemes.
 
 It should also be noted that when the control electronics are near the qubits and cooled to 4.2$K$ or
@@ -105,7 +106,7 @@ Of course, $E$ needs to be compared to the thermal energy, $kT$, where $k$ is th
 constant. We still need to cool the system to cryogenic temperature so that $E$ is large
 compared to $kT$ to obeserve the quantum effects.
 
-Figure 11.2 shows the cross section along a qubit array (e.g., [4]). It is similar to a typical
+Figure 11.2 shows the cross section along a qubit array (e.g., \cite{4veldhorst2014addressable}). It is similar to a typical
 metal-oxide-semiconductor (MOS) transistor or capacitor. It has gates on top formed by either metal or heavily doped polycrystalline silicon.\\
 
 \includegraphics[scale=0.45]{Fig.11.2.jpeg}\\
@@ -116,18 +117,18 @@ The plunger gates, $P$1 and $P$2, are used to deplete the electron underneath an
 confinement potential in the vertical direction ($\hat{x}$). The barrier gate ($B$1) is used to control the potential between the plunger gates
 to allow electrons to transfer or tunnel to another quantum dot by changing the barrier height.
 This is a 2D corss section. In reality, the confinement should occur in the $\hat{z}$ direction also to form a quantum dot.
-The drawing is simplified and did not consider this. Readers can refer to [4] to see a realistic layout. The quantum dots are formed under the plunger
+The drawing is simplified and did not consider this. Readers can refer to \cite{4veldhorst2014addressable} to see a realistic layout. The quantum dots are formed under the plunger
 gates and the lectrons arrying the qubits reside there.
 
 Besides silicon platforms, spin qubit has also been realized in other materials, such as AlGaAs/GaAs heterostructure, 
-where AlGaAs is used as the insulator as it has a wide bandgap and GaAs is the substrate (e.g., [5]).
+where AlGaAs is used as the insulator as it has a wide bandgap and GaAs is the substrate (e.g., \cite{5koppens2006driven}).
 The advantage of using the AlGaAs/GaAs system is that it has a very perfect interface that can enhance the decoherence time.
 However, it is not a s scalable as the silicon platform.\\\\\\
 \textbf{\large 11.4 Silicon Spin Qubit}\\\\
 \textbf{Silicon spin qubit} is commonly referred to as spin qubit implemented on a silicon platform.
 Most of the time, it refers to the electron or hole spin qubits. Usually, \textit{it has nothing to do
 with the silicon atom itself}. In this chapter, we only look at electron spin qubits. Hole spin qubits can proide some
-physics that electron spin qubits do not have [6]. For example, it has a strong \textbf{spin-orbit (SO coupling)} which allows
+physics that electron spin qubits do not have \cite{6fang2023recent}. For example, it has a strong \textbf{spin-orbit (SO coupling)} which allows
 it to be manipulated by electrostatic (instead of magnetic field) directly. Of course, it also means
 that it is more susceptible to decoherence time degradation due to the charges in the environment which are abundant.\\
 
@@ -168,7 +169,7 @@ $m^*$ is usually written as a muliplication of a constant and the electron rest 
 empty space, $m_0$. For example, an effective mass, $m^*=0.2m_0$ means that the electron has an
 effective mass of $0.2\times9.1\times10^{-31}\text{kg}=1.82\times10^{-31}\text{kg}$.
 
-The g-factor may also change due to the environment. For examples, one may refer to [7].\\\\
+The g-factor may also change due to the environment. For examples, one may refer to \cite{7jock2018silicon}.\\\\
 \textbf{Example 11.1} If $B_0=1T$, assuming the electron mass is still $m_0$ and $g=-2$, find the
 energy difference between $\ket{0}$ and $\ket{1}$
 
@@ -230,7 +231,7 @@ we need to wait for$10T_1$. A silicon qubit may have a $T_1$ as much as 100 ms. 
 this is not a desirable initialization method.\\\\\\
 \bfit{\large 11.5.2 State Filtering Through Tunneling}\\\\
 We may also try to filter and get rid of electrons in state $\ket{1}$ through electrical
-operations to achieve the initialization purpose. This is mentioned in [8] for another purpose
+operations to achieve the initialization purpose. This is mentioned in \cite{8elzerman2004single} for another purpose
 but we can hijack it to perform initialization. \textbf{I have not seen people using this for initialization}. \textbf{But I think this is instructive and we can further discuss its pros and cons}.
 It also prepares us for spin-to-charge conversion for readout in the following section.\\
 
@@ -265,7 +266,7 @@ the quantum dot is initialized to the ground state. Of course, we need to make s
 short enought so that the initialziation process is fast enough.\\
 
 \includegraphics[scale=0.45]{Fig.11.5.jpeg}\\
-\textbf{Fig. 11.5} Initialization scheme based on [9]. Left: Two orbital states formed due to an asymmertic
+\textbf{Fig. 11.5} Initialization scheme based on \cite{9friesen2004spin}. Left: Two orbital states formed due to an asymmertic
 quantum well. Right: Both orbital states split into two levels due to Zeeman splitting\\\\\\
 \bfit{\large 11.5.3 Initialization Through Higher Orbital State}\\\\
 In [9], an initialization scheme through the interaction between two orbital states
@@ -288,7 +289,7 @@ second orbital. Note that only a quantum of energy can be absorbed (i.e.,$\hbar 
 So the qubit will stay at its ground state. However, if the qubit is in its excited state, $\ket{1}=\ket{n=1,\downarrow}$,
 it will absorb one proton and become $\ket{n=2,\uparrow}$. Note that the spin direction is also flipped 
 during the transition. This is possible because of the spin-orbit coupling which we will not
-discuss and please take this for granted [9]. When it is at $n=2$, it decays rapidly to $n=1$ because of the
+discuss and please take this for granted \cite{9friesen2004spin}. When it is at $n=2$, it decays rapidly to $n=1$ because of the
 short lifetime (about 80 $ns$). The lifetime is much shorter thatn spin-relaxation (i.e., $T_1$ for relaxing
 $\ket{n=1,\downarrow}$ to $\ket{n=1,\uparrow}$) which is $>1 ms$. Therefore, we can realize very rapid initialization.
 For this scheme, we may say that we use an external microwave pulse to achieve spin flipping. Although
@@ -298,7 +299,7 @@ it is brought to a higher energy level ($n=2$), it will then relax naturally ver
 quantum computing. It is used to read the final result or perform error correction by reading the ancillary qubits
 during computation. In a silicon spin qubit, the spin state is usually mapped to a charge state as there is no easy
 mechanism to detect the spin of the electron. This is called \textbf{spin-to-charge conversion}. We will use the
-example in [8] to explain on eof the possible approaches.
+example in \cite{8elzerman2004single} to explain on eof the possible approaches.
 
 Figure 11.6 shows the layout of a spin-to-charge conversion circuit. The electron carrying the spin qubit resides in a
 \textbf{quantum dot} (QDOT). The QDOT is capacitively coupled to an electron reservoir and a \textbf{quantum point contact transistor}
@@ -306,7 +307,7 @@ Figure 11.6 shows the layout of a spin-to-charge conversion circuit. The electro
 reservoir and its interaction with aquantum dot in Sect. 11.5.2.
 
 QPC is a type of transistor that only has a constricted region for the carrier to
-transport from the source to the drain [10]. It allows quantization transport which is 
+transport from the source to the drain \cite{10van1996quantum}. It allows quantization transport which is 
 \textit{very sensitive} to the environmental charge. By capacitively coupling the QDOT to QPC,
 the current throught QPC depends strongly on the charge state of the QDOT.
 When there is one lectron in the QDOT, the current will increase the barrie for the carrie in the 
@@ -337,8 +338,59 @@ into the reservoir. As a result, the current in the QPC transistor, $I_{QPC}$, i
 cna tunnel from the reservoir to the QDOT and occupy the ground state and thus reduce $I_{QPC}$ to the original level. Therefore,
 one will measure an $I_{QPC}$ "pulse" if it is spin-down.
 
+On the other hand, if the qubit is spin-up ($\ket{0}$), no tunneling will occur. There is no empty state below the Fermi level in the
+reservoir for the QDOT electron to tunnel  to and there is no electron i nthe reservoir above the Fermi level to tunnel
+into the QDOT. As a result, $I_{QPC}$ is constant at a low level.
 
+By measuring $I_{QPC}$, one can then determine if the electron is spin-up (no pulse) or spin-down (with a pulse).\\\\\\
+\textbf{\large 11.7 Summary}\\\\
+In this chapter, we have studied how an electron spin qubit is implemented on a silicon platform.
+Silicon spin qubit is one of the most promising platforms in terms of integration and scalability. We use a DC
+magentic field to create the Hilbert space for electron spin qubit through Zeeman splitting. We study various qubit initialization
+schemes. Finally, we study how to use spin-to-charge conversion to read/measure a silicon spin qubit.\\\\
+\textbf{\large Problems}\\\\
+\textbf{11.1 Coulomb Blockade}\\
+Sweeping the capacitance from 1$aF$ to 1$pF$, plot the charging energy if there is only one
+electron. How does it compare to the thermal energies at 10 mK, 100 mK, and 1 K?\\\\
+\textbf{11.2 Zeeman Splitting}\\
+With $|\vec{B}|=1.4\, T$, it is found that the Zeeman splitting is 1.4 GHz. What is the corresponding energy splitting?
+What is the corrsponding $\frac{g}{m^*}$?\\\\
+\textbf{11.3 Initialization Through Higher Orbitals}\\
+Continuing from Problem 11.2, if before the splitting the energy difference between $n=2$ and $n=1$ is 31 GHz, what is the value of $\nu_{12}$?\\\\\\
+\textbf{\large References}\\\\
 
+1. Anika Zaman, Hector Jose Morrell, and Hiu Yung Wong. A step-by-step hhl algorithm walkthrough to enhance understanding of critical quantum computing concepts. IEBE Access,
+11:77117-77131, 2023.\\
+
+2. R. Acharya, et al. Suppressing quantum errors by scaling a surface code logical qubit. Nature,
+614(7949):676-681, Feb 2023.\\
+
+3. Yatao Peng, Andrea Ruffino, and Edoardo Charbon. A cryogenic broadband sub-l-b nf cmos low noise amplifier for quantum applications. IEEE Journal of Solid-State Circuis,
+56(7):2040-2053, 2021.\\
+
+4. M. Veldhorst, J. C. C. Hwang, C. H. Yang, A. W. Leenstra, B. de Ronde, J. P. Dehollain, I. T Muhonen, F. E. Hudson, 
+K. M. Itoh, A. Morello, and A. S. Dzurak. An addressable quantum dor qubit with fault-tolerant control-fidelity. Nature Nanotechnology, 9(12):981-985, Dec 2014.\\
+
+5. S. F. H. L. Koppens, C. Buizert, K. J, Tieroij, I. T. Vink, K. C. Nowack, T. Meunier, L. P.
+Kouwenhoven, and L. M. K. Vandersypen. Driven coherent oscillations of a single electron spin in a quantum dot. Nature, 442(7104:766-771, Aug 2006.\\
+6. Yinan Fang, Pericles Philippopoulos, Dimitrie Culcer, W. A. Coish, and Stefano Chesi. Recent
+advances in hole-spin qubits, 2023.\\
+
+7. Ryan M. Jock, N. Tobias Jacobson, Patrick Harvey-Collard, Andrew M. Mounce, Srinivasa, Dan R. Ward. John Anderson. Ron Manginell. Joel p Wend. Martin Dudict.
+Tammy Pluym, John King Gamble. Andrew D. Baczewski. Wavne M. Witzel. and MalcolmS
+tions, 9(1):1768, May 2018.
+Carroll. A silicon metal-oxide-semiconductor electron spin-orbit aubit. Name Communit\\
+
+8. J. M. Elzerman. R. Hanson, L. H. Willeme van Beveren. B. Wirkamn. T. M. K. Vandersype and L. P. Kouwenhoven, 
+Single shot read-out of an individual electron spin in a quantum do Nature, 430(6998):431-435, Jul 2004.\\
+
+9. Mark Friesen, Charles Tahan, Robert Joynt, and M. A. Eriksson. Spin readout and initialization
+in a semiconductor quantum dot. Phys. Rev. Lett., 92:037901, Jan 2004.\\
+
+10. Henk van Houten and Carlo Beenakker. Quantum point contacts. Physics Today, 49(7):22-27
+
+\bibliographystyle{plain}
+\bibliography{11_ref}
 
 
 \end{document}
