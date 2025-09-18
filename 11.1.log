@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  18 SEP 2025 17:28
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  18 SEP 2025 18:05
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -241,131 +241,369 @@ File: pdftex.def 2024/04/13 v1.2c Graphics/color driver for pdftex
 ))
 \Gin@req@height=\dimen168
 \Gin@req@width=\dimen169
-) (/usr/local/texlive/2025/texmf-dist/tex/latex/natbib/natbib.sty
-Package: natbib 2010/09/13 8.31b (PWD, AO)
-\bibhang=\skip55
-\bibsep=\skip56
-LaTeX Info: Redefining \cite on input line 694.
-\c@NAT@ctr=\count298
-) (/usr/local/texlive/2025/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+) (/usr/local/texlive/2025/texmf-dist/tex/latex/biblatex/biblatex.sty
+Package: biblatex 2024/03/21 v3.20 programmable bibliographies (PK/MW)
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/logreq/logreq.sty
+Package: logreq 2010/08/04 v1.0 xml request logger
+\lrq@indent=\count298
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/logreq/logreq.def
+File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
+)) (/usr/local/texlive/2025/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2024/03/16 v1.1e Standard LaTeX ifthen package (DPC)
+)
+\c@tabx@nest=\count299
+\c@listtotal=\count300
+\c@listcount=\count301
+\c@liststart=\count302
+\c@liststop=\count303
+\c@citecount=\count304
+\c@citetotal=\count305
+\c@multicitecount=\count306
+\c@multicitetotal=\count307
+\c@instcount=\count308
+\c@maxnames=\count309
+\c@minnames=\count310
+\c@maxitems=\count311
+\c@minitems=\count312
+\c@citecounter=\count313
+\c@maxcitecounter=\count314
+\c@savedcitecounter=\count315
+\c@uniquelist=\count316
+\c@uniquename=\count317
+\c@refsection=\count318
+\c@refsegment=\count319
+\c@maxextratitle=\count320
+\c@maxextratitleyear=\count321
+\c@maxextraname=\count322
+\c@maxextradate=\count323
+\c@maxextraalpha=\count324
+\c@abbrvpenalty=\count325
+\c@highnamepenalty=\count326
+\c@lownamepenalty=\count327
+\c@maxparens=\count328
+\c@parenlevel=\count329
+\blx@tempcnta=\count330
+\blx@tempcntb=\count331
+\blx@tempcntc=\count332
+\c@blx@maxsection=\count333
+\blx@maxsegment@0=\count334
+\blx@notetype=\count335
+\blx@parenlevel@text=\count336
+\blx@parenlevel@foot=\count337
+\blx@sectionciteorder@0=\count338
+\blx@sectionciteorderinternal@0=\count339
+\blx@entrysetcounter=\count340
+\blx@biblioinstance=\count341
+\labelnumberwidth=\skip55
+\labelalphawidth=\skip56
+\biblabelsep=\skip57
+\bibitemsep=\skip58
+\bibnamesep=\skip59
+\bibinitsep=\skip60
+\bibparsep=\skip61
+\bibhang=\skip62
+\blx@bcfin=\read2
+\blx@bcfout=\write3
+\blx@langwohyphens=\language90
+\c@mincomprange=\count342
+\c@maxcomprange=\count343
+\c@mincompwidth=\count344
+Package biblatex Info: Trying to load biblatex default data model...
+Package biblatex Info: ... file 'blx-dm.def' found.
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/biblatex/blx-dm.def
+File: blx-dm.def 2024/03/21 v3.20 biblatex datamodel (PK/MW)
+)
+Package biblatex Info: Trying to load biblatex style data model...
+Package biblatex Info: ... file 'nature.dbx' not found.
+Package biblatex Info: Trying to load biblatex custom data model...
+Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
+\c@afterword=\count345
+\c@savedafterword=\count346
+\c@annotator=\count347
+\c@savedannotator=\count348
+\c@author=\count349
+\c@savedauthor=\count350
+\c@bookauthor=\count351
+\c@savedbookauthor=\count352
+\c@commentator=\count353
+\c@savedcommentator=\count354
+\c@editor=\count355
+\c@savededitor=\count356
+\c@editora=\count357
+\c@savededitora=\count358
+\c@editorb=\count359
+\c@savededitorb=\count360
+\c@editorc=\count361
+\c@savededitorc=\count362
+\c@foreword=\count363
+\c@savedforeword=\count364
+\c@holder=\count365
+\c@savedholder=\count366
+\c@introduction=\count367
+\c@savedintroduction=\count368
+\c@namea=\count369
+\c@savednamea=\count370
+\c@nameb=\count371
+\c@savednameb=\count372
+\c@namec=\count373
+\c@savednamec=\count374
+\c@translator=\count375
+\c@savedtranslator=\count376
+\c@shortauthor=\count377
+\c@savedshortauthor=\count378
+\c@shorteditor=\count379
+\c@savedshorteditor=\count380
+\c@labelname=\count381
+\c@savedlabelname=\count382
+\c@institution=\count383
+\c@savedinstitution=\count384
+\c@lista=\count385
+\c@savedlista=\count386
+\c@listb=\count387
+\c@savedlistb=\count388
+\c@listc=\count389
+\c@savedlistc=\count390
+\c@listd=\count391
+\c@savedlistd=\count392
+\c@liste=\count393
+\c@savedliste=\count394
+\c@listf=\count395
+\c@savedlistf=\count396
+\c@location=\count397
+\c@savedlocation=\count398
+\c@organization=\count399
+\c@savedorganization=\count400
+\c@origlocation=\count401
+\c@savedoriglocation=\count402
+\c@origpublisher=\count403
+\c@savedorigpublisher=\count404
+\c@publisher=\count405
+\c@savedpublisher=\count406
+\c@language=\count407
+\c@savedlanguage=\count408
+\c@origlanguage=\count409
+\c@savedoriglanguage=\count410
+\c@pageref=\count411
+\c@savedpageref=\count412
+\shorthandwidth=\skip63
+\shortjournalwidth=\skip64
+\shortserieswidth=\skip65
+\shorttitlewidth=\skip66
+\shortauthorwidth=\skip67
+\shorteditorwidth=\skip68
+\locallabelnumberwidth=\skip69
+\locallabelalphawidth=\skip70
+\localshorthandwidth=\skip71
+\localshortjournalwidth=\skip72
+\localshortserieswidth=\skip73
+\localshorttitlewidth=\skip74
+\localshortauthorwidth=\skip75
+\localshorteditorwidth=\skip76
+Package biblatex Info: Trying to load compatibility code...
+Package biblatex Info: ... file 'blx-compat.def' found.
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/biblatex/blx-compat.def
+File: blx-compat.def 2024/03/21 v3.20 biblatex compatibility (PK/MW)
+)
+Package biblatex Info: Trying to load generic definitions...
+Package biblatex Info: ... file 'biblatex.def' found.
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/biblatex/biblatex.def
+File: biblatex.def 2024/03/21 v3.20 biblatex compatibility (PK/MW)
+\c@textcitecount=\count413
+\c@textcitetotal=\count414
+\c@textcitemaxnames=\count415
+\c@biburlbigbreakpenalty=\count416
+\c@biburlbreakpenalty=\count417
+\c@biburlnumpenalty=\count418
+\c@biburlucpenalty=\count419
+\c@biburllcpenalty=\count420
+\biburlbigskip=\muskip19
+\biburlnumskip=\muskip20
+\biburlucskip=\muskip21
+\biburllcskip=\muskip22
+\c@smartand=\count421
+)
+Package biblatex Info: Trying to load bibliography style 'nature'...
+Package biblatex Info: ... file 'nature.bbx' found.
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/biblatex-nature/nature.bbx
+File: nature.bbx 2020/12/30 v1.3d biblatex bibliography style
+Package biblatex Info: Trying to load bibliography style 'numeric-comp'...
+Package biblatex Info: ... file 'numeric-comp.bbx' found.
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/biblatex/bbx/numeric-comp.bbx
+File: numeric-comp.bbx 2024/03/21 v3.20 biblatex bibliography style (PK/MW)
+Package biblatex Info: Trying to load bibliography style 'numeric'...
+Package biblatex Info: ... file 'numeric.bbx' found.
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/biblatex/bbx/numeric.bbx
+File: numeric.bbx 2024/03/21 v3.20 biblatex bibliography style (PK/MW)
+Package biblatex Info: Trying to load bibliography style 'standard'...
+Package biblatex Info: ... file 'standard.bbx' found.
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/biblatex/bbx/standard.bbx
+File: standard.bbx 2024/03/21 v3.20 biblatex bibliography style (PK/MW)
+\c@bbx:relatedcount=\count422
+\c@bbx:relatedtotal=\count423
+))))
+Package biblatex Info: Trying to load citation style 'nature'...
+Package biblatex Info: ... file 'nature.cbx' found.
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/biblatex-nature/nature.cbx
+File: nature.cbx 2020/12/30 v1.3d biblatex citation style
+Package biblatex Info: Trying to load citation style 'numeric-comp'...
+Package biblatex Info: ... file 'numeric-comp.cbx' found.
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/biblatex/cbx/numeric-comp.cbx
+File: numeric-comp.cbx 2024/03/21 v3.20 biblatex citation style (PK/MW)
+\c@cbx@tempcnta=\count424
+\c@cbx@tempcntb=\count425
+\c@cbx@tempcntc=\count426
+\c@cbx@tempcntd=\count427
+Package biblatex Info: Redefining '\cite'.
+Package biblatex Info: Redefining '\parencite'.
+Package biblatex Info: Redefining '\footcite'.
+Package biblatex Info: Redefining '\footcitetext'.
+Package biblatex Info: Redefining '\smartcite'.
+Package biblatex Info: Redefining '\supercite'.
+Package biblatex Info: Redefining '\textcite'.
+Package biblatex Info: Redefining '\textcites'.
+Package biblatex Info: Redefining '\cites'.
+Package biblatex Info: Redefining '\parencites'.
+Package biblatex Info: Redefining '\smartcites'.
+))
+Package biblatex Info: Trying to load configuration file...
+Package biblatex Info: ... file 'biblatex.cfg' found.
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/biblatex/biblatex.cfg
+File: biblatex.cfg 
+)
+Package biblatex Info: Input encoding 'utf8' detected.
+Package biblatex Info: Document encoding is UTF8 ....
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/l3kernel/expl3.sty
+Package: expl3 2025-01-18 L3 programming layer (loader) 
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count299
+\l__color_backend_stack_int=\count428
 \l__pdf_internal_box=\box54
-) (./11.1.aux)
+))
+Package biblatex Info: ... and expl3
+(biblatex)             2025-01-18 L3 programming layer (loader) 
+(biblatex)             is new enough (at least 2020/04/06),
+(biblatex)             setting 'casechanger=expl3'.
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/biblatex/blx-case-expl3.sty (/usr/local/texlive/2025/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+Package: xparse 2024-08-16 L3 Experimental document command parser
+)
+Package: blx-case-expl3 2024/03/21 v3.20 expl3 case changing code for biblatex
+))
+\@quotelevel=\count429
+\@quotereset=\count430
+ (./11.1.aux)
 \openout1 = `11.1.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-Package hyperref Info: Link coloring OFF on input line 10.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+Package hyperref Info: Link coloring OFF on input line 12.
  (./11.1.out) (./11.1.out)
-\@outlinefile=\write3
-\openout3 = `11.1.out'.
+\@outlinefile=\write4
+\openout4 = `11.1.out'.
 
  (/usr/local/texlive/2025/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count300
+\scratchcounter=\count431
 \scratchdimen=\dimen170
 \scratchbox=\box55
-\nofMPsegments=\count301
-\nofMParguments=\count302
+\nofMPsegments=\count432
+\nofMParguments=\count433
 \everyMPshowfont=\toks23
-\MPscratchCnt=\count303
+\MPscratchCnt=\count434
 \MPscratchDim=\dimen171
-\MPnumerator=\count304
-\makeMPintoPDFobject=\count305
+\MPnumerator=\count435
+\makeMPintoPDFobject=\count436
 \everyMPtoPDFconversion=\toks24
 ) (/usr/local/texlive/2025/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
- (/usr/local/texlive/2025/texmf-dist/tex/latex/grfext/grfext.sty
-Package: grfext 2019/12/03 v1.3 Manage graphics extensions (HO)
-)
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
-Package grfext Info: Graphics extension search list:
-(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPEG,.JBIG2,.JB2,.eps]
-(grfext)             \AppendGraphicsExtensions on input line 504.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-LaTeX Font Info:    Trying to load font information for U+msa on input line 28.
+Package biblatex Info: Trying to load language 'english'...
+Package biblatex Info: ... file 'english.lbx' found.
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/biblatex/lbx/english.lbx
+File: english.lbx 2024/03/21 v3.20 biblatex localization (PK/MW)
+)
+Package biblatex Info: Input encoding 'utf8' detected.
+Package biblatex Info: Automatic encoding selection.
+(biblatex)             Assuming data encoding 'utf8'.
+\openout3 = `11.1.bcf'.
+
+Package biblatex Info: Trying to load bibliographic data...
+Package biblatex Info: ... file '11.1.bbl' found.
+ (./11.1.bbl)
+Package biblatex Info: Reference section=0 on input line 12.
+Package biblatex Info: Reference segment=0 on input line 12.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 30.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 28.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 30.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Overfull \hbox (41.8578pt too wide) in paragraph at lines 12--29
+Overfull \hbox (41.8578pt too wide) in paragraph at lines 14--31
 \OT1/cmr/bx/n/14.4 Electron Spin Qubit in Semiconductor-Implementation,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 12--29
+Underfull \hbox (badness 10000) in paragraph at lines 14--31
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 12--29
+Underfull \hbox (badness 10000) in paragraph at lines 14--31
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 12--29
+Underfull \hbox (badness 10000) in paragraph at lines 14--31
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 12--29
+Underfull \hbox (badness 10000) in paragraph at lines 14--31
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 12--29
+Underfull \hbox (badness 10000) in paragraph at lines 14--31
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 12--29
+Underfull \hbox (badness 10000) in paragraph at lines 32--34
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 12--29
+Underfull \hbox (badness 10000) in paragraph at lines 39--51
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 30--32
+Underfull \hbox (badness 10000) in paragraph at lines 39--51
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 37--49
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 37--49
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 37--49
+Underfull \hbox (badness 10000) in paragraph at lines 39--51
 
  []
 
@@ -374,78 +612,78 @@ Underfull \hbox (badness 10000) in paragraph at lines 37--49
 [1
 
 {/usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Overfull \hbox (3.13948pt too wide) in paragraph at lines 64--72
+Overfull \hbox (3.13948pt too wide) in paragraph at lines 66--74
 \OT1/cmr/m/n/10 such as low-noise am-pli-fiers (LNAs), analog-to-digital con-vert-ers (ADCs), digital-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 76--79
+Underfull \hbox (badness 10000) in paragraph at lines 78--81
 
  []
 
-<Fig.11.1.jpeg, id=25, 633.3261pt x 269.5671pt>
+<Fig.11.1.jpeg, id=24, 633.3261pt x 269.5671pt>
 File: Fig.11.1.jpeg Graphic file (type jpg)
 <use Fig.11.1.jpeg>
-Package pdftex.def Info: Fig.11.1.jpeg  used on input line 80.
+Package pdftex.def Info: Fig.11.1.jpeg  used on input line 82.
 (pdftex.def)             Requested size: 316.66228pt x 134.78322pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 80--94
+Underfull \hbox (badness 10000) in paragraph at lines 82--96
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 80--94
+Underfull \hbox (badness 10000) in paragraph at lines 82--96
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 80--94
+Underfull \hbox (badness 10000) in paragraph at lines 82--96
 
  []
 
 
 
 [2 <./Fig.11.1.jpeg>]
-Underfull \hbox (badness 10000) in paragraph at lines 109--111
+Underfull \hbox (badness 10000) in paragraph at lines 111--113
 
  []
 
-<Fig.11.2.jpeg, id=35, 637.9032pt x 329.7921pt>
+<Fig.11.2.jpeg, id=34, 637.9032pt x 329.7921pt>
 File: Fig.11.2.jpeg Graphic file (type jpg)
 <use Fig.11.2.jpeg>
-Package pdftex.def Info: Fig.11.2.jpeg  used on input line 112.
+Package pdftex.def Info: Fig.11.2.jpeg  used on input line 114.
 (pdftex.def)             Requested size: 287.05379pt x 148.40506pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 112--122
+Underfull \hbox (badness 10000) in paragraph at lines 114--124
 
  []
 
 
 
 [3 <./Fig.11.2.jpeg>]
-Underfull \hbox (badness 10000) in paragraph at lines 123--134
+Underfull \hbox (badness 10000) in paragraph at lines 125--136
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 123--134
+Underfull \hbox (badness 10000) in paragraph at lines 125--136
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 123--134
+Underfull \hbox (badness 10000) in paragraph at lines 125--136
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 123--134
+Underfull \hbox (badness 10000) in paragraph at lines 125--136
 
  []
 
-<Fig.11.3.jpeg, id=46, 650.43pt x 258.4857pt>
+<Fig.11.3.jpeg, id=45, 650.43pt x 258.4857pt>
 File: Fig.11.3.jpeg Graphic file (type jpg)
 <use Fig.11.3.jpeg>
-Package pdftex.def Info: Fig.11.3.jpeg  used on input line 135.
+Package pdftex.def Info: Fig.11.3.jpeg  used on input line 137.
 (pdftex.def)             Requested size: 292.6908pt x 116.31747pt.
 
 
@@ -453,307 +691,243 @@ Package pdftex.def Info: Fig.11.3.jpeg  used on input line 135.
 pdfTeX warning (ext4): destination with the same identifier (name{equation.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.164 \begin{equation}
+l.166 \begin{equation}
                       \label{eq 11.3}
 pdfTeX warning (ext4): destination with the same identifier (name{equation.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.164 \begin{equation}
+l.166 \begin{equation}
                       \label{eq 11.3}
 pdfTeX warning (ext4): destination with the same identifier (name{equation.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.164 \begin{equation}
+l.166 \begin{equation}
                       \label{eq 11.3}
 pdfTeX warning (ext4): destination with the same identifier (name{equation.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.164 \begin{equation}
+l.166 \begin{equation}
                       \label{eq 11.3}
-Underfull \hbox (badness 10000) in paragraph at lines 172--175
+Underfull \hbox (badness 10000) in paragraph at lines 174--177
 
  []
 
 
 
 [5]
-Underfull \hbox (badness 10000) in paragraph at lines 190--194
+Underfull \hbox (badness 10000) in paragraph at lines 192--196
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 206--215
+Underfull \hbox (badness 10000) in paragraph at lines 208--217
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 206--215
+Underfull \hbox (badness 10000) in paragraph at lines 208--217
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 216--224
+Underfull \hbox (badness 10000) in paragraph at lines 218--226
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 216--224
+Underfull \hbox (badness 10000) in paragraph at lines 218--226
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 216--224
+Underfull \hbox (badness 10000) in paragraph at lines 218--226
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 227--239
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 227--239
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 227--239
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 227--239
 
  []
 
 
 
 [6]
-Underfull \hbox (badness 10000) in paragraph at lines 225--237
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 225--237
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 225--237
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 225--237
-
- []
-
-<Fig.11.4.jpeg, id=72, 629.4717pt x 232.9503pt>
+<Fig.11.4.jpeg, id=71, 629.4717pt x 232.9503pt>
 File: Fig.11.4.jpeg Graphic file (type jpg)
 <use Fig.11.4.jpeg>
-Package pdftex.def Info: Fig.11.4.jpeg  used on input line 238.
+Package pdftex.def Info: Fig.11.4.jpeg  used on input line 240.
 (pdftex.def)             Requested size: 283.25964pt x 104.82666pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 238--245
+Underfull \hbox (badness 10000) in paragraph at lines 240--247
 
  []
 
 
 
 [7 <./Fig.11.4.jpeg>]
-Underfull \hbox (badness 10000) in paragraph at lines 261--267
+Underfull \hbox (badness 10000) in paragraph at lines 263--269
 
  []
 
-<Fig.11.5.jpeg, id=79, 662.7159pt x 231.7458pt>
+<Fig.11.5.jpeg, id=78, 662.7159pt x 231.7458pt>
 File: Fig.11.5.jpeg Graphic file (type jpg)
 <use Fig.11.5.jpeg>
-Package pdftex.def Info: Fig.11.5.jpeg  used on input line 268.
+Package pdftex.def Info: Fig.11.5.jpeg  used on input line 270.
 (pdftex.def)             Requested size: 298.21939pt x 104.28464pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 268--280
+Underfull \hbox (badness 10000) in paragraph at lines 270--282
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 268--280
+Underfull \hbox (badness 10000) in paragraph at lines 270--282
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 268--280
+Underfull \hbox (badness 10000) in paragraph at lines 270--282
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 286--305
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 286--305
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 286--305
 
  []
 
 
 
 [8 <./Fig.11.5.jpeg>]
-Underfull \hbox (badness 10000) in paragraph at lines 284--303
+Underfull \hbox (badness 10000) in paragraph at lines 319--322
 
  []
 
+<Fig.11.6.jpg, id=88, 608.0316pt x 245.9589pt>
+File: Fig.11.6.jpg Graphic file (type jpg)
+<use Fig.11.6.jpg>
+Package pdftex.def Info: Fig.11.6.jpg  used on input line 323.
+(pdftex.def)             Requested size: 273.6117pt x 110.68047pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 284--303
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 284--303
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 317--320
+Underfull \hbox (badness 10000) in paragraph at lines 323--324
 
  []
 
 
 
 [9]
-<Fig.11.6.jpg, id=94, 608.0316pt x 245.9589pt>
-File: Fig.11.6.jpg Graphic file (type jpg)
-<use Fig.11.6.jpg>
-Package pdftex.def Info: Fig.11.6.jpg  used on input line 321.
-(pdftex.def)             Requested size: 273.6117pt x 110.68047pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 321--322
+Underfull \hbox (badness 10000) in paragraph at lines 325--327
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 323--325
+Underfull \hbox (badness 10000) in paragraph at lines 325--327
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 323--325
-
- []
-
-<Fig. 11.7.jpg, id=95, 621.0402pt x 307.8702pt>
+<Fig. 11.7.jpg, id=94, 621.0402pt x 307.8702pt>
 File: Fig. 11.7.jpg Graphic file (type jpg)
 <use Fig. 11.7.jpg>
-Package pdftex.def Info: Fig. 11.7.jpg  used on input line 326.
+Package pdftex.def Info: Fig. 11.7.jpg  used on input line 328.
 (pdftex.def)             Requested size: 279.46552pt x 138.5403pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 326--327
+Underfull \hbox (badness 10000) in paragraph at lines 328--329
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 328--340
+Underfull \hbox (badness 10000) in paragraph at lines 330--342
 
  []
 
 
 
 [10 <./Fig.11.6.jpg> <./Fig. 11.7.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 345--361
+Underfull \hbox (badness 10000) in paragraph at lines 347--364
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 345--361
+Underfull \hbox (badness 10000) in paragraph at lines 347--364
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 345--361
+Underfull \hbox (badness 10000) in paragraph at lines 347--364
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 345--361
+Underfull \hbox (badness 10000) in paragraph at lines 347--364
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 345--361
+Underfull \hbox (badness 10000) in paragraph at lines 347--364
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 345--361
+Underfull \hbox (badness 10000) in paragraph at lines 347--364
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 345--361
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 345--361
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 345--361
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 345--361
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 345--361
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 362--364
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 365--367
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 368--370
+Underfull \hbox (badness 10000) in paragraph at lines 347--364
 
  []
 
 
 
 [11]
-Underfull \hbox (badness 10000) in paragraph at lines 371--373
 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 374--376
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 377--379
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 380--381
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 382--384
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 385--387
-
- []
-
-(./11.1.bbl
-
-[12])
-
-[13] (./11.1.aux)
+[12] (./11.1.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
 Package rerunfilecheck Info: File `11.1.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+Package logreq Info: Writing requests to '11.1.run.xml'.
+\openout1 = `11.1.run.xml'.
+
  ) 
 Here is how much of TeX's memory you used:
- 10237 strings out of 473190
- 155486 string characters out of 5715801
- 551332 words of memory out of 5000000
- 33343 multiletter control sequences out of 15000+600000
+ 17244 strings out of 473190
+ 300957 string characters out of 5715801
+ 1121601 words of memory out of 5000000
+ 40298 multiletter control sequences out of 15000+600000
  562988 words of font info for 52 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,11n,79p,442b,554s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,11n,81p,745b,1467s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on 11.1.pdf (13 pages, 5431592 bytes).
+Output written on 11.1.pdf (12 pages, 5429526 bytes).
 PDF statistics:
- 182 PDF objects out of 1000 (max. 8388607)
- 130 compressed objects within 2 object streams
- 30 named destinations out of 1000 (max. 500000)
+ 176 PDF objects out of 1000 (max. 8388607)
+ 125 compressed objects within 2 object streams
+ 29 named destinations out of 1000 (max. 500000)
  36 words of extra memory for PDF output out of 10000 (max. 10000000)
 

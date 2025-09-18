@@ -1,53 +1,552 @@
-\begin{thebibliography}{10}
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
 
-\bibitem{8elzerman2004single}
-JM~Elzerman, R~Hanson, LH~Willems~van Beveren, B~Witkamp, LMK Vandersypen, and Leo~P Kouwenhoven.
-\newblock Single-shot read-out of an individual electron spin in a quantum dot.
-\newblock {\em nature}, 430(6998):431--435, 2004.
 
-\bibitem{6fang2023recent}
-Yinan Fang, Pericles Philippopoulos, Dimitrie Culcer, WA~Coish, and Stefano Chesi.
-\newblock Recent advances in hole-spin qubits.
-\newblock {\em Materials for Quantum Technology}, 3(1):012003, 2023.
+\refsection{0}
+  \datalist[entry]{none/global//global/global/global}
+    \entry{1zaman2023step}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=d0867a0652f840591522b5164f76e565}{%
+           family={Zaman},
+           familyi={Z\bibinitperiod},
+           given={Anika},
+           giveni={A\bibinitperiod}}}%
+        {{hash=786b739c5fb5f75faa2d7ff6e036ff24}{%
+           family={Morrell},
+           familyi={M\bibinitperiod},
+           given={Hector\bibnamedelima Jose},
+           giveni={H\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=ea636e46c6830524a519cf9be8e873ff}{%
+           family={Wong},
+           familyi={W\bibinitperiod},
+           given={Hiu\bibnamedelima Yung},
+           giveni={H\bibinitperiod\bibinitdelim Y\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{c44e4d83828d75b551f5462ed2d3469e}
+      \strng{fullhash}{a88b2dd9daf6eba62771f05c590fe9d6}
+      \strng{fullhashraw}{a88b2dd9daf6eba62771f05c590fe9d6}
+      \strng{bibnamehash}{a88b2dd9daf6eba62771f05c590fe9d6}
+      \strng{authorbibnamehash}{a88b2dd9daf6eba62771f05c590fe9d6}
+      \strng{authornamehash}{c44e4d83828d75b551f5462ed2d3469e}
+      \strng{authorfullhash}{a88b2dd9daf6eba62771f05c590fe9d6}
+      \strng{authorfullhashraw}{a88b2dd9daf6eba62771f05c590fe9d6}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Access}
+      \field{title}{A step-by-step HHL algorithm walkthrough to enhance understanding of critical quantum computing concepts}
+      \field{volume}{11}
+      \field{year}{2023}
+      \field{pages}{77117\bibrangedash 77131}
+      \range{pages}{15}
+    \endentry
+    \entry{2google2023suppressing}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=df0efb047c39e19b8d7d09c11754202b}{%
+           family={al.},
+           familyi={a\bibinitperiod},
+           given={R.\bibnamedelimi Acharya},
+           giveni={R\bibinitperiod\bibinitdelim A\bibinitperiod},
+           prefix={et.},
+           prefixi={e\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Nature Publishing Group UK London}%
+      }
+      \strng{namehash}{df0efb047c39e19b8d7d09c11754202b}
+      \strng{fullhash}{df0efb047c39e19b8d7d09c11754202b}
+      \strng{fullhashraw}{df0efb047c39e19b8d7d09c11754202b}
+      \strng{bibnamehash}{df0efb047c39e19b8d7d09c11754202b}
+      \strng{authorbibnamehash}{df0efb047c39e19b8d7d09c11754202b}
+      \strng{authornamehash}{df0efb047c39e19b8d7d09c11754202b}
+      \strng{authorfullhash}{df0efb047c39e19b8d7d09c11754202b}
+      \strng{authorfullhashraw}{df0efb047c39e19b8d7d09c11754202b}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Nature}
+      \field{number}{7949}
+      \field{title}{Suppressing quantum errors by scaling a surface code logical qubit}
+      \field{volume}{614}
+      \field{year}{2023}
+      \field{pages}{676\bibrangedash 681}
+      \range{pages}{6}
+    \endentry
+    \entry{3peng2021cryogenic}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=659313d995ea51dab1d34170759ecba5}{%
+           family={Peng},
+           familyi={P\bibinitperiod},
+           given={Yatao},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=f5a8c11d58e14f078dcd4dc2c7349183}{%
+           family={Ruffino},
+           familyi={R\bibinitperiod},
+           given={Andrea},
+           giveni={A\bibinitperiod}}}%
+        {{hash=d6dd49eea525bedc29f7505ead40f2c8}{%
+           family={Charbon},
+           familyi={C\bibinitperiod},
+           given={Edoardo},
+           giveni={E\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{3b333b0e48a18dd08ddef91759098c63}
+      \strng{fullhash}{6091cede5f6dbab80f42a93195fdf1c7}
+      \strng{fullhashraw}{6091cede5f6dbab80f42a93195fdf1c7}
+      \strng{bibnamehash}{6091cede5f6dbab80f42a93195fdf1c7}
+      \strng{authorbibnamehash}{6091cede5f6dbab80f42a93195fdf1c7}
+      \strng{authornamehash}{3b333b0e48a18dd08ddef91759098c63}
+      \strng{authorfullhash}{6091cede5f6dbab80f42a93195fdf1c7}
+      \strng{authorfullhashraw}{6091cede5f6dbab80f42a93195fdf1c7}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Journal of Solid-State Circuits}
+      \field{number}{7}
+      \field{title}{A cryogenic broadband sub-1-dB NF CMOS low noise amplifier for quantum applications}
+      \field{volume}{56}
+      \field{year}{2021}
+      \field{pages}{2040\bibrangedash 2053}
+      \range{pages}{14}
+    \endentry
+    \entry{4veldhorst2014addressable}{article}{}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{10}{}{%
+        {{hash=436f6cc4dcbe5432e118cdbc3972cdfb}{%
+           family={Veldhorst},
+           familyi={V\bibinitperiod},
+           given={M},
+           giveni={M\bibinitperiod}}}%
+        {{hash=c99ad1f0198b9bd3c851274b7c4f935d}{%
+           family={Hwang},
+           familyi={H\bibinitperiod},
+           given={JCC},
+           giveni={J\bibinitperiod}}}%
+        {{hash=f4687e40a665d6a148ea4dd33ed9f687}{%
+           family={Yang},
+           familyi={Y\bibinitperiod},
+           given={CH},
+           giveni={C\bibinitperiod}}}%
+        {{hash=3e3ef6037b2e20cc68e956932504e61f}{%
+           family={Leenstra},
+           familyi={L\bibinitperiod},
+           given={AW},
+           giveni={A\bibinitperiod}}}%
+        {{hash=04b5b6fc9b5aed7ba0eb577b33e9364f}{%
+           family={Ronde},
+           familyi={R\bibinitperiod},
+           given={Bob},
+           giveni={B\bibinitperiod},
+           prefix={de},
+           prefixi={d\bibinitperiod}}}%
+        {{hash=a07d88ad2c2bb26066520531b32b1d15}{%
+           family={Dehollain},
+           familyi={D\bibinitperiod},
+           given={JP},
+           giveni={J\bibinitperiod}}}%
+        {{hash=815de6141a40d8cc1ebcfc61263fe5bb}{%
+           family={Muhonen},
+           familyi={M\bibinitperiod},
+           given={JT},
+           giveni={J\bibinitperiod}}}%
+        {{hash=5c18da544f762e93c7ba7e64e8ae14a8}{%
+           family={Hudson},
+           familyi={H\bibinitperiod},
+           given={FE},
+           giveni={F\bibinitperiod}}}%
+        {{hash=1f785565010d391548938e89c822afd2}{%
+           family={Itoh},
+           familyi={I\bibinitperiod},
+           given={Kohei\bibnamedelima M},
+           giveni={K\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=e626a22c2e2d86c31cdfed3e74267702}{%
+           family={Morello},
+           familyi={M\bibinitperiod},
+           given={A\bibnamedelima t},
+           giveni={A\bibinitperiod\bibinitdelim t\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Nature Publishing Group UK London}%
+      }
+      \strng{namehash}{df4d618cdc521938e2a04e4dd90a4336}
+      \strng{fullhash}{e9a94474348037c396915af0bff8d136}
+      \strng{fullhashraw}{e9a94474348037c396915af0bff8d136}
+      \strng{bibnamehash}{df4d618cdc521938e2a04e4dd90a4336}
+      \strng{authorbibnamehash}{df4d618cdc521938e2a04e4dd90a4336}
+      \strng{authornamehash}{df4d618cdc521938e2a04e4dd90a4336}
+      \strng{authorfullhash}{e9a94474348037c396915af0bff8d136}
+      \strng{authorfullhashraw}{e9a94474348037c396915af0bff8d136}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Nature nanotechnology}
+      \field{number}{12}
+      \field{title}{An addressable quantum dot qubit with fault-tolerant control-fidelity}
+      \field{volume}{9}
+      \field{year}{2014}
+      \field{pages}{981\bibrangedash 985}
+      \range{pages}{5}
+    \endentry
+    \entry{5koppens2006driven}{article}{}{}
+      \name{author}{8}{}{%
+        {{hash=44d79bc0ba4a0652fb789794ed70c66e}{%
+           family={Koppens},
+           familyi={K\bibinitperiod},
+           given={Frank\bibnamedelima HL},
+           giveni={F\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=c924e1ad79a53e255b5b074c301e6656}{%
+           family={Buizert},
+           familyi={B\bibinitperiod},
+           given={Christo},
+           giveni={C\bibinitperiod}}}%
+        {{hash=c9af53d40953383e5f94bbd1c5b04d65}{%
+           family={Tielrooij},
+           familyi={T\bibinitperiod},
+           given={Klaas-Jan},
+           giveni={K\bibinithyphendelim J\bibinitperiod}}}%
+        {{hash=e9cba674e045232759652f55d7d33391}{%
+           family={Vink},
+           familyi={V\bibinitperiod},
+           given={Ivo\bibnamedelima T},
+           giveni={I\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
+        {{hash=4f5f8502763da1f91a55d658a31e9bd4}{%
+           family={Nowack},
+           familyi={N\bibinitperiod},
+           given={Katja\bibnamedelima C},
+           giveni={K\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=5449607f679ee989f804a20ffe6f140a}{%
+           family={Meunier},
+           familyi={M\bibinitperiod},
+           given={Tristan},
+           giveni={T\bibinitperiod}}}%
+        {{hash=e1c7a509c799280c6a9de329476d0c91}{%
+           family={Kouwenhoven},
+           familyi={K\bibinitperiod},
+           given={LP},
+           giveni={L\bibinitperiod}}}%
+        {{hash=ce80bedea21b4475d781de8b597664ef}{%
+           family={Vandersypen},
+           familyi={V\bibinitperiod},
+           given={LMK},
+           giveni={L\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Nature Publishing Group UK London}%
+      }
+      \strng{namehash}{db30200f8503b26fd11ed3254a0f3dae}
+      \strng{fullhash}{3a412df0cc3b19198c6f557954f4deb1}
+      \strng{fullhashraw}{3a412df0cc3b19198c6f557954f4deb1}
+      \strng{bibnamehash}{db30200f8503b26fd11ed3254a0f3dae}
+      \strng{authorbibnamehash}{db30200f8503b26fd11ed3254a0f3dae}
+      \strng{authornamehash}{db30200f8503b26fd11ed3254a0f3dae}
+      \strng{authorfullhash}{3a412df0cc3b19198c6f557954f4deb1}
+      \strng{authorfullhashraw}{3a412df0cc3b19198c6f557954f4deb1}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Nature}
+      \field{number}{7104}
+      \field{title}{Driven coherent oscillations of a single electron spin in a quantum dot}
+      \field{volume}{442}
+      \field{year}{2006}
+      \field{pages}{766\bibrangedash 771}
+      \range{pages}{6}
+    \endentry
+    \entry{6fang2023recent}{article}{}{}
+      \name{author}{5}{}{%
+        {{hash=877b0de5dc38ea61e725f0d2e46b9117}{%
+           family={Fang},
+           familyi={F\bibinitperiod},
+           given={Yinan},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=d4905e0630bc110000547af04838b744}{%
+           family={Philippopoulos},
+           familyi={P\bibinitperiod},
+           given={Pericles},
+           giveni={P\bibinitperiod}}}%
+        {{hash=fb936cad53982e0e0b5ad6c5922fc1d2}{%
+           family={Culcer},
+           familyi={C\bibinitperiod},
+           given={Dimitrie},
+           giveni={D\bibinitperiod}}}%
+        {{hash=a4a6d16bee6c9fcd220695d625e608cb}{%
+           family={Coish},
+           familyi={C\bibinitperiod},
+           given={WA},
+           giveni={W\bibinitperiod}}}%
+        {{hash=54d518be68707e191698c68661779b1d}{%
+           family={Chesi},
+           familyi={C\bibinitperiod},
+           given={Stefano},
+           giveni={S\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {IOP Publishing}%
+      }
+      \strng{namehash}{ec89cff5d0bd8d8ab6fe9590916d6c53}
+      \strng{fullhash}{a92f947ae8b9c625c5071a84cf153502}
+      \strng{fullhashraw}{a92f947ae8b9c625c5071a84cf153502}
+      \strng{bibnamehash}{a92f947ae8b9c625c5071a84cf153502}
+      \strng{authorbibnamehash}{a92f947ae8b9c625c5071a84cf153502}
+      \strng{authornamehash}{ec89cff5d0bd8d8ab6fe9590916d6c53}
+      \strng{authorfullhash}{a92f947ae8b9c625c5071a84cf153502}
+      \strng{authorfullhashraw}{a92f947ae8b9c625c5071a84cf153502}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Materials for Quantum Technology}
+      \field{number}{1}
+      \field{title}{Recent advances in hole-spin qubits}
+      \field{volume}{3}
+      \field{year}{2023}
+      \field{pages}{012003}
+      \range{pages}{1}
+    \endentry
+    \entry{7jock2018silicon}{article}{}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{10}{}{%
+        {{hash=593b8b44f4ea29b72b698c7e098d15df}{%
+           family={Jock},
+           familyi={J\bibinitperiod},
+           given={Ryan\bibnamedelima M},
+           giveni={R\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=32f00096c67189a75293ff10e34b23bb}{%
+           family={Jacobson},
+           familyi={J\bibinitperiod},
+           given={N\bibnamedelima Tobias},
+           giveni={N\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
+        {{hash=37bae22b2c94a301b3072be9dcd2f20b}{%
+           family={Harvey-Collard},
+           familyi={H\bibinithyphendelim C\bibinitperiod},
+           given={Patrick},
+           giveni={P\bibinitperiod}}}%
+        {{hash=07e7b00c4b4aec956c1dbe92f6f1d88d}{%
+           family={Mounce},
+           familyi={M\bibinitperiod},
+           given={Andrew\bibnamedelima M},
+           giveni={A\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=36bbf41b410a3c22bb530b4399e0eaae}{%
+           family={Srinivasa},
+           familyi={S\bibinitperiod},
+           given={Vanita},
+           giveni={V\bibinitperiod}}}%
+        {{hash=52a24c8cb2955fbd6e1615337185d71d}{%
+           family={Ward},
+           familyi={W\bibinitperiod},
+           given={Dan\bibnamedelima R},
+           giveni={D\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+        {{hash=fec5ecb2986d46cd1d53ab2f051ec153}{%
+           family={Anderson},
+           familyi={A\bibinitperiod},
+           given={John},
+           giveni={J\bibinitperiod}}}%
+        {{hash=26044b14f3d0ad9ee0fc444e57ce4389}{%
+           family={Manginell},
+           familyi={M\bibinitperiod},
+           given={Ron},
+           giveni={R\bibinitperiod}}}%
+        {{hash=270662c77382f7843cfb0704204886d5}{%
+           family={Wendt},
+           familyi={W\bibinitperiod},
+           given={Joel\bibnamedelima R},
+           giveni={J\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+        {{hash=154d6d2b932cb9374df19c12afb3eb49}{%
+           family={Rudolph},
+           familyi={R\bibinitperiod},
+           given={Martin},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Nature Publishing Group UK London}%
+      }
+      \strng{namehash}{5c13cb0f5a3c20ae623624801f0a05e3}
+      \strng{fullhash}{0bfe3504cd9d93919ebeb9b09bd2de65}
+      \strng{fullhashraw}{0bfe3504cd9d93919ebeb9b09bd2de65}
+      \strng{bibnamehash}{5c13cb0f5a3c20ae623624801f0a05e3}
+      \strng{authorbibnamehash}{5c13cb0f5a3c20ae623624801f0a05e3}
+      \strng{authornamehash}{5c13cb0f5a3c20ae623624801f0a05e3}
+      \strng{authorfullhash}{0bfe3504cd9d93919ebeb9b09bd2de65}
+      \strng{authorfullhashraw}{0bfe3504cd9d93919ebeb9b09bd2de65}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Nature communications}
+      \field{number}{1}
+      \field{title}{A silicon metal-oxide-semiconductor electron spin-orbit qubit}
+      \field{volume}{9}
+      \field{year}{2018}
+      \field{pages}{1768}
+      \range{pages}{1}
+    \endentry
+    \entry{8elzerman2004single}{article}{}{}
+      \name{author}{6}{}{%
+        {{hash=fb572aefc31da22f88bd06459d6d0980}{%
+           family={Elzerman},
+           familyi={E\bibinitperiod},
+           given={J.M.},
+           giveni={J\bibinitperiod}}}%
+        {{hash=205d73a028e4793fefdd098845c8851f}{%
+           family={Hanson},
+           familyi={H\bibinitperiod},
+           given={R},
+           giveni={R\bibinitperiod}}}%
+        {{hash=4ddec1e35781824248e1bf17bbbda1b2}{%
+           family={Willems\bibnamedelimb van\bibnamedelima Beveren},
+           familyi={W\bibinitperiod\bibinitdelim v\bibinitperiod\bibinitdelim B\bibinitperiod},
+           given={L.H.},
+           giveni={L\bibinitperiod}}}%
+        {{hash=5417b8f5f1efb02dfdda2ed3ccfc3d9b}{%
+           family={Witkamp},
+           familyi={W\bibinitperiod},
+           given={B},
+           giveni={B\bibinitperiod}}}%
+        {{hash=ce80bedea21b4475d781de8b597664ef}{%
+           family={Vandersypen},
+           familyi={V\bibinitperiod},
+           given={L.M.K.},
+           giveni={L\bibinitperiod}}}%
+        {{hash=03a77ab643b4639a383e3788ad7a3751}{%
+           family={Kouwenhoven},
+           familyi={K\bibinitperiod},
+           given={Leo\bibnamedelima P},
+           giveni={L\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Nature Publishing Group UK London}%
+      }
+      \strng{namehash}{b3e80766742be5f130da0cbba0089f04}
+      \strng{fullhash}{5c6d9ea664bbd389290deb8906875e59}
+      \strng{fullhashraw}{5c6d9ea664bbd389290deb8906875e59}
+      \strng{bibnamehash}{b3e80766742be5f130da0cbba0089f04}
+      \strng{authorbibnamehash}{b3e80766742be5f130da0cbba0089f04}
+      \strng{authornamehash}{b3e80766742be5f130da0cbba0089f04}
+      \strng{authorfullhash}{5c6d9ea664bbd389290deb8906875e59}
+      \strng{authorfullhashraw}{5c6d9ea664bbd389290deb8906875e59}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{nature}
+      \field{number}{6998}
+      \field{title}{Single-shot read-out of an individual electron spin in a quantum dot}
+      \field{volume}{430}
+      \field{year}{2004}
+      \field{pages}{431\bibrangedash 435}
+      \range{pages}{5}
+    \endentry
+    \entry{9friesen2004spin}{article}{}{}
+      \name{author}{4}{}{%
+        {{hash=4ab30f4b90f622c748382db95f870896}{%
+           family={Friesen},
+           familyi={F\bibinitperiod},
+           given={Mark},
+           giveni={M\bibinitperiod}}}%
+        {{hash=9d3d4753990f8f47630681727acc95d0}{%
+           family={Tahan},
+           familyi={T\bibinitperiod},
+           given={Charles},
+           giveni={C\bibinitperiod}}}%
+        {{hash=f7f04a9d257f217f3090a29b6eea749e}{%
+           family={Joynt},
+           familyi={J\bibinitperiod},
+           given={Robert},
+           giveni={R\bibinitperiod}}}%
+        {{hash=43b8e3af3b34392775e0518df643eaff}{%
+           family={Eriksson},
+           familyi={E\bibinitperiod},
+           given={MA},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {APS}%
+      }
+      \strng{namehash}{6460547f98eee9a8ec2e538b5652bcdc}
+      \strng{fullhash}{89c409c99ac7b2b06bfc4f0e7affd9a9}
+      \strng{fullhashraw}{89c409c99ac7b2b06bfc4f0e7affd9a9}
+      \strng{bibnamehash}{89c409c99ac7b2b06bfc4f0e7affd9a9}
+      \strng{authorbibnamehash}{89c409c99ac7b2b06bfc4f0e7affd9a9}
+      \strng{authornamehash}{6460547f98eee9a8ec2e538b5652bcdc}
+      \strng{authorfullhash}{89c409c99ac7b2b06bfc4f0e7affd9a9}
+      \strng{authorfullhashraw}{89c409c99ac7b2b06bfc4f0e7affd9a9}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Physical review letters}
+      \field{number}{3}
+      \field{title}{Spin readout and initialization in a semiconductor quantum dot}
+      \field{volume}{92}
+      \field{year}{2004}
+      \field{pages}{037901}
+      \range{pages}{1}
+    \endentry
+    \entry{1avan1996quantum}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=65f3748fb24bc386fb8dccca8da4b163}{%
+           family={Van\bibnamedelima Houten},
+           familyi={V\bibinitperiod\bibinitdelim H\bibinitperiod},
+           given={Henk},
+           giveni={H\bibinitperiod}}}%
+        {{hash=4ba9870608a5249c31c943e686acb283}{%
+           family={Beenakker},
+           familyi={B\bibinitperiod},
+           given={Carlo},
+           giveni={C\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Institute of Physics}%
+      }
+      \strng{namehash}{efd680346640f09ac6971bd7fee654e0}
+      \strng{fullhash}{efd680346640f09ac6971bd7fee654e0}
+      \strng{fullhashraw}{efd680346640f09ac6971bd7fee654e0}
+      \strng{bibnamehash}{efd680346640f09ac6971bd7fee654e0}
+      \strng{authorbibnamehash}{efd680346640f09ac6971bd7fee654e0}
+      \strng{authornamehash}{efd680346640f09ac6971bd7fee654e0}
+      \strng{authorfullhash}{efd680346640f09ac6971bd7fee654e0}
+      \strng{authorfullhashraw}{efd680346640f09ac6971bd7fee654e0}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Physics today}
+      \field{number}{7}
+      \field{title}{Quantum point contacts}
+      \field{volume}{49}
+      \field{year}{1996}
+      \field{pages}{22\bibrangedash 27}
+      \range{pages}{6}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
 
-\bibitem{9friesen2004spin}
-Mark Friesen, Charles Tahan, Robert Joynt, and MA~Eriksson.
-\newblock Spin readout and initialization in a semiconductor quantum dot.
-\newblock {\em Physical review letters}, 92(3):037901, 2004.
-
-\bibitem{7jock2018silicon}
-Ryan~M Jock, N~Tobias Jacobson, Patrick Harvey-Collard, Andrew~M Mounce, Vanita Srinivasa, Dan~R Ward, John Anderson, Ron Manginell, Joel~R Wendt, Martin Rudolph, et~al.
-\newblock A silicon metal-oxide-semiconductor electron spin-orbit qubit.
-\newblock {\em Nature communications}, 9(1):1768, 2018.
-
-\bibitem{5koppens2006driven}
-Frank~HL Koppens, Christo Buizert, Klaas-Jan Tielrooij, Ivo~T Vink, Katja~C Nowack, Tristan Meunier, LP~Kouwenhoven, and LMK Vandersypen.
-\newblock Driven coherent oscillations of a single electron spin in a quantum dot.
-\newblock {\em Nature}, 442(7104):766--771, 2006.
-
-\bibitem{3peng2021cryogenic}
-Yatao Peng, Andrea Ruffino, and Edoardo Charbon.
-\newblock A cryogenic broadband sub-1-db nf cmos low noise amplifier for quantum applications.
-\newblock {\em IEEE Journal of Solid-State Circuits}, 56(7):2040--2053, 2021.
-
-\bibitem{2google2023suppressing}
-et~al. R.~Acharya.
-\newblock Suppressing quantum errors by scaling a surface code logical qubit.
-\newblock {\em Nature}, 614(7949):676--681, 2023.
-
-\bibitem{10van1996quantum}
-Henk Van~Houten and Carlo Beenakker.
-\newblock Quantum point contacts.
-\newblock {\em Physics today}, 49(7):22--27, 1996.
-
-\bibitem{4veldhorst2014addressable}
-M~Veldhorst, JCC Hwang, CH~Yang, AW~Leenstra, Bob de~Ronde, JP~Dehollain, JT~Muhonen, FE~Hudson, Kohei~M Itoh, A~t Morello, et~al.
-\newblock An addressable quantum dot qubit with fault-tolerant control-fidelity.
-\newblock {\em Nature nanotechnology}, 9(12):981--985, 2014.
-
-\bibitem{1zaman2023step}
-Anika Zaman, Hector~Jose Morrell, and Hiu~Yung Wong.
-\newblock A step-by-step hhl algorithm walkthrough to enhance understanding of critical quantum computing concepts.
-\newblock {\em IEEE Access}, 11:77117--77131, 2023.
-
-\end{thebibliography}
