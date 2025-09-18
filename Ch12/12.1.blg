@@ -1,9 +1,15 @@
-[0] Config.pm:328> INFO - This is Biber 2.21
-[0] Config.pm:331> INFO - Logfile is '12.1.blg'
-[215] biber-MSWIN64:342> INFO - === 
-[265] Biber.pm:421> INFO - Reading '12.1.bcf'
-[373] Biber.pm:1002> INFO - Found 0 citekeys in bib section 0
-[385] bbl.pm:676> INFO - Writing '12.1.bbl' with encoding 'UTF-8'
-[386] bbl.pm:779> INFO - Output to 12.1.bbl
-[386] Biber.pm:132> WARN - The file '12.1.bcf' does not contain any citations!
-[386] Biber.pm:134> INFO - WARNINGS: 1
+[0] Config.pm:308> INFO - This is Biber 2.20
+[0] Config.pm:311> INFO - Logfile is '12.1.blg'
+[26] biber-darwin:340> INFO - === Thu Sep 18, 2025, 19:11:12
+[31] Biber.pm:420> INFO - Reading '12.1.bcf'
+[60] Biber.pm:994> INFO - Found 1 citekeys in bib section 0
+[65] Biber.pm:4463> INFO - Processing section 0
+[68] Biber.pm:4654> INFO - Looking for bibtex file '12_ref.bib' for section 0
+[69] bibtex.pm:1713> INFO - LaTeX decoding ...
+[70] bibtex.pm:1519> INFO - Found BibTeX data source '12_ref.bib'
+[81] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[81] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[81] Biber.pm:4283> INFO - Sorting list 'none/global//global/global/global' of type 'entry' with template 'none' and locale 'en-US'
+[81] Biber.pm:4289> INFO - No sort tailoring available for locale 'en-US'
+[81] bbl.pm:676> INFO - Writing '12.1.bbl' with encoding 'UTF-8'
+[82] bbl.pm:779> INFO - Output to 12.1.bbl

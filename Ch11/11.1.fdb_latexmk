@@ -1,13 +1,13 @@
 # Fdb version 4
-["biber 11.1"] 1758233048.88813 "11.1.bcf" "11.1.bbl" "11.1" 1758233145.51273 0
-  "11.1.bcf" 1758233145.46101 108955 d796d9151e7da0d149d843c652136bc9 "pdflatex"
+["biber 11.1"] 1758233048.88813 "11.1.bcf" "11.1.bbl" "11.1" 1758236581.86037 0
+  "11.1.bcf" 1758236581.80686 109046 5d785512403aa0cda34be5074d2383c9 "pdflatex"
   "11_ref.bib" 1758232991.08003 3508 802f78534441ff8ef32c1b6e152e5e85 ""
   (generated)
   "11.1.bbl"
   "11.1.blg"
   (rewritten before read)
-["pdflatex"] 1758233144.80898 "/Users/youngsoom4pro/Documents/GitHub/Latex-sharing/11.1.tex" "11.1.pdf" "11.1" 1758233145.51292 0
-  "/Users/youngsoom4pro/Documents/GitHub/Latex-sharing/11.1.tex" 1758233144.63734 26102 b52d168af83285e6dfc4d115793428ea ""
+["pdflatex"] 1758236581.16669 "/Users/youngsoom4pro/Documents/GitHub/Latex-sharing/Ch11/11.1.tex" "11.1.pdf" "11.1" 1758236581.86061 2
+  "/Users/youngsoom4pro/Documents/GitHub/Latex-sharing/Ch11/11.1.tex" 1758236580.05717 26232 6537851f7ca11ec69e90b71050590ce8 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm" 1246382020 916 f87d7c45f9c908e672703b83b72241a3 ""
@@ -109,11 +109,10 @@
   "/usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1756827417 5467155 19efa205003f9ecad95fbbaa6ff24da1 ""
   "/usr/local/texlive/2025/texmf-var/web2c/pdftex/pdflatex.fmt" 1741450574 3345740 46b66fdb0378f7bf5921b5eabf1762b8 ""
   "/usr/local/texlive/2025/texmf.cnf" 1741450484 577 418a7058ec8e006d8704f60ecd22c938 ""
-  "11.1.aux" 1758233145.45965 2312 d586b39c39457ff4ca5c98bd7eddf45f "pdflatex"
+  "11.1.aux" 1758236581.80575 2309 dc7c9de8e0da3ba1dfbce808778317d1 "pdflatex"
   "11.1.bbl" 1758233049.92188 21944 ddfe827963be83d3bba9a93a86570456 "biber 11.1"
-  "11.1.out" 1758233145.18486 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "11.1.run.xml" 1758233145.46154 2402 d827a0073d3391f99a7f4123152405be "pdflatex"
-  "11.1.tex" 1758233144.63734 26102 b52d168af83285e6dfc4d115793428ea ""
+  "11.1.out" 1758236581.53182 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "11.1.tex" 1758236580.05717 26232 6537851f7ca11ec69e90b71050590ce8 ""
   "Fig. 11.7.jpg" 1758230360.30959 696341 968f7e9255845c581cfaf05db0d80868 ""
   "Fig.11.1.jpeg" 1758213039.67741 1013539 8ad12d54dc6c6a70c6eb7b9ccfcc1aff ""
   "Fig.11.2.jpeg" 1758213044.31742 1243114 75be7e5c28073a5ddcaeba73a21227fd ""

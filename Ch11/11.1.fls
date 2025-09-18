@@ -1,8 +1,8 @@
-PWD /Users/youngsoom4pro/Documents/GitHub/Latex-sharing
+PWD /Users/youngsoom4pro/Documents/GitHub/Latex-sharing/Ch11
 INPUT /usr/local/texlive/2025/texmf.cnf
 INPUT /usr/local/texlive/2025/texmf-dist/web2c/texmf.cnf
 INPUT /usr/local/texlive/2025/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT /Users/youngsoom4pro/Documents/GitHub/Latex-sharing/11.1.tex
+INPUT /Users/youngsoom4pro/Documents/GitHub/Latex-sharing/Ch11/11.1.tex
 OUTPUT 11.1.log
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/base/article.cls
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/base/article.cls
@@ -147,16 +147,7 @@ INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/biblatex/blx-case-expl3.sty
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/biblatex/blx-case-expl3.sty
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
-INPUT ./11.1.aux
-INPUT ./11.1.aux
-INPUT 11.1.aux
 OUTPUT 11.1.aux
-INPUT ./11.1.out
-INPUT ./11.1.out
-INPUT 11.1.out
-INPUT 11.1.out
-INPUT ./11.1.out
-INPUT ./11.1.out
 OUTPUT 11.1.out
 OUTPUT 11.1.pdf
 INPUT /usr/local/texlive/2025/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
@@ -236,7 +227,6 @@ INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
 INPUT 11.1.aux
 INPUT ./11.1.out
 INPUT ./11.1.out
-INPUT 11.1.run.xml
 OUTPUT 11.1.run.xml
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb

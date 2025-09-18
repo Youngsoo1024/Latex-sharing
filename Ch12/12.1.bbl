@@ -16,5 +16,39 @@
   {}
 \endgroup
 
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global/global}
+    \entry{WongHuiYong}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=640624132e4fb8af61f42117a12cc0d7}{%
+           family={Hui-Yong},
+           familyi={H\bibinithyphendelim Y\bibinitperiod},
+           given={Wong},
+           giveni={W\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {London}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{640624132e4fb8af61f42117a12cc0d7}
+      \strng{fullhash}{640624132e4fb8af61f42117a12cc0d7}
+      \strng{fullhashraw}{640624132e4fb8af61f42117a12cc0d7}
+      \strng{bibnamehash}{640624132e4fb8af61f42117a12cc0d7}
+      \strng{authorbibnamehash}{640624132e4fb8af61f42117a12cc0d7}
+      \strng{authornamehash}{640624132e4fb8af61f42117a12cc0d7}
+      \strng{authorfullhash}{640624132e4fb8af61f42117a12cc0d7}
+      \strng{authorfullhashraw}{640624132e4fb8af61f42117a12cc0d7}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{\textit{Introduction to Quantum Computing Holes}}
+      \field{year}{2024}
+    \endentry
+  \enddatalist
+\endrefsection
 \endinput
 
