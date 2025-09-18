@@ -315,12 +315,28 @@ in the QPC to transport. Likewise, when there is no electron in the QDOT, QPC wi
 
 To perform the spin-to-charge conversion, we will use a scheme to let the electron stay in the
 QDOT if it is spin-up and empty it when it is spin-down. As a result, a larger QPC current means that
-it is spin-down, and a smaller current means that it is spin-up.
+it is spin-down, and a smaller current means that it is spin-up.\\
 
+\includegraphics[scale=0.45]{Fig.11.6.jpg}\\
+
+\textbf{Fig. 11.6} Layout of spin-to-charge conversion for silicon spin qubit readout. The electron carrying th espin resides in the quantum
+dot (QDOT) which is capacitively coupled to a reservoir and a quantum point contact transistor (QPC)\\\\
+
+\includegraphics[scale=0.45]{Fig. 11.7.jpg}\\
+
+\textbf{Fig. 11.7} Spin-to-charge conversio nscheme for silicon spin qubit readout. Left: If the electron is in its excited state, during measurement, 
+it will tunnel to the reservoir. The charge in the QDOT becomes less negative and thus the current in the QPC transistor, $I_{QPC}$, increases.
+However, after some time, and electron will tunnel from the reservoir to the QDOT and occupy the ground state. $I_{QPC}$ will decrease. Right: If the electron
+is in its ground state, no tunneling will occur and thus $I_{QPC}$ does not change during the measurement
+\\\\
 Figure 11.7 illustrate the scheme. Like what is discussed in Sect.11.5.2, we will 
 bias the QDOT so that the Fermi level of the reservoir is between the spin down ($\ket{1}$)
-and spin up ($\ket{0}$) energy levels. Since it is at a very low temperature (e.g., 10mK), the states in the
-reservoir above (below) the Fermi energy are empty (filled).
+and spin up ($\ket{0}$) energy levels. Since it is at a very low temperature (e.g., 10 mK), the states in the
+reservoir above (below) the Fermi energy are empty (filled). If the qubit is spin-down ($\ket{\downarrow}$), it will then tunnel
+into the reservoir. As a result, the current in the QPC transistor, $I_{QPC}$, increases. After a certain time, an electron
+cna tunnel from the reservoir to the QDOT and occupy the ground state and thus reduce $I_{QPC}$ to the original level. Therefore,
+one will measure an $I_{QPC}$ "pulse" if it is spin-down.
+
 
 
 
