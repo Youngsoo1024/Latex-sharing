@@ -39,8 +39,8 @@ If the scalars are only real numbers, then the space is called a real vector spa
 space.
 We can further require that a certain vector space has an operation called the inner product defined for its vectors. Then it is called an inner product space. The inner product between two vectors u and v is written as <u|v> which is a scalar.
 Before we continue to study the properties of inner products, let us discuss how our 3D space behaves as an inner product space.
-
-Example 2.1 Euclidean vector space is an inner product space. The 3D space we live in is a Euclidean vector space. Discuss how it fulfills the definition of an inner product space.
+\\[20pt]
+/textbf{Example 2.1} Euclidean vector space is an inner product space. The 3D space we live in is a Euclidean vector space. Discuss how it fulfills the definition of an inner product space.
 
 For any position vectors in the space, $\vec{v}$ and $\vec{w}$, we already know from our daily experience that they obey Eq. (2.1) with real number scales. So it is a vector space.
 We can set $\hat{x}$, $\hat{y}$ and $\hat{z}$ as its basis vectors (see Chapter 3 in [1]) and they are orthonormal (to be discussed in Sect. 2.3.4) 
@@ -55,7 +55,7 @@ For simplicity, we will remove the arrow in the vector notation now. Since $\bra
 can be a complex number, the definition of an inner product is an operation that obeys the following rules:
 which is just the norm or the length of their difference.
 I introduce norm and distance because I would like to give a more formal definition of Hilbert Space. A Hilbert space is a real or complex inner product space that is complete with respect to its distance. The definition of “completeness” here is different from the completeness of basis vector (e.g., Section 10.4 in [1]). It is pretty involving mathematically. We can approximately explain it as the following. There is something called the Cauchy sequence. This sequence has its elements eventually become arbitrarily close to the next one (converged). For an inner product space, we can create many Cauchy sequences of its vectors. Each Cauchy sequence will converge to a vector (in other words, its distance to other elements will converge to 0). If the converged vector is also a vector in the inner product space, i.e., the inner product space contains that converged vector, then it is said to be complete. Since we measure the convergence using distance, it is said to be complete with respect to its distance.
-Note that any finite-dimensional inner product space is complete. Therefore, a Euclidean vector space is a Hilbert space because it is complete.
+Note that any finite-dimensional inner product space is complete. Therefore, a Euclidean vector space is a Hilbert space because it is complete.\\[20pt]
 Figure 2.1 summarizes the properties of the space discussed.
 
 
@@ -65,13 +65,13 @@ Figure 2.1 summarizes the properties of the space discussed.
 
 
 
-Fig. 2.1 summary of the properties of various spaces discussed in this section
-
-2.3 Review of Vector Basics
+\textbf{Fig. 2.1} summary of the properties of various spaces discussed in this section
+\\[30pt]
+\textbf{\large 2.3 Review of Vector Basics}
 
 Here we will succinctly list the basic concepts in linear algebra that are relevant to quantum computing. For a more detailed discussion, please see [1].
 
-2.3.1 Basis Vectors/States, Bra-ket Notation, and Representation of Vectors/States
+\bfit{2.3.1 Basis Vectors/States, Bra-ket Notation, and Representation of Vectors/States}
 
 A state in a quantum system is represented by a vector. In other words, every vector in a Hilbert space is also a state. We may choose some vectors to be the basis vectors and every vector in the space can be represented as a linear combination of the basis vectors. For example, 
 in real 3D space, a vector v$\vec{v}$ can be expressed as the combination of the unit vectors (as basis vectors),  $\hat{x}$, $\hat{y}$ and $\hat{z}$, as
@@ -97,7 +97,7 @@ If a different basis vector set is chosen, the representation will be different.
 		(2.13)
 
 
-Fig.2.2 Vector  can be represented in two different bases, 
+\textbf{Fig.2.2} Vector  can be represented in two different bases, 
 
 
 
@@ -125,7 +125,7 @@ Fig.2.2 Vector  can be represented in two different bases,
 
 It should be noted that it has different column vectors in different bases. This is because each row represents the amount of basis vector, indicated after the right arrows, the vector contains. Also, we have used the bra-ket notation. It should be emphasized that while we label the basis vectors as  in a qubit space, even thought they are related through the same equations.
 
-Example 2.2. Change of Basis: Derive Eq. (2.14) from Eq. (2.13).
+\textbf{Example 2.2.} Change of Basis: Derive Eq. (2.14) from Eq. (2.13).
 Here we assume that we already know that  and . We could have derived them using trigonometry in Fig. 2.2 but we assume the readers know how to do it. Then,
 		(2.15)
 
