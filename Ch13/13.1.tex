@@ -1,7 +1,7 @@
 \documentclass{article}
 \usepackage{amsmath,amssymb,braket,url,hyperref,booktabs,graphicx}
 \usepackage[style=nature]{biblatex}
-\addbibresource{12_ref.bib}
+\addbibresource{13_ref.bib}
 \newcommand{\bfit}[1]{\textit{\textbf{#1}}}
 \begin{document}
 \medskip
@@ -20,5 +20,69 @@ Mechanics}
 \\[30pt]
 \textbf{\large 13.1 Introduction}
 \\\\
-Most of us have learned the basics of Newtonian mechanics.
+Most of us have learned the basics of Newtonian mechanics. Newtonian mechanics
+is also called \textit{vectorial mechanics} because it studies the motion of bodies under the influence
+of vector euantities such as $force$. However, Newtonian mechanics is not convenient in solving certain
+problems. There are other frameworks in theoretical physics called analytical mechanics such as 
+\textbf{Lagrangian mechanics} and \textbf{Hamiltonian mechanics}. They are equivalent to Newtonian mechanics and
+they use scalar quantities such as the kinetic energy and potential energy of a system to derive
+the equations of motion of the system. In many problems, they appear to be more elegant and succincy than 
+Newtonian mechanics. More importantly, the concpets in analytical mechanics can be \textit{generalized}
+to hyperspace/phase space, in which we do not live. Moreover, Hamiltonian mechanics allow us to transition from
+classical mechanics to quantum mechanics more "smoothly." In this chapter, we will learn the 
+\textit{skills} of using Lagrangian and Hamiltonian mechanics. Readers are expected to learn the rules only. Readers
+may refer to \cite{goldstein2001pearson} if they are interested in having a deeper appreciation of analytical mechanics.
+\\[20pt]
+\bfit{\large 13.1.1 Learning Outcomes}
+\\\\
+Be able to write down the Lagrangian and Hamiltonian of a given physical system;
+be able to derive the equation of motion of a system based on its Lagrangian and Hamiltonian.
+\\[20pt]
+\bfit{\large 13.1.2 Teaching Videos}
+\\\\
+$\bullet$ Search for Ch13 in this playlist
+
+- \url{https://tinyurl.com/3yhze3jn}\\\\
+$\bullet$ Other Videos
+
+- \url{https://youtu.be/Ydj2hintCkc}
+
+- \url{https://youtu.be/u2SgXmf2SvQ}
+
+-\url{https://youtu.be/IdSF_064ZSo}
+\\[30pt]
+\textbf{\large 13.2 Lagrangian Mechanics}
+\\\\
+\bfit{\large 13.2.1 Generalized Coordinates and Belocities}
+\\\\
+For the purposes in the following chapters, we only consider point particles, conservative forces,
+and non-relativistic mechanics. Let us consider a system comprised of $N$ 
+particle. We know that if the coordinates of each particle and the velocity of each particle are known at a 
+given  time, the system has a well-defined state. This is because the
+acceleration of a particle depends on the force exerted on it. 
+And the force is the spatial derivative of its potential, which is a function of its
+coordinates. Therefore, if we know their positions and velocities, we know
+their accelerations and, thus, can deduce their past and future states.
+
+For $N$ particles, inour real space, there are 3$N$ independent coordinates
+due to the three orthogonal directions. Therefore, they are the collection of 
+$\vec{q}=\{ q_1,q_2,\cdots,q_{3N} \}$, where we write it as a 3$N$-dimensional vector.
+Similarly, it has 3$N$ independent velocities, $\vec{\dot{q}}=\{ \dot{q_1},\dot{q_2},\cdots,\dot{q_{3N}} \}$, where
+\begin{equation}\label{eq 13.1}
+    \dot{q_i}=\frac{dq_i}{dt}. \tag{13.1}
+\end{equation}
+
+Besides using real spatial coordinates and velocities to uniquely determine the
+state of a system, one may also use other 3$N$ quantities to determine its coordinates as long as
+they also give the system 3$N$ degrees of freedom \cite{Landau}. Such quantities are called
+the \textbf{generalized coordinates}. The time derivatives (Eq.(\ref{eq 13.1})) of the
+generalized coordinates are called the \textbf{generalized velocities}. For the formalism we will
+discuss later, it is easier to think and understand using spatial coordinates and velocities but
+we need to keep in mind and accept the fact that they are applicable to generalized coordinates and velocities, too.
+\\[20pt]
+\bfit{\large 13.2.2 Lagrangian and Lagrange's Equations}
+\\\\
+We will
+
+\printbibliography
 \end{document}

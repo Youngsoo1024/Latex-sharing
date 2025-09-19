@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  19 SEP 2025 15:14
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  19 SEP 2025 15:04
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -489,7 +489,8 @@ Package: blx-case-expl3 2024/03/21 v3.20 expl3 case changing code for biblatex
 ))
 \@quotelevel=\count429
 \@quotereset=\count430
- (./13.1.aux)
+
+No file 13.1.aux.
 \openout1 = `13.1.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 6.
@@ -511,11 +512,10 @@ LaTeX Font Info:    ... okay on input line 6.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 6.
 LaTeX Font Info:    ... okay on input line 6.
 Package hyperref Info: Link coloring OFF on input line 6.
- (./13.1.out) (./13.1.out)
 \@outlinefile=\write4
 \openout4 = `13.1.out'.
 
- (/usr/local/texlive/2025/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+(/usr/local/texlive/2025/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count431
 \scratchdimen=\dimen170
@@ -594,9 +594,27 @@ Underfull \hbox (badness 10000) in paragraph at lines 52--66
 
 
 [2]
-Underfull \hbox (badness 10000) in paragraph at lines 75--86
 
- []
+LaTeX Warning: Command \' invalid in math mode on input line 70.
+
+/Users/youngsoom4pro/Documents/GitHub/Latex-sharing/Ch13/13.1.tex:70: Please use \mathaccent for accents in math mode.
+\add@accent ... \let \ignorespaces \relax \accent 
+                                                  #1 #2\egroup \ifmmode \els...
+l.70 ... 3$N$ independent velocities, $\vec{\'{q}}
+                                                  $
+I'm changing \accent to \mathaccent here; wish me luck.
+(Accents are not the same in formulas as they are in text.)
+
+
+LaTeX Warning: Command \' invalid in math mode on input line 70.
+
+/Users/youngsoom4pro/Documents/GitHub/Latex-sharing/Ch13/13.1.tex:70: Please use \mathaccent for accents in math mode.
+\add@accent ... \let \ignorespaces \relax \accent 
+                                                  #1 #2\egroup \ifmmode \els...
+l.70 ... 3$N$ independent velocities, $\vec{\'{q}}
+                                                  $
+I'm changing \accent to \mathaccent here; wish me luck.
+(Accents are not the same in formulas as they are in text.)
 
 
 
@@ -605,25 +623,43 @@ Underfull \hbox (badness 10000) in paragraph at lines 75--86
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
-Package rerunfilecheck Info: File `13.1.out' has not changed.
-(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+
+
+LaTeX Warning: There were undefined references.
+
+
+Package rerunfilecheck Warning: File `13.1.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `13.1.out':
+(rerunfilecheck)             Before: <no file>
+(rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
+
+Package biblatex Warning: Please (re)run Biber on the file:
+(biblatex)                13.1
+(biblatex)                and rerun LaTeX afterwards.
+
 Package logreq Info: Writing requests to '13.1.run.xml'.
 \openout1 = `13.1.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 17148 strings out of 473190
- 298407 string characters out of 5715801
- 1116923 words of memory out of 5000000
- 40222 multiletter control sequences out of 15000+600000
- 563295 words of font info for 53 fonts, out of 8000000 for 9000
+ 17126 strings out of 473190
+ 297953 string characters out of 5715801
+ 1116654 words of memory out of 5000000
+ 40211 multiletter control sequences out of 15000+600000
+ 562997 words of font info for 52 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,6n,81p,750b,1171s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,5n,81p,750b,1167s stack positions out of 10000i,1000n,20000p,200000b,200000s
+
+pdfTeX warning (dest): name{cite.0@goldstein2001pearson} has been referenced but does not exist, replaced by a fixed one
+
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on 13.1.pdf (3 pages, 136165 bytes).
+Output written on 13.1.pdf (3 pages, 127246 bytes).
 PDF statistics:
- 85 PDF objects out of 1000 (max. 8388607)
- 59 compressed objects within 1 object stream
- 9 named destinations out of 1000 (max. 500000)
+ 77 PDF objects out of 1000 (max. 8388607)
+ 51 compressed objects within 1 object stream
+ 5 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

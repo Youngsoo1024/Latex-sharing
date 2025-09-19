@@ -82,7 +82,7 @@
       <file>13.1.bcf</file>
     </requires>
     <requires type="editable">
-      <file>12_ref.bib</file>
+      <file>13_ref.bib</file>
     </requires>
   </external>
 </requests>
