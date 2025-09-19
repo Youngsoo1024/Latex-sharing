@@ -48,5 +48,38 @@ Firstly, the Hilbert space is created by applying a DC magnetic field pointing t
 This direction is named the $-\hat{z}$ direction. Therefore, \textit{spin-up means that the spin is 
 pointing to the left, and spin-down means that the spin is pointing to the right}. This is nothing
 special becuase the name of direction is completely a human definition.
+
+The system is kept at 50 mK and $B_0=1.4T$. This is a spin qubit. To enhance the decoherence
+time, we need to avoid the spin interacting with the external environment. The electron spin can
+interact with the nuclear spin in the silicon easily and lose its coherence.
+Unfortunately, while 95.53\% of natural silicon atoms have a zero nuclear spin
+(92.23\% $^{28}Si$ \textbf{isotope} and 3.1\% $^{30}Si$ isotope), 4.67\% of them have
+a spin ($^{29}Si$ isotope). This is because $^{29}Si$ has 14 protons and 15 neutrons
+and their spins are not nullified due odd number of nucleons. The electron spin will interact
+strongly with the nucleus of $^29Si$. Therefore, a highly purified silicon substrate is used,
+in which $^29Si$ is reduced to 800 $ppm$ (part-per-million). That means, among 1 million silicon
+atoms in the substrate, only 800 will be $^{29}Si$.
+\\\\
+
+      \includegraphics[scale=0.55]{Fig.12.1.jpeg}\\
+\textbf{Fig. 12.1} Illustration of how an electron spin qubit is implemented in 
+  \cite{veldhorst2014addressable}. The magnetic field due to $I_{ESR}$ is shown and it points
+  perpendicular to the substrate at the qubit
+\\\\
+
+For \textbf{readout}, it also uses spin-to-charge conversion as in Sect. 11.6. However, instead of using a 
+qunatum point contact (QPC) transistor, it uses a \textbf{single electron transistor} (SET) which has its current
+also very sensitive to the charge occupation in the quantum dot.
+
+To implement a 1-qubit gate, it uses the theory we learned in Sect 9.3. That is by applying a perturbing oscillating
+magnetic field in the $\hat{x}$ direction. But note that, the $\hat{x}$ direaction in Fig.12.1 is perpendicular to the silicon substrate.
+To achieve the oscillating magnetic field, an AC electric current, $I_{ESR}$, is passed through
+a wire next to the qubit. $ESR$ stands for \textbf{electron spin resonance} which means that its
+frequency is the same as the Larmor frequency due to $\vec{B}$ (see Sect.9.4). The current will generate a circular
+magnetic field about the wire due to the \textbf{Biot-Savart law} (see
+also Example 24.2). Although it is circular, at the point where it touches the qubit, it is pointing
+at the tangential direction of the circle and thus it is pointing in the $\hat{x}$ direction and perpendicular
+to the Si substrate. 
+
 \printbibliography
 \end{document}
