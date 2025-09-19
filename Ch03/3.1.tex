@@ -1,0 +1,115 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{hyperref}
+\usepackage{braket}
+\begin{document}
+
+\textbf{\Large Chapter 3} \\ 
+\textbf{\Large Linear Algebra-Operators, Matrices, and Quantum Gates}
+\\
+\\
+\\
+\textbf{\large 3.1 Introduction}
+\\
+\\
+Vectors are the fundamentals in a Hilbert space. They represent the state of a physical system corresponding to that
+Hilbert space. But a state or a vector is \textit{passive}. What is interesting is the application of an operator to rotate
+a vector  in the space or, in other words, to transform the state. An operator corresponds to a matrix.
+In this chapter, we will review the concepts of eigenvalue, eigenvector, Hermitian matrix, and unitary matrix.
+We will also review how to construct a projection operator and a unitary transformation matrix.
+Then we will revisit the meaning of a measurement in a quantum system using the new knowledge we have learned. Finally,
+we will discuss how to perform a tensor product for matrices.
+\\
+\\
+\textbf{\textit{3.1.1 Learning Outcomes}}
+\\
+\\
+Understand the definitions of HErmitian matrix, unitary matrix, and project matrix;
+able to transform vectors and matrices from one basis to another; appreciate
+that applying an operator to a vector is to rotate the vector in its Hilbert space.
+\\
+\\
+\textbf{\textit{3.1.2 Teaching Videos}}
+\\
+\\
+$\cdot$ Search for Ch3 in this playlist\\
+- \url{http://tinyurl.com/3yhze3jn}\\
+\\
+$\cdot$ Other Vidoes\\
+- \url{http://youtu.be/Wrmigi645J4}\\
+- \url{http://youtu.be/Z_fXDssH2JA}\\
+\\
+\\
+\textbf{\large 3.2 Operators}
+\\
+\\
+An \textbf{operator} in a Hilbert space maps the vectors in one space to another space.
+However, sometimes, the second space is the same as the first one. In this case,
+an operator can be considered to be rotating a vector in its space. Here we will consider
+the operator that map the vectors to the same space. For example, an operator \textbf{\textit{M}} 
+applied to vector $\ket{\alpha^\prime}$,
+
+\begin{equation} \label{eq 3.1}
+    \ket{\alpha^\prime}= \textbf{\textit{M}} \ket{\alpha}. \tag{3.1}
+\end{equation}
+
+
+If the vector is represented as a colum vector, it is natural that the operator must be a matrix.
+
+The operators are linear and observe the distribution law,
+
+\begin{equation} \label{eq 3.2}
+    \textbf{\textit{M}} (\textit{C}_{\alpha}\ket{\alpha}+ \textit{C}_{\beta}\ket{\beta})=\textit{C}_{\alpha}
+\textbf{\textit{M}} \ket{\alpha}+\textit{C}_{\beta}\textbf{\textit{M}}\ket{\beta}, \tag{3.2}
+\end{equation}
+
+where $\textit{C}_{\alpha}$ and $\textit{C}_{\beta}$ are complex scalra and $\ket{\beta}$ is another vector.
+\\
+\\
+\textit{\textbf{\large 3.2.1 Dual Correspondence}}
+\\
+\\
+We introduced the concept of \textbf{dual correspondence} in Chap. 2 that every vector $\ket{\alpha}$
+in the \textit{ket} space has a correspondence vector $\bra{\alpha}$ in the \textit{bra} space. Therefore,
+there is a corresponding \textit{bra} version for $\bra{\alpha^{\prime}}$, i.e., $\bra{\alpha^{\prime}}$,
+in Eq. (\ref{eq 3.1}),
+
+\begin{equation}
+    \bra{\alpha^{\prime}} \Leftrightarrow \ket{\alpha^{\prime}} \tag{3.3}
+\end{equation}
+
+Is there a dual correspondence for the \textit{ket}-space operator \textit{\textbf{M}}?
+Yes, it is the \textbf{adjoint} of \textit{\textbf{M}}, i.e.. $\textit{\textbf{M}}^{\dagger}$.
+The adjoint of a matrix is just the conjugate transpose of that matrix. This is the same as how we find
+the \textit{bra} version of a vector (e.g., Eq.(2.19)). Therefore, Eq. (3.3) can be written as,
+
+\begin{equation} \label{eq 3.4}
+    \bra{\alpha}\textit{\textbf{M}}^{\dagger}\Leftrightarrow\textit{\textbf{M}}\ket{\alpha} \tag{3.4}
+\end{equation}
+\\
+Note that the operator is applied form the \textbf{right} of the bra vector.
+This can be easily appreciated by recognizing that a bra vector is a row vector instead of a column vector.
+
+
+The dual equation of Eq. (\ref{eq 3.2}) is thus,
+
+\begin{equation} \label{eq 3.5}
+     (\textit{C}_{\alpha}^*\bra{\alpha}+ \textit{C}_{\beta}^*\bra{\beta})\textbf{\textit{M}}^{\dagger}
+     =\textit{C}_{\alpha}^* \bra{\alpha}\textbf{\textit{M}}^{\dagger}+\textit{C}_{\beta}^*\bra{\beta}\textbf{\textit{M}}^{\dagger}. \tag{3.5}    
+\end{equation}
+
+Note that complex conjugate is taken for scalars $\textit{C}_{\alpha}$ and $\textit{C}_{\beta}$ in the \textit{bra} version.
+
+
+Based on the first line Eq. (2.6), we can further derive that
+
+\begin{align} \label{eq 3.6}
+    \begin{split}
+        \braket{\beta|\alpha^\prime}=\braket{\alpha^\prime|\beta}^*\\
+\braket{\beta|\textit{\textbf{M}}|\alpha}=\braket{\alpha|\textit{\textbf{M}}^{\dagger}|\beta}
+    \end{split}\tag{3.6}
+\end{align}
+
+
+These are some useful equations we will use in quantum mechanics.
+\end{document}

@@ -1,0 +1,195 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{hyperref}
+\usepackage{braket}
+\begin{document}
+\textbf{\large 2.3.4 Orthonormal Basis and Vector Normalization}
+\\
+\\
+An \textbf{orthonormal basis} a is basis with an orthonormal basis vector.
+Let it be a n-dimensional basis and thus it has \textit{n} basis vectors, 
+$\ket{x_{0}},\ket{x_{1}},\cdots,\ket{x_{n-1}}$. If each basis vector is normalized (with a length of 1) and orthogonal
+to the others (with 0 overlap or inner product with other basis vectors), it is called an orthonormal basis.
+This can be written as
+\begin{align}
+    \begin{split}
+    \braket{x_{i}|x_{j}}&= \begin{cases}
+        0 & \text{if i $\neq$  j, (orthogonal)}\\
+        1 & \text{if i = j, (normalized)}
+    \end{cases}\\
+    & =\delta_{ij}
+    \end{split} \tag{2.23}
+\end{align}
+
+where we use the \textbf{Kronecker delta} in the last line. Note that when i = j, $\braket{x_{i}|x_{j}} = \braket{x_{i}|x_{i}}$ and
+this is just the suqare of the norm of the basis vector, $\ket{x_{i}}$ (Eq.(2.7)). If it is one, then it means that the length is also one. Working
+on an orthonormal basis probides a lot of convenience in calculations due to the fact that $\braket{x_{i}|x_{j}}$ results in either 0 or 1. 
+We can also thus write the vector in a clolum or row form as in Eqs. (2.18) and (2.19).\\
+For example, if a vector $\bra{V}$ represented in an orthonormal basis, $\ket{x_{i}}$, is given by
+
+\begin{equation}
+    \ket{V}=a_{0}\ket{x_{0}}+\cdot\cdot+a_{n-1}\ket{x_{n-1}} \tag{2.24}
+\end{equation}
+
+to find its norm squared, $||v||^2$ (Eq.(2.7)), we have
+
+\begin{align}
+    \begin{split}
+        \braket{v|v}&=(a_{0}^*a_{1}^*\cdots a_{n-1}^*)
+        \begin{pmatrix}
+         a_{0}\\
+         a_{1}\\
+         \vdots \\
+         a_{n-1}   
+        \end{pmatrix}\\
+        &=a_{0}^*a_{0}+a_{1}^*a_{1}+\dots+a_{n-1}^*a_{n-1}, \\
+        &=|a_{0}|^2+|a_{1}|^2+\dots+|a_{n-1}|^2,
+    \end{split} \tag{2.25}
+\end{align} 
+
+If $\braket{v|v} = 1$, then vector $\ket{v}$ is a \textbf{a normalized vector}.
+As shown in Eq.(2.25), this means that a normalized vector has the sum of the coefficient modulus squared
+equals one. Recalling that upon the measurement of a quantum state, the probability is the corresponding
+coefficient modulus squared (Eqs.(2.21)) and (2.22), then a
+quantunm state must be normalized so that the probability of collapsing to any ofthe basis states is one. 
+In other words, this ensures the sum of the probabilities ofmeasureing one of the basis states to be one. 
+Therefore, any quantum state must be normalized vector.
+\\
+\\
+\textbf{\large 2.4 Tensor product}
+\\
+\\
+We can combine two or more vector spaces through \textbf{tensor product}.
+For a more detailed discussion , please refer to Chapters 11 and 12 in [1].
+What is the meaning of \textit{combing two vector spaces} and why do we want to do that?
+For example, we can describe the spin of an electron using a 2D Hilbert space.
+It has two basis vectors, $\ket{0}_{1}$ and $\ket{1}_{1}$. Here I used subsript 1 to
+indicate that this is the vector scpace belonging to the first electron. 
+The state of any possible spin of the electron is a vector, $\ket{\psi_{1}}$, in this Hilbert
+space and is a linear combination of the basis states,
+
+\begin{equation}
+    \ket{\psi_{1}}= \alpha_{1}\ket{0}_{1}+\beta_{1}\ket{1}_{1} \tag{2.26}
+\end{equation}
+
+Similarly, if there si a second electron, its basis vectors are $\ket{0}_{2}$ and $\ket{1}_{2}$.
+Its state is given by.
+
+\begin{equation}
+    \ket{\psi_{2}}= \alpha_{2}\ket{0}_{2}+\beta_{1}\ket{1}_{2} \tag{2.27}
+\end{equation}
+
+If we want to describe the two electrons together or treat the two electrons as a \textit{single} physical
+system, then the tensor product is the mathematical tool for us to do so.
+
+
+As aligned with our common sense, the new system must have a larger vector space. Here, \textit{let me emphasize} that a larger
+space is \textit{NOT} obtained through a simple extension of a lower-dimension one to a higher-dimension one (e.g., adding a time
+dimension to the 3D space to become a 4D space-time).
+It is a result of the tensor product, $\otimes$, of the lower space basis states. The number of the new basis states is the electron system as  a whole has four basis states,
+$\ket{0}_{1}\otimes\ket{0}_{2}, \ket{0}_{1}\otimes\ket{1}_{2}, \ket{1}_{1}\otimes\ket{0}_{2}, and \ket{1}_{1}\otimes\ket{1}_{2}$. We may also omit $\otimes$ by writing it as
+$\ket{0}_{1}\ket{0}_{2}, \ket{0}_{1}\ket{1}_{2}, \ket{1}_{1}\ket{0}_{2}, and \ket{1}_{1}\ket{1}_{2}$. And if we agree with each other that the first (second) number refers to the first (second)
+electron, we can also succinctly write it as $\ket{00},\ket{01}, \ket{10}, and \ket{11}$.
+
+With the new sapce, we also expect that a state in the combined system must be a linear combination of the new basis vectors. This can be seen clearly by considering
+the tensor product of the tow-eletron system. The following demonstrates how to perform tensor products without explaining the background. Readers can treat it as
+a result of the definitions and should apprecieate its similarity of a regular algebraic product.
+
+For example, if the first electron is in state $\ket{\psi_{1}}$ and the second electron is in state $\ket{\psi_{2}}$, then the state of the whole system, $\ket{\psi}$, is obtained
+through the tensor product of $\ket{\psi_{1}} and \ket{\psi_{2}}$ (Eqs. (2.26) and (2.27)):
+
+\begin{align}
+    \begin{split}
+        \ket{\psi}&=\ket{\psi_{1}}\otimes\ket{\psi_{2}},\\
+        &=(\alpha_{1}\ket{0}_{1}+\beta_{1}\ket{1}_{1})\otimes(\alpha_{2}\ket{0}_{2}+\beta_{2}\ket{1}_{2}),\\
+        &=\alpha_{1}\alpha_{2}\ket{0}_{1}\ket{0}_{2}+\alpha_{1}\beta_{2}\ket{0}_{1}\ket{1}_{2}+\beta_{1}\alpha_{2}\ket{1}_{1}\ket{0}_{2}+\beta_{1}\beta_{2}\ket{1}_{1}\ket{1}_{2},\\
+        &=\alpha_{1}\alpha_{2}\ket{00}+\alpha_{1}\beta_{2}\ket{01}+\beta_{1}\alpha_{2}\ket{10}+\beta_{1}\beta_{2}\ket{11}.
+    \end{split} \tag{2.28}
+\end{align}
+We can also do this in matrix form,
+
+\begin{align}
+    \begin{split}
+        \ket{psi}&=\ket{psi_{1}}\otimes\ket{psi_{2}},\\
+        &=\begin{pmatrix}
+            \alpha_{1}\\
+            \beta_{1}
+        \end{pmatrix}
+        \otimes
+        \begin{pmatrix}
+            \alpha_{2}\\
+            \beta_{2}
+        \end{pmatrix},\\
+        &=\begin{pmatrix}
+            \alpha_{1} \begin{pmatrix}
+                \alpha_{2}\\
+                \beta_{2}
+            \end{pmatrix}\\
+            \beta_{1} \begin{pmatrix}
+                \alpha_{2}\\
+                \beta_{2}
+            \end{pmatrix}
+        \end{pmatrix},\\
+        &=\begin{pmatrix}
+            \alpha_{1}\alpha_{2}\\
+            \alpha_{1}\beta_{2}\\
+            \beta_{1}\alpha_{1}\\
+            \beta_{1}\beta_{2}
+        \end{pmatrix}
+        \cdot
+        \begin{matrix}
+            \ket{00}\\
+            \ket{01}\\
+            \ket{10}\\
+            \ket{11}
+        \end{matrix}
+    \end{split} \tag{2.29}
+\end{align}
+where in the last line, the corresponding basis states are indicated. The same methodology is used for higher-dimensional spaces.
+
+
+If more than 2 spaces need to be combined, we can do this one after another.
+\\
+\\
+\textbf{\large 2.5 Summary}
+\\
+\\
+We review the basic properties of vectors in various vector spaces. In quantum computing, we will work in the Hilbert space. Therefore, the inner product
+which is an important component of the Hilbert space plays an important role in all
+calculations. We also dicuss the measurement of a quantum state. Although measurement is not a part of linear algebra, it requires that
+all quantum state needs to be normalized. We also practice how to combine two subststems into a larger
+one using tensor product. In the next chapter, we will discuss more advanced linear algebra.
+We will discuss martices and operators and their applications in quantum computing.
+\\
+\\
+\textbf{\large Problems}\\
+
+
+\textbf{2.1 Vector space}
+
+$\alpha$ is a scalar and $\ket{W}$ is a vector. Given that,
+\begin{equation}
+    \ket{aW} = a\ket{W} \tag{2.30}
+\end{equation}
+using also Eq. (2.1), prove the following equations:
+\begin{equation}
+    \braket{V|aW} = a \braket{V|W} \tag{2.31}\\
+\end{equation}
+\begin{equation}
+    \braket{aV|W} = a^* \braket{V|W} \tag{2.32}\\
+    \end{equation}
+
+\textbf{    2.2 Orthonormal Basis}
+
+    Prove Eq (2.25) using bra-ket notation (e.g., Eq.(2.24))instead of using matrix form.
+
+\textbf{    2.3 Tensor product}
+
+    Find the tensor product of $\ket{a} and \ket{b}$ in Example 2.3.
+\\
+\\
+\textbf{\large References}\\
+    1. Hiu-yung Wong. Introductino to Quantum Computing. Springer, 2024.\\
+    2. Vector space. \url{Http://en.wikipedia.org/wiki/Vector_space}. Accessed:2024-01-08.
+    \end{document}

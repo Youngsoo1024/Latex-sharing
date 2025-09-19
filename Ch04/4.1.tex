@@ -1,0 +1,477 @@
+\documentclass{article}
+\usepackage{braket}%
+\usepackage{amsmath}%
+\usepackage{hyperref}%
+\usepackage{amsfonts}%
+\usepackage{amssymb}%
+\usepackage{booktabs}
+\begin{document}
+\textbf{\Large Chapter 4\\Schr\"{o}dinger Equatino and Quantum Gates}
+\\\\\\\\
+\textbf{\large 4.1 Introduction}
+\\\\
+To realize an operator or quantum gate, we need to set up the hardware so that 
+it has the appropriate energy landsape, which is called the Hamiltonian. A quantum state will then 
+evolve by following the Schr\"{o}dinger equatino of the given Hamiltonian.
+In this chapter, we will first study how to solve the Schr\"{o}dinger eqaution using matrix mechanics with both diagonal and non-diagonal Hamiltonians.
+Then we will discuss how a quantum gate can be generated for a given HAmiltonian. We will then review a few important 1-qubit quantum gates. We will also discuss the CNOT gate,
+which is a 2-qubit entanglement gatem, and demonstrate how to use it to create and
+entanglement state by combining it with other 1-qubit gates.
+\\\\
+\textbf{\textit{\large 4.1.1. Lernaing Outcomes}}\\\\
+Understand the meaning of the Schr\"{o}dinger equation be albe to solve the 
+Schr\"{o}dinger equation in matrix form for different types of HAmiltonians;
+be familiar with the basic gates and entanglement creation.\\\\
+\textit{\textbf{\large 4.1.2 Teaching Videos}}\\\\
+$\bullet$ Search for Ch4 in this playlist
+\\
+- \url{http://tinyurl.com/3yhze3jn}\\
+
+$\bullet$ Other videos\\\\
+- \url{http://youtu.be/wyenXTGu51o}\\
+- \url{http://youtu.be/DvjPM3ACkNw}\\
+- \url{http://youtu.be/Wrmigi645J4}\\
+- \url{http://youtu.be/tKx-JZg0qYk}\\
+\\\\
+\textbf{\large 4.2 Schr\"{o}dinger Equation}
+\\\\
+The \textbf{Schr\"{o}dinger equation} is the \textit{governing equation} in quantum
+mechanics. It is difficult to solve. However, it is relatively easy if it is applied to a 1-qubit system,
+which is the case in most parts of this book. The Schr\"{o}dinger equation is given as
+
+\begin{equation} \label{eq 4.1}
+    i\hbar\frac{\partial}{\partial t}= \textit{\textbf{H}}\ket{\psi},\tag{4.1}
+\end{equation}
+where $i$ is the imaginary number, $\sqrt{-1}$, $t$ is time, and $\hbar$
+is \textbf{reduced Plank constant}. $\hbar=\frac{h}{2\pi}$ with the \textbf{Planck constant}, $h=6.626\times10^{-34}J\cdot s \cdot$. \textit{\textbf{H}}
+is the \textbf{Hamiltonian} \textit{of the system that we are investigating}. 
+The Hamiltonian is the total energy of the system, which is the usm of the potential and kinetic energies.
+We will divuss it more in depth in chap.13. Here, we assume that \textit{\textbf{H}} is given.
+Also, we write \textit{\textbf{H}} in boldface because we treat it as a matrix here.
+In the following chapters, we will start writing it as an operator after we have laerned the ncessary knowledge.
+$\ket{\psi}$ is the state of the system.
+
+Let us first decriptively understand what the Schr/"{o}dinger equation tries to tell us.
+It says that the rate of change of the state ($\frac{\partial\ket{\psi}}{\partial t}$) is propertional to (scaled by $i\hbar$)
+the Hamiltonian multiplied by the state (\textbf{\textit{H}}$\ket{\psi}$).
+
+Recalling that we represent a state as a vector, the Hamiltonian must be a matrix.
+Writing and solving the Schr\"{o}dinger equation in this way is called the \textbf{matrix mechanics} as
+proposed by Heisenberg in contrast to Schr\"{o}dinger's wave formulation. For finite (discrete) Hilbert space such
+as those of qubit systems, matrix mechanics is often more convenient.
+
+Let us now consider a 1-qubit system. A single qubit is a 2D Hilbert space with complex scalrs with 
+two basis states, $\ket{0}$ and $\ket{1}$. Again,  $\ket{0}$ and $\ket{1}$ are just the
+labels of the basis states and it does not matter what the underlying physics is.
+A general state in the system, $\ket{\psi}$, can be represented as a linear combination
+of the basis states
+\begin{equation} \label{eq 4.2}
+    \ket{\psi} = \alpha\ket{0}+\beta\ket{1}=\begin{pmatrix}
+        \alpha \\ \beta
+    \end{pmatrix} \tag{4.2}
+\end{equation}
+where $\alpha$ and $\beta$ are complex scalrs. If $\alpha$ and $\beta$ are determined, then
+$\ket{\psi}$ is determined.Therefore, solving the Schr\"{o}dinger equation for $\ket{\psi}$ in the
+1-qubit system is quivalent to finding $\alpha$ and $\beta$.
+
+Since it is a 2D space, the matrix must be 2 $\times$ 2 in size. We assume the Hamiltonian to be
+\begin{equation} \label{eq 4.3}
+    \textit{\textbf{H}}=\begin{pmatrix}
+        H_{00} \ H_{01}\\
+        H_{10} \ H_{11}
+    \end{pmatrix}, \tag{4.3}
+\end{equation} 
+where $H_{00}, H_{01}, H_{10},$ and $H_{11}$  are complex numbers. Then Eq. (\ref{eq 4.1}) becomes
+\begin{equation} \label{eq 4.4}
+    i\hbar\frac{\partial}{\partial t}\begin{pmatrix}
+        \alpha \\  \beta
+    \end{pmatrix}=\begin{pmatrix}
+        H_{00} \ H_{01}\\
+        H_{10} \ H_{11}
+    \end{pmatrix}
+    \begin{pmatrix}
+        \alpha \\ \beta
+    \end{pmatrix} \tag{4.4}
+\end{equation}
+To find $\alpha$ and $\beta$, we perform scalr multiplication on the left-hand side and matrix
+multiplication on the right-hand side,
+\begin{align} \label{eq 4.5}
+    \begin{split}
+        \begin{pmatrix}
+             i\hbar\frac{\partial \alpha}{\partial t}\\
+             \addlinespace
+            i\hbar\frac{\partial \beta}{\partial t} \end{pmatrix}
+            &=\begin{pmatrix}
+                H_{00} \ H_{01}\\ \addlinespace
+                H_{10} \ H_{11}
+            \end{pmatrix}
+            \begin{pmatrix}
+                \alpha \\ \addlinespace \beta
+            \end{pmatrix},\\
+            &=\begin{pmatrix}
+                H_{00}\alpha \ H_{01}\beta\\ \addlinespace
+                H_{10}\alpha \ H_{11}\beta
+            \end{pmatrix}. 
+    \end{split} \tag{4.5}
+\end{align}
+The vectors on the left and right are the same and so do their coefficients. 
+Therefore, we obtain two simultaneous \textit{differential equations},
+\begin{equation} \label{eq 4.6}
+        i\hbar\frac{\partial\alpha}{\partial t}= H_{00}\alpha+H_{01}\beta,\\\tag{4.6}
+        \end{equation}
+        \begin{equation} \label{eq 4.7}
+        i\hbar\frac{\partial\beta}{\partial t}= H_{10}\alpha+H_{11}
+        \beta,\\ \tag{4.7}
+\end{equation}
+To solve Eqs. (\ref{eq 4.6}) and (\ref{eq 4.7}), we need to solve a second-order differential equation
+by substituting one into another. We will study two cases to understand how to solve them in general.
+\\\\
+\textbf{\large 4.3 Solving Schr\"{o}dinger Equation}
+\\\\
+In general, a \textbf{matrix differential equation} with the following form,
+\begin{equation} \label{eq 4.8}
+    i\hbar\frac{\partial}{\partial t}= \textit{\textbf{H}}\ket{\psi}; \ \ \ \   \ket{\psi(t=0)}=\ket{\psi_0},\tag{4.8}
+\end{equation}
+has a general solution of 
+\begin{equation} \label{eq 4.9}
+    \ket{\psi(t)}=e^{\frac{H}{ih}t}\ket{\psi_0}=e^{-i\frac{H}{h}t}\ket{\psi_0} \tag{4.9}
+\end{equation}
+when \textit{\textbf{H}} is \textit{constant matrix} (independent of time).
+If it is time-dependent, move sophisticated equations are needded and readers can refer to Chapter 2 in
+[2]. Therefore, if we know how to perform \textbf{matrix exponential}, we can
+obtain the solution, too.
+\\\\
+\textbf{\textit{\large 4.3.1 Diagonal Hamiltonian}}\\
+\\
+If the given HAmiltonian is diagonalized, then $H_{01}$ and $H_{10}$ are zero.
+A HAmiltonian (or, in general, an operator) is diagonal if the basis being used is the eigenbasis of
+the Hamiltonian (see Sect. 3.3.1). The equations to be solved becomes
+\begin{equation} \label{eq 4.10}
+    i\hbar\frac{\partial\alpha}{\partial t}= H_{00}\alpha\tag{4.10}
+\end{equation}
+
+\begin{equation} \label{eq 4.11}
+    i\hbar\frac{\partial\beta}{\partial t}= H_{11}\beta\tag{4.11}
+\end{equation}
+We can see that now $\alpha$ and $\beta$ are \textbf{decoupled}, and each equation
+contains only one variable and can be solved independently. Note that $\alpha$ and $\beta$ 
+refer to the amount of eah basis state ($\ket{0}$ and $\ket{1}$) that $\ket{\psi}$ has.
+Therefore, \textbf{non-zero off-diagonal elements} \textit{enable the coupling between different basis states}.
+For example, even if $\beta = 0$ at $t=0$, eventually, $\beta$ will become non-zero if there are 
+non-zero off-diagonal elementswhich enable the coupling.
+
+The solutions to the equations are 
+\begin{equation} \label{eq 4.12}
+    \alpha(t)=\alpha_0e^{-i\frac{H_{00}}{/hbar}t},\tag{4.12}
+\end{equation}
+\begin{equation} \label{eq 4.13}
+    \beta(t)=\beta_0e^{-i\frac{H_{11}}{/hbar}t},\tag{4.13}
+\end{equation}
+where $\alpha_{0}$ and $\beta_{0}$ are constants and they are the initial values of 
+$\alpha(t)$ and $\beta(t)$ at $t=0$.One may substitute Eqs. (\ref{eq 4.12}) and (\ref{eq 4.13})
+into Eqs. (\ref{eq 4.10}) and (\ref{eq 4.11}), respectively, to show that they are indeed the solutions.
+
+Therefore, the state (vector) of the 1-qubit system changes as a function of time
+when it has a diagonal Hamiltonian $\textit{\textbf{H}}=\begin{pmatrix}
+    H_{00} & 0 \\ 0 & H_{11}
+\end{pmatrix}$ as
+\begin{equation} \label{eq 4.14}
+    \ket{\psi}= \begin{pmatrix}
+        \alpha(t)\\ \addlinespace \beta(t)
+    \end{pmatrix}
+    =\begin{pmatrix}
+        \alpha_0e^{-i\frac{H_{00}}{\hbar}t}\\ \addlinespace
+        \beta_0e^{-i\frac{H_{11}}{\hbar}t}        
+    \end{pmatrix}\tag{4.14}
+\end{equation}
+
+We may also check this by using Eq. (\ref{eq 4.9}). When the Hamiltonian is \textit{diagonal},
+we cna exponentiate it easily by only exponentiating the diagonal elements (the proof will be given in Example 4.1).
+That is,
+\begin{align} \label{eq 4.15}
+    \begin{split}
+        e^{-i\frac{H}{\hbar}t} &= e^{-i\frac{\begin{pmatrix}
+            H_{00} & 0\\ 0 &H_{11}
+        \end{pmatrix}}{\hbar}t},\\
+        &= \begin{pmatrix}
+            e^{-i\frac{H_{00}}{\hbar}t} & 0\\0 & e^{-i\frac{H_{11}}{\hbar}t}
+        \end{pmatrix}
+    \end{split} \tag{4.15}
+\end{align}
+Therefore, Eq. (\ref{eq 4.9}) becomes
+
+\begin{align} \label{eq 4.16}
+    \begin{split}
+      \ket{\psi(t)}&= e^{-i\frac{H}{\hbar}t}\ket{\psi_0},\\
+      \begin{pmatrix}
+          \alpha(t) \\ \beta(t)
+        \end{pmatrix} &=\begin{pmatrix}
+           e^{-i\frac{H_{00}}{\hbar}t} & 0\\0 & e^{-i\frac{H_{11}}{\hbar}t}
+        \end{pmatrix} 
+        \begin{pmatrix}
+              \alpha_0\\ \beta_0
+       \end{pmatrix},\\
+        \begin{pmatrix}
+            \alpha(t) \\ \beta(t)
+        \end{pmatrix}&
+        =\begin{pmatrix}
+            \alpha_0 e^{-i\frac{H_{00}}{\hbar}t} \\ \beta_0 e^{-i\frac{H_{11}}{\hbar}t} 
+        \end{pmatrix},
+   \end{split} \tag{4.16}
+\end{align}
+which is the same as the solutoin in Eq. (\ref{eq 4.4}).
+\\\\
+\textbf{Example 4.1} Prove Eq. (\ref{eq 4.15}).
+
+We prove this by using the Taylor expansion of $e^{-i\frac{H}{\hbar}t}$
+and the definition of the zero exponent of a matrix, \textit{\textbf{H}},
+\begin{equation} \label{eq 4.17}
+    \textit{\textbf{H}}^0 = I \tag{4.17}
+\end{equation}
+The Taylor series of $e^{-i\frac{H}{\hbar}t}$ is
+\begin{align} \label{eq 4.18}
+    \begin{split}
+        e^{-i\frac{H}{\hbar}t} &= \sum_{k=0}^{\infty}\frac{-i\frac{H}{\hbar}t}{k!},\\
+        &= \sum_{k=1}^{\infty}\frac{1}{k!}\begin{pmatrix}
+            -i\frac{H_{00}}{\hbar}t & 0\\0 &-i\frac{H_{11}}{\hbar}t
+        \end{pmatrix}^k,\\
+        &= \sum_{k=1}^{\infty}\frac{1}{k!}\begin{pmatrix}
+            (-i\frac{H_{00}}{\hbar}t)^k & 0\\0 &(-i\frac{H_{11}}{\hbar}t)^k
+        \end{pmatrix},\\
+        &=\begin{pmatrix}
+            \sum_{k=0}^{\infty}\frac{1}{k!}(-i\frac{H_{00}}{\hbar}t)^k &0\\
+            0 & \sum_{k=0}^{\infty}\frac{1}{k!}(-i\frac{H_{11}}{\hbar}t)^k
+        \end{pmatrix},\\
+        &= \begin{pmatrix}
+            e^{-i\frac{H_{00}}{\hbar}t}& 0\\0 &e^{-i\frac{H_{11}}{\hbar}t}
+        \end{pmatrix}.
+    \end{split} \tag{4.18}
+\end{align}
+where in line 2, Eq. (4.3) is used to substitue \textit{\textbf{H}}. In line 3, we use the fact that
+when a diagonal matrix multiplies itself, it is the same as each diagonal element multiplies
+itself. In line 4, we just the definition of matrix summation, and in line 5, the Taylor series
+of number exponenital is used.
+\\\\
+\textbf{\textit{\large 4.3.2 Non-diagonal Hamiltonian}}\\\\
+If the HAmiltonian is not diagonal (i.e., at least one of the off-diagonal elements is non-zero),
+then we cannot use Eq.(\ref{eq 4.15}). We need to solve the system of linear
+equations in Eqs. (\ref{eq 4.6}) and (\ref{eq 4.7}). This is tedious. However, if we
+already know the eigenvalues and eigenvectors of \textit{\textbf{H}}, we can work on its
+eigenbasis to find the solutions and then transform it back to the basis we are interested in.
+By the way, since \textit{\textbf{H}} is the total energy of the system, its eigenvalues are also called the \textbf{eigenenergies}.
+
+We had discussed how to construct a general transformation matrix in Sect. 3.3.5.
+Assume we are in an old basis with basis states $\ket{0}$ and $\ket{1}$.
+In this basis, \textit{\textbf{H}} is not diagonal. We can work in the eigenbasis
+of \textit{\textbf{H}} (the new basis with basis vectors $\ket{0^\prime}$ and $\ket{1^\prime}$) by
+creating a transformation matrix, \textit{\textbf{U}}, based on Eq. (3.23)
+\begin{equation} \label{eq 4.19}
+    \textbf{\textit{U}}=\begin{pmatrix}
+        \braket{0^\prime|0} \braket{0^\prime|1}\\
+        \braket{1^\prime|0} \braket{1^\prime|1}
+    \end{pmatrix} \tag{4.19}
+\end{equation}
+Then Eq. (\ref{eq 4.1}) becomes
+\begin{align}
+    \begin{split} \label{eq 4.20}
+        \textbf{\textit{U}}i\hbar\frac{\partial}{\partial t}\ket{\psi}&=\textbf{\textit{U  H  I}}\ket{\psi},\\
+        i\hbar\frac{\partial}{\partial t}\textbf{\textit{U}}\ket{\psi}&=\textbf{\textit{U  H  U}}^\dagger\textbf{\textit{U}} \ket{\psi}.
+    \end{split} \tag{4.20}
+\end{align}
+This is like how we derived Eq. (3.28) by applying \textbf{\textit{U}}, which
+is time independent, from the left and using the identity, $\textbf{\textit{U}}^\dagger\textbf{\textit{U}}= \textbf{\textit{I}}$.
+More specifically, we can set $\ket{\psi^\prime}=\textbf{\textit{U}}\ket{\psi}$ and $\textbf{\textit{H}}^\prime=\textbf{\textit{U H U}}^\dagger$ 
+which is \textit{diagonal} and we can solve
+\begin{equation} \label{eq 4.21}
+    i\hbar\frac{\partial}{\partial t}\ket{\psi^\prime}=\textbf{\textit{H}}^\prime\ket{\psi^{\prime}}\tag{4.21}
+\end{equation}
+as how we did in the diagonal Hamiltonian case in Eq. (\ref{eq 4.16}). After obtaining,
+$\ket{\psi^\prime}$ we can get $\ket{\psi}$ by using
+\begin{equation} \label{eq 4.22}
+    \ket{\psi}=\textbf{\textit{U}}^\dagger\ket{\psi^\prime}. \tag{4.22}
+\end{equation}
+
+Of course, the difficulty is to find the eigenvectors of \textbf{\textit{H}}
+which is computationally intensive when the matrix is large.
+\\\\
+\textit{\textbf{\large 4.3.3 Using Taylor Expansion}}
+\\\\
+In principle, we can also calculate matrix exponential using Taylor expansion.
+Sometimes, an analytical closed form can be found. In the following example,
+while the matrix can be diagonalized (see Problem 4.2), we use Taylor expansion to 
+calculate the matrix exponential.
+\\\\
+\textbf{Example 4.2} This example will be used later when we try to construct an
+\textbf{iSWAP gate} for superconducting transmon qubits in Chap.21.
+Given the following Hamiltonian, find $e^{-i\frac{H}{\hbar}t}$,
+\begin{equation} \label{eq 4.23}
+    \textbf{\textit{H}}=\begin{pmatrix}
+        0\  0\ 0\ 0\\0\ 0\ g\ 0\\0\ g\ 0\ 0\\0\ 0\ 0\ 0
+    \end{pmatrix}.\tag{4.23}
+\end{equation}
+We will use the Taylor series of $e^{-i\frac{H}{\hbar}t}$.
+\begin{align} \label{eq 4.24}
+    \begin{split}
+        e^{-i\frac{H}{\hbar}t}&=\sum_{k=0}^{\infty}\frac{(-i\frac{H}{\hbar}t)^k}{k!},\\
+        &=\sum_{k=0}^{\infty}\begin{pmatrix}
+            0& 0& 0& 0\\0& 0& \frac{-igt}{\hbar}& 0\\
+            0& \frac{-igt}{\hbar}& 0& 0\\ 0& 0& 0& 0
+        \end{pmatrix}^k. 
+    \end{split}\tag{4.24}
+\end{align}
+
+Let us first study $\begin{pmatrix}
+            0& 0& 0& 0\\0& 0& \frac{-igt}{\hbar}& 0\\
+            0& \frac{-igt}{\hbar}& 0& 0\\ 0& 0& 0& 0
+        \end{pmatrix}^k$. When $k=0$, it is just \textbf{\textit{I}} as given in
+        Eq. (\ref{eq 4.17}).
+
+        Also, we note that
+
+\begin{align} \label{eq 4.25}
+    \begin{split}
+        \begin{pmatrix}
+            0& 0& 0& 0\\0& 0& \frac{-igt}{\hbar}& 0\\
+            0& \frac{-igt}{\hbar}& 0& 0\\ 0& 0& 0& 0
+        \end{pmatrix}^2
+        &=\begin{pmatrix}
+            0& 0& 0& 0\\0& 0& \frac{-igt}{\hbar}& 0\\
+            0& \frac{-igt}{\hbar}& 0& 0\\ 0& 0& 0& 0
+        \end{pmatrix}\begin{pmatrix}
+            0& 0& 0& 0\\0& 0& \frac{-igt}{\hbar}& 0\\
+            0& \frac{-igt}{\hbar}& 0& 0\\ 0& 0& 0& 0
+        \end{pmatrix},\\
+        &=\begin{pmatrix}
+            0& 0& 0& 0\\0&  -(\frac{gt}{\hbar})^2& 0& 0\\
+            0& 0& -(\frac{gt}{\hbar})^2&  0\\ 0& 0& 0& 0
+        \end{pmatrix}.
+    \end{split}\tag{4.25}
+\end{align}
+Similarly,
+\begin{equation} \label{eq 4.26}
+     \begin{pmatrix}
+            0& 0& 0& 0\\0& 0& \frac{-igt}{\hbar}& 0\\
+            0& \frac{-igt}{\hbar}& 0& 0\\ 0& 0& 0& 0
+        \end{pmatrix}^3
+        =\begin{pmatrix}
+            0& 0& 0& 0\\0& 0& i(\frac{gt}{\hbar})^3& 0\\
+            0& i(\frac{gt}{\hbar})^3& 0& 0\\ 0& 0& 0& 0
+        \end{pmatrix}, \tag{4.26}
+\end{equation}
+\begin{equation}\label{eq 4.27}
+     \begin{pmatrix}
+            0& 0& 0& 0\\0& 0& \frac{-igt}{\hbar}& 0\\
+            0& \frac{-igt}{\hbar}& 0& 0\\ 0& 0& 0& 0
+        \end{pmatrix}^4
+        =\begin{pmatrix}
+            0& 0& 0& 0\\0&  (\frac{gt}{\hbar})^4& 0& 0\\
+            0& 0& (\frac{gt}{\hbar})^4&  0\\ 0& 0& 0& 0
+        \end{pmatrix}, \tag{4.27}
+\end{equation}
+and
+\begin{equation} \label{eq 4.28}
+     \begin{pmatrix}
+            0& 0& 0& 0\\0& 0& \frac{-igt}{\hbar}& 0\\
+            0& \frac{-igt}{\hbar}& 0& 0\\ 0& 0& 0& 0
+        \end{pmatrix}^5
+        =\begin{pmatrix}
+            0& 0& 0& 0\\0& 0& -i(\frac{gt}{\hbar})^5& 0\\
+            0& -i(\frac{gt}{\hbar})^5& 0& 0\\ 0& 0& 0& 0
+        \end{pmatrix}, \tag{4.28}
+\end{equation}
+
+We see that it has off-diagonal terms $(\frac{-igt}{\hbar})^k$ when
+$k$ is odd, and it has diagonal terms $(\frac{-igt}{\hbar})^k$ when 
+$k$ is even. Therefore, the Taylor expansion can be written as
+\begin{align} \label{eq 4.29}
+    \begin{split}
+        &e^(-i\frac{H}{\hbar}t) = \textbf{\textit{I}}+\sum_{k=1}^{\infty}\frac{1}{k!}\begin{pmatrix}
+            0 & 0& 0& 0\\ 0& 0& \frac{-igt}{\hbar}& 0\\
+            0& \frac{-igt}{\hbar}& 0& 0\\ 0& 0& 0& 0
+        \end{pmatrix}^k.\\
+        &=\frac{1}{0!}\begin{pmatrix}
+            1 \ 0\ 0\ 0\\ 0\ 1\ 0\ 0\\
+            0\ 0\ 1\ 0\\ 0\ 0\ 0\ 1
+        \end{pmatrix}
+        +\frac{1}{1!}\begin{pmatrix}
+             0 & 0& 0& 0\\ 0& 0& \frac{-igt}{\hbar}& 0\\
+            0& \frac{-igt}{\hbar}& 0& 0\\ 0& 0& 0& 0
+        \end{pmatrix}
+        +\frac{1}{2!}\begin{pmatrix}
+            0& 0& 0& 0\\0&  -(\frac{gt}{\hbar})^2& 0& 0\\
+            0& 0& -(\frac{gt}{\hbar})^2&  0\\ 0& 0& 0& 0
+        \end{pmatrix}\\
+        &+\frac{1}{3!}\begin{pmatrix}
+            0& 0& 0& 0\\0& 0& i(\frac{gt}{\hbar})^3& 0\\
+            0& i(\frac{gt}{\hbar})^3& 0& 0\\ 0& 0& 0& 0
+        \end{pmatrix}
+        +\frac{1}{4!}\begin{pmatrix}
+            0& 0& 0& 0\\0&  (\frac{gt}{\hbar})^4& 0& 0\\
+            0& 0& (\frac{gt}{\hbar})^4&  0\\ 0& 0& 0& 0
+        \end{pmatrix}\\
+        &+\frac{1}{5!}\begin{pmatrix}
+            0& 0& 0& 0\\0& 0& -i(\frac{gt}{\hbar})^5& 0\\
+            0& -i(\frac{gt}{\hbar})^5& 0& 0\\ 0& 0& 0& 0
+        \end{pmatrix}+ \cdots,\\
+        &=\begin{pmatrix}
+            1& 0& 0& 0\\
+            0& 1-\frac{1}{2!}(\frac{gt}{\hbar})^2+\frac{1}{4!}(\frac{gt}{\hbar})^4-\cdots& \begin{pmatrix}
+                -i\frac{1}{1!}\frac{gt}{\hbar}+i\frac{1}{3!}(\frac{gt}{\hbar})^3\\
+                -i\frac{1}{5!}(\frac{gt}{\hbar})^5+\cdots
+            \end{pmatrix}& 0\\
+            0& -i\frac{1}{1!}\frac{gt}{\hbar}+i\frac{1}{3!}(\frac{gt}{\hbar})^3+-i\frac{1}{5!}(\frac{gt}{\hbar})^5+\cdots&
+            1-\frac{1}{2!}(\frac{gt}{\hbar})^2+\frac{1}{4!}(\frac{gt}{\hbar})^4-\cdots& 0\\
+            0& 0& 0& 1
+        \end{pmatrix},\\
+        &=\begin{pmatrix}
+            1& 0& 0& 0\\
+            0& \cos\frac{gt}{\hbar}& -i \sin\frac{gt}{\hbar}& 0\\
+            0& -i \sin\frac{gt}{\hbar}& \cos\frac{gt}{\hbar}& 0\\
+            0& 0& 0& 1
+        \end{pmatrix}.
+    \end{split} \tag{4.29}
+\end{align}
+where in the first line, we singled out $k=0$ and summed from $k=1$ to $k=\infty$.
+In the last line, we used the Taylor expansions of $\cos\frac{gt}{\hbar}$ and $\sin\frac{gt}{\hbar}$.
+\\\\
+\textbf{\large 4.4 Relationship Between Hamiltonian and Quantum Gate}
+\\\\
+A \textbf{quantum gate} is used to transform a quantum state (e.g., $\ket{\psi_{in}}$) 
+to another (e.g., $\ket{\psi_{out}}$). Therefore, a quantum gate is a matrix, 
+\textbf{\textit{U}}, when the states are represented as colum vectors.
+It is a 2 $\times$ 2 matrix for a 1-qubit system and it is a $2^n\times2^n$ matrix
+for an $n$-qubit system. Therefore,
+
+\begin{equation} \label{eq 4.30}
+    \ket{\psi_{out}}=\textbf{\textit{U}}\ket{\psi_{in}}.\tag{4.30}
+\end{equation}
+To implement a quantum gate (i.e., to implement \textbf{\textit{U}}), we need to apply an appropriate Hamiltonian
+so that the initial state of the system will change to the 
+desired state. Equation (\ref{eq 4.9}) describes how the initial state 
+$\ket{\psi_0}$ changes to the finla state at $t$, $\ket{\psi(t)}$. Note again
+this is only true if the HAmiltonian is time-independent.
+If we let $\ket{\psi_0}=\ket{\psi_{in}}$ and $\ket{\psi(t)}=\ket{\psi_{out}}$,
+then Eq. (\ref{eq 4.9}) is equibalent to Eq. (\ref{eq 4.30}) if
+\begin{equation} \label{eq 4.31}
+    \textbf{\textit{U}}=e^{-i\frac{H}{\hbar}t},\tag{4.31}
+\end{equation}
+Note that \textbf{\textit{H}} can be diagonal or non-diagonal. Also, since 
+\textbf{\textit{H}} is the energy operator and its eigenvalues (or eigenenergies) are real,
+then it is also Hermitian with \textbf{\textit{H}}=\textbf{\textit{H}}$^\dagger$. That mechanics
+\begin{align}\label{eq 4.32}
+    \begin{split}
+        &\textbf{\textit{U}}\textbf{\textit{U}}^\dagger,\\
+        =& e^{\frac{-iHt}{\hbar}}(e^{\frac{-iHt}{\hbar}})^\dagger, \\
+        =& e^{\frac{-iHt}{\hbar}}e^{\frac{iH^{\dagger}t}{\hbar}},\\
+        =& e^{\frac{-iHt}{\hbar}}e^{\frac{iHt}{\hbar}},\\
+        =& \textbf{\textit{I}}.
+    \end{split}\tag{4.32}
+\end{align}
+Therefore, any quantum gate, \textbf{\textit{U}}, is \textit{unitary} and \textit{reversible}.
+We need to be careful not to be confused with the roles of the Hamiltonian
+and quantum gate in quantum state manipulation.
+
+What I habe shown is the quantum gate of a 1-qubit system. The idea is the same for multiple qubits.
+
+
+\end{document}

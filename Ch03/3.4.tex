@@ -1,0 +1,186 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{braket}
+\usepackage{hyperref}
+\usepackage{MnSymbol}
+\begin{document}
+\textbf{\Large 3.4 Measurement of a Quantum State - Part 2}
+\\ \\
+We have discussed some of the basis of measurement in Sect. 2.3.3. 
+When a quantum state is measured, the state will collapse to one of the
+basis states. For example, if we perform a spin measurement on a spin qubit, the quantum state will collapse
+to either spin-up, $\ket{\uparrow}$, or spin-down, $\ket{\downarrow}$.
+Experminetally, we will also obtain a real number in the maeasurement (e.g., $\frac{1}{2}$or $-\frac{1}{2}$).
+
+In general, depending on what we are measuring, the basis states it will collapse
+to and the real values measured are the eigenvectors and eigenvalues, respectively, of 
+a Hermitian matrix, \textit{\textbf{A}}. For example, if we rare perfroming a spin measurement of and electron,
+this measurement corresponds to the Hermitian matrix, $\frac{1}{2}\sigma_z=\begin{pmatrix}
+    \frac{1}{2} & 0\\0 & -\frac{1}{2}
+\end{pmatrix}$,
+which has eigenvalues of $\frac{1}{2}$ and $-\frac{1}{2}$. It should
+be noted that the corresponding Hermitian matrix is \textbf{NOT an operator to perform the measurement}.
+It is only that its eigenvectors are the states it will collapse to  and its eigenvalues are 
+the numbers being measured experimentally.
+
+It should also be clear to the reader why the corresponding operators must be
+Hermitian. This is because the Hermitian matrix has real eigenvalues which
+are what will be measured expermientally.
+
+We mentioned that the probability of a state $\ket{\psi}=\alpha\ket{0}+\beta\ket{1}$
+collapsing to one of the basis states (which are the eigenstates of the corresponding Hermitian matrix)
+is the square of the modulus of the corresponding coefficient. Here, we will give a more versatile
+definition of the probability, \textit{$Prob(\ket{i})$},it will collapse to basis
+state $\ket{i}$. That is,
+
+\begin{equation} \label{eq 3.29}
+    \textit{Prob}(\ket{i})=\braket{\psi|\textit{\textbf{P}}_{\ket{i}}|\psi}, \tag{3.29}
+\end{equation}
+
+where the projection operator to $\ket{i}$ is used.
+\\\\
+\textbf{Example 3.5} Derive Eq. (2.21) using Eq.(\ref{eq 3.29}).
+\begin{align} \label{eq 3.30}
+    \begin{split}
+        \textit{Prob}(\ket{0}) &= \braket{\psi|\textit{{P}}_{\ket{0}}|\psi},\\
+        &= (\alpha^*\bra{0}+\beta^*\bra{1})(\ket{0}\bra{0})(\alpha\ket{0}+\beta\ket{1}),\\
+        &= \alpha^* \braket{0|0}\braket{0|\ \alpha \ |0},\\
+        &= \alpha^*\alpha=|\alpha|^2,
+    \end{split} \tag{3.30}
+\end{align} 
+where from line 2 to line 3, we have used the fact that $\braket{0|1}=0$.
+\\\\
+\textit{\textbf{3.4.1 Expectation Value in a Measurement}}
+\\\\
+If \textit{\textbf{A}} is the Hermitian matrix corresponding to a measurement and has eigenvectors 
+$\ket{0}$ and $\ket{1}$, then the \textbf{expectation value} or the average
+value obtained by performing the measurement on many identically prepared state 
+$\ket{\psi}$ is the sum of the eigenvalues ($\lambda_0,\lambda_1$) of each eigenvector
+weighted by the probability of the eigenvector to which $\ket{\psi}$ will collapse.
+Therefore, the expectation value of \textit{\textbf{A}} (or the average measured value) for the given state
+$\ket{\psi}$ is
+\begin{align} \label{eq 3.31}
+    \begin{split}
+        \braket{\textit{\textbf{A}}} &= \textit{Prob}(\ket{0})\lambda_0+\textit{Prob}(\ket{1})\lambda_1,\\
+        &= \braket{\psi|\textit{{P}}_{\ket{0}}|\psi}\lambda_0+\braket{\psi|\textit{{P}}_{\ket{1}}|\psi}\lambda_1,\\
+        &= \braket{\psi|0}\braket{0|\psi}\lambda_0+\braket{\psi|1}\braket{1|\psi}\lambda_1,\\
+        &= \bra{\psi}(\ket{0}\bra{0}\lambda_0+\ket{1}\bra{1}\lambda_1)\ket{\psi},\\
+        &= \braket{\psi| \ \textit{\textbf{A}} \ |\psi}.
+    \end{split} \tag{3.31}
+\end{align}
+In the last line, we used the fact that working in \textit{\textbf{A}}'s eigenbasis,
+\textit{\textbf{A}} is a diagonal matrix with the eigenvalues along the diagonal which is 
+\textit{\textbf{A}} = $\ket{0}\bra{0}\lambda_0+\ket{1}\bra{1}\lambda_1$ (see Eqs. (3.8) and (3.9)).
+\\\\\\
+\textbf{\Large 3.5 Tensor Product of Matrices}\\\\
+In Sect. 2.4, we discussed how to construct a larger space by combining smaller
+spaces using the \textbf{tensor product}. The state/vector of the combined system can be described by the tensor product
+of the states/vectors of the smaller systems (Eq. (2.28)). Note that it can also be a linear
+combination of the tensor products if they are \textbf{entangled} which will be discussed later.
+We also need to create an operator for the combined system so that it is equivalent to the individual
+operators i nthe subsystems. For example, if \textit{\textbf{M$_\textbf{1}$}} is applied to $\ket{\psi_1}$ and 
+\textit{\textbf{M$_\textbf{2}$}} is applied to $\ket{\psi_2}$, what is the equivalent operator
+\textit{\textbf{M}} applied to state of the combined system, i.e., $\ket{\psi_1}\otimes\ket{\psi_2}$?
+
+We construct \textit{\textbf{M}} using a tensor product of \textit{\textbf{M$_\textbf{1}$}} and \textit{\textbf{M$_\textbf{2}$}},
+\begin{equation} \label{eq 3.32}
+   \textit{\textbf{M}}=\textit{\textbf{M}}_{\textbf{1}}\otimes\textit{\textbf{M}}_{\textbf{2}}. \tag{3.32}
+\end{equation} 
+At a result, we have
+\begin{align} \label{eq 3.33}
+    \begin{split}
+        \textbf{\textit{M}}\ket{\psi}&=\textbf{\textit{M}}(\ket{\psi_1}\otimes\ket{\psi_2}),\\
+        &=(\textbf{\textit{M}}_{\textbf{1}}\otimes\textbf{\textit{M}}_{\textbf{2}})(\ket{\psi_1}\otimes\ket{\psi_2}),\\
+        &=(\textit{\textbf{M}}_{\textbf{1}}\ket{\psi_1})\otimes(\textit{\textbf{M}}_{\textbf{2}}\ket{\psi_2}).
+    \end{split} \tag{3.33}
+\end{align}
+Note that the operator in each subsystem only applies to the state in that system.
+For example, a magnetic pulse to rotate the spin state of electron 1 (\textit{\textbf{M}}$_{\textbf{1}}$) is only physically
+applied to electron 1 and shoul not have an effect on electron 2 . If it has,
+this is already an operator in the combined system.
+
+When the operators are expressed in their matrix form, we follow the approach in Eq. (2.29)
+to perform the tensor product.
+
+\textbf{Example 3.6} If \textbf{\textit{M}}$_{\textbf{1}}=\begin{pmatrix}
+    a \ b \\ c \ d
+\end{pmatrix}$ and \textbf{\textit{M}}$_{\textbf{2}}=\begin{pmatrix}
+    e \ f \\ g \ h
+\end{pmatrix}$, find \textit{\textbf{M}}=$\textit{\textbf{M}}_{\textbf{1}}\otimes\textit{\textbf{M}}_{\textbf{2}}$.
+
+\begin{align} \label{eq 3.34}
+    \begin{split}
+        \textit{\textbf{M}} &= \begin{pmatrix}
+            a \ b \\ c \ d
+        \end{pmatrix}\otimes
+        \begin{pmatrix}
+            e\ f\\ g\ h
+        \end{pmatrix},\\
+        &=\begin{pmatrix}
+            a \ \begin{pmatrix}
+                e\ f\\ g\ h
+            \end{pmatrix} \ b \begin{pmatrix}
+                e\ f\\g\ h
+            \end{pmatrix}\\
+            \ \\
+            c \ \begin{pmatrix}
+                e\ f\\ g\ h
+            \end{pmatrix} \ d \begin{pmatrix}
+                e\ f\\g\ h
+            \end{pmatrix}
+        \end{pmatrix},\\
+        &= \begin{pmatrix}
+            ae\ af\ be\ bf\\
+            ag\ ah\ bg\ bh\\
+            ce\ cf\ de\ df\\
+            cg\ ch\ dg\ dh
+        \end{pmatrix}.
+    \end{split} \tag{3.34}
+\end{align}
+\hfill $\blacksquare$
+\\
+\textbf{\large 3.6 Summary}\\
+\\
+In this chapter, we have reviewed some fundamental concepts of matrix. A Hermitian matrix
+has real eigenvalues. Therefore, all measurements must be corresponding to a Hermitian
+matrix. However, it is emphasized that the Hermitian matrix is not an operator that results in a 
+measurement and its eigenvalues are the xperimenatlly measured values.
+A unitary matrix preserves the inner products of vectors and preserves the vector norms. Therefore,
+the transformation matrix for basis changign must be unitary. We also learn how to create the
+operators of a combined system using a tensor porduct of the oprators in the subsystems.
+Now, we have reviewed most of the essential basic linear algebra and we can start studying the physics
+of quantum computers, namely, the Schr\"{o}dinger equation in the nex chapter.
+
+\textbf{\large Problems}\\\\
+\textbf{3.1 Dual Correspondesnce}
+
+Prove Eq. (3.6) by using Eq. (2.6)\\\\
+\textbf{3.2 Adjoint Martix}
+
+find the adjoint matrix of $\begin{pmatrix}
+    i\ 1\\0\ i
+\end{pmatrix}$. Is it Hermitian? Is it unitary?\\
+\\
+\textbf{3.3 Transformation}
+
+How is a general vector $\ket{\psi}=\begin{pmatrix}
+    \alpha \\ \beta
+\end{pmatrix}$ transformed in the example in Fig. 2.2?\\\\
+\textbf{3.4 Tensor Product}
+
+Transfrom $\ket{0}_1\otimes\ket{0}_2$ using the matrices in Eq. (\ref{eq 3.34}). Firstly,
+transform each qubit individually in its own space and then find the combined vector using a tensor
+product. Secondly, transform $\ket{0}_1\otimes\ket{0}_2$ in the combined space using the corresponding
+matrix in the combined space. Show that both methods give the same result.\\\\
+\textbf{3.5 Diagonal Matrix}
+
+
+Show that this is a diagoanl matrix by performing approproated substitutions:
+\textit{\textbf{A}}=$\ket{0}\bra{0}\lambda_0+\ket{1}\bra{1}\lambda_1$. See also Eq. (\ref{eq 3.31}).
+\\\\
+\textbf{\large Reference}
+
+
+1. Hiu-Yang Wong. \textit{Introduction to Quantum Computing}. Springer, 2024.
+
+\end{document}
