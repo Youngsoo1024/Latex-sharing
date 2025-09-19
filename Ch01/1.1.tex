@@ -1,0 +1,132 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb,braket,url,hyperref,booktabs,graphicx}
+\usepackage[style=nature]{biblatex}
+\addbibresource{12_ref.bib}
+\newcommand{\bfit}[1]{\textit{\textbf{#1}}}
+\begin{document}
+\medskip
+\noindent
+\begin{document}
+
+
+Chapter 1
+Quantum Computer Hardware and Architecture - An Overview
+
+1.1 Introduction
+In this chapter, we will have an overview of a quantum computer from an engineer’s perspective. We will first look at the basic operations of a quantum computer, namely, qubit initialization, qubit manipulation, and qubit readout. We then introduce and discuss DiVincenzo’s criteria which set the minimal requirement for a technology to build a quantum  computer. Then we will use a superconducting qubit quantum computer as an example to trace the propagation, attenuation, modification, and amplification of the microwave signals to gain a deeper understanding of the operation principles of quantum computer and the critical role of classical and microwave electrons in a quantum computer. We will also discuss the scaling of a quantum computer.
+
+1.1 Learning outcomes
+
+Understand the basic operations of a quantum computer; be able to describe the role of classical electronics in a quantum computer; appreciate the challenges in achieving a highly scaled quantum computer.
+
+1.1.2 Teaching Videos
+search for Ch1 in the playlist
+http://tinyurl.com/3yhze3jn
+Other videos
+http://youtu.be/M93Qtu3J-5M
+
+
+1.2 Quantum computer as a classical electronics-controlled wavefunction
+
+A quantum computer is nothing but a quantum bit (qubit) wavefunction, such as the spin of an electron, the electronic state of an ion, and the excess number of Copper pairs in a superconducting qubit, is passive. Without interacting with the external environment, it is a “boring” passive wavefunction. A quantum computing process is also nothing but the modification of the wavefunction through an appropriate Hamiltonian. We will discuss Hamiltonian in future chapters (e.g., Chap. 4). Hamiltonian is the total energy of the system which governs the evolution (change) of the wavefunction. An appropriate Hamiltonian is created by applying a suitable laser pulse or microwave pulse with the right frequency, right shape, right amplitude, and right phase at the right time for a right duration. The pulses are generated in classical electronics and it is not surprising that microwave engineering, laser optics, and signal processing play a key role in a quantum computer. Since the pulses need to be short and fast, high-speed digital circuits (such as application-specific integrated circuits (ASICs) and field programmable gate arrays (FPGAs)) and efficient classical programming and data processing are crucial in a quantum computer.
+At the time of writing, a quantum computer is just a well-organized physics laboratory.
+Figure 1.1 shows that there are three critical interactions between the classical electronics and the qubit wavefunctions (QBn-1, •••, QBo), namely, qubit initialization, qubit manipulation, and qubit readout. These are all performed by sending an appropriate pulse to the qubit from the classical electronics.
+Qubit initialization is a process to initialize the qubit to a particular state which is usually the ground state, |0>. Most quantum computing algorithm starts with all qubits initialized to |0> [1, 2). Moreover, in algorithms with error corrections, a steady supply of initialized qubits is required. There are two ways to initialize a qubit to 0). One is through thermalization. In this process, we let the qubit wait for a long enough time so that it will decay to the ground state by losing energy to its environment. This is typically a long process. The second approach is to measure the qubit and a pulse is applied to reset the qubit to the ground state if it is not at the initialization with more details in Chaps. 11 and 22.
+ground state (i.e., |1> → |0>). This is called the active reset. We will discuss qubit Qubit manipulation is equivalent to applying a quantum gate to the qubit. As mentioned, pulses with the appropriate frequency, shape, amplitude, phase, and
+duration are sent to interact with the qubit so that the qubit wavefunction will change. If the pulse only interacts with a single qubit, it is a 1-qubit gate. If the pulse causes two qubits to interact with each other, it is a 2-qubit gate. Any quantum gate can be decomposed or approximated by a set of 1-qubit and 2-qubit gates (which is called a set of universal quantum gates). This is just like the fact that any classical logic may be implemented by NOT and AND gates. It is possible to have gates for 3 or more qubits. However, they are more difficult to implement and have lower fidelity.
+Qubit readout refers to measuring all or some of the qubits. The readout is essential in quantum computing as it is used to measure the final result. In some algorithms, intermediate results need to be measured to determine the next step (e.g. in quantum teleportation, see Chapter 19 in [1]). It is also used to measure ancillary qubits for error correction in the middle of the algorithm. Due to the nature of quantum mechanics, upon measurement, a qubit wavefunction will collapse to the measurement basis states (|0) or |1)). This is achieved by applying a pulse to the qubit and observing the change of the reflected pulse which is modulated by the state of the qubit (|0) or /1)) in some architectures (such as superconducting qubit). In the silicon electron spin qubit case, the spin state is mapped to a charge state, and the charge state is detected by electronics.
+
+1.3 DiVincenzo’s Criteria
+
+In this 2000 paper [3], DiVincenzo suggested that any architecture needed to have the following five criteria to make a useful quantum computer:
+
+The ability to initialize the state of the qubits to a simple fiducial state.
+2. A "universal" set of quantum gates
+3. A qubit-specific measurement capability
+4. A scalable physical system with well-characterized qubit
+5. Long relevant decoherence times
+
+Items 1-3 have been discussed in Sect. 1.2. Item I refers to qubit initialization, Initialization needs to have a high fidelity (which is not trivial) and also needs to be fast as mentioned earlier. Item 2 requests the architecture to have a set of universal
+1-qubit and 2-qubit gates that can be used to build up (or at least approximate) any quantum circuits. Item 3 requires that one can selectively measure any particular qubits without affecting others. This is required in many circuits such as quantum teleportation and Shor's algorithm [1].
+Item 4 refers to the fact that the qubit must be a well-distinguished two-level system. It should only have states |0〉 and |1〉 and they need to be well-separated.
+This is not trivial for some systems. For example, a superconducting qubit can have states |0〉, |1〉, |2〉, |3〉, ... (Fig. 1.1). If the energy separation between |0〉 and |1〉, E1 - Eo, is too close to the energy separation between  |1〉 and  |2〉, E2 - E1, i.e., E2 - E1 ~ E1 - Eo, the qubit state can leave the |0〉 / |1〉 Hilbert space easily, resulting in a failure in the computation. We will discuss this in detail in Sect. 19.2.
+|0〉 and |1〉 need to be well-separated because of two reasons. Firstly, there are thermal and quantum noises. When there is noise, they cannot be distinguished well unless their energy separation is well above the noise level. When the noise level is large, the qubit can transit from one state to another due to the noise. The noise will also distort the measurement signal making the state indistinguishable [4]. The second reason is due to the so-called line-width broadening. The energy of each level is not sharp. It has a certain spread due to the uncertainty principle and its interaction with the environment. Therefore, even if there is no noise, the two levels need to be well separated.
+Thermal noise is proportional to kT/q, where k is the Boltzmann constant, I is the temperature, and q is the elementary charge. Figure 1.2 shows the thermal energy as a function of temperature in kelvin (K). The qubit bit energy separation (E1 - Eo) of a typical superconducting qubit is about 0.02 me V which is equivalent
+to the thermal noise at 0.23 K = 230 mK. Therefore, to operate a superconducting
+quantum computer, a dilution refrigerator is needed in which the temperature is maintained at about 10 to 20 mK, corresponding to a thermal energy of about 10-20 times lower than the qubit energy separation.
+Therefore, besides those mentioned in Sect. 1.2, cryogenic technologies and electronics are critical players in quantum computers.
+Item 5 is about the decoherence time which is a measure of duration a qubit can maintain its state without intentional interaction (such as the initialization, manipulation, and readout in Fig. 1.1). A qubit may lose its information by interacting with the environment. There are two types of decoherence time. The first type is called the T1-décoherence time or the longitudinal decoherence time. It is a time constant of how fast an excited state, |1), will decay to a ground state, 10). The second type is called the T2-decoherence time or the transverse decoherence time.
+It is a time constant of how fast a quantum superposition of (0) and 1) decays to a classical mixture of |0) and |1). In this process, the state loses its phase information too and thus it is also called the dephasing time. This will be discussed in detail in Chap. 25.
+Item 5 tells us that the qubit needs to have a long decoherence time so that it can perform enough computation (many applications of quantum gates) before it loses its information. Since decoherence is related to noise, we again want to put the qubit at a cryogenic temperature to avoid the thermal noise.
+There is a dilemma in DiVincenzo's Criteria. To have a long decoherence time, qubits should be well-isolated from the environment. A qubit that does not have a strong interaction mechanism with the environment usually is well-isolated.
+However, qubit control requires that the qubit can be coupled to the environment (the control) easily. Usually, these two cannot be achieved at the same time. Therefore, a quantum computer architecture that has a long decoherence time usually has a long gate time (as coupling to the control is weaker). Moreover, we also require dissipative coupling to the environment for initialization if active reset is not preferred.
+
+1.4 Tracing the Signal: A Superconducting Qubit Quantum Computer Example
+
+It would be instructive to look deeper into a quantum computer by tracing how the signals propagate. Here I will choose a superconducting qubit quantum computer which I have worked on. Figure 1.3 shows the schematic of a typical
+superconducting qubit quantum computer. Every part is classical except the qubit and the traveling wave parametric amplifier (TWPA) at 10 mK are quantum.
+On the top at room temperature, a high-performance server in conjunction with high-speed electronics such as FPGAs is used to generate signals, analyze data, and make decisions. It controls equipment such as an arbitrary waveform generator (AWG) to generate appropriate pulses (with the right phase, shape, duration, amplitude, and frequency) for qubit initialization, manipulation, and readout. The signal will be up-converted to microwave frequency in the GHz regime through a mixer and a local oscillator (LO) which is required to interact with the qubit as the superconducting qubit operates in the GHz domain (e.g., a qubit energy of 0.02 meV corresponds to about a 5 GHz microwave photon).
+The pulses will be generated with a large enough amplitude and go through a chain of attenuators from room temperature to about 10 mK. Note that the manipulation/reset pulses usually have a different frequency (so a different LO is used) than that of the readout pulse. The attenuators are required to attenuate the thermal noise from room temperature so that the thermal noise becomes negligible when it reaches the qubit. At that stage, the thermal noise is smaller than the quantum noise. Quantum noise is a result of the Heisenberg's Uncertainty Principle and cannot be avoided which poses a fundamental limit.
+The pulse does not interact with the qubit directly. It often interacts with the qubit through capacitive or inductive coupling. If it is a manipulation pulse (i.e., a quantum gate) or initialization pulse for active reset, the process is completed.
+
+However, if it is a readout pulse (i.e., a measurement pulse), the reflected or transmitted signal will be detected. In some quantum computers, the readout and manipulation/reset are coupled to the qubit through different paths. Usually, the readout pulse is passed through a resonator capacitively coupled to the qubit. The resonant frequency of the resonator will change depending on the state of the qubit ( 10) or (1)), and thus the reflected/transmitted pulse is changed accordingly.
+When the readout pulse is reflected or transmitted, the signal is very weak and cannot be detected by classical electronics. Therefore, amplification is required.
+However, every amplifier has a certain noise factor which will be discussed in Chap. 23. When an amplifier amplifies the signal, it also amplifies the noise and thus the signal-to-noise ratio, S/N ratio, will not be improved. Indeed, it also adds additional noise to the amplified signal due to the noise sources in the amplifier, and thus further degrades the S/N ratio depending on its noise factor. Based on microwave theory [5], to minimize the overall noise factor, it is desirable to have an amplifier with the lowest noise factor at the beginning of the amplification chain. Therefore, a TWPA is added at the beginning. This is a type of quantum parametric amplifier [6] and has the minimal possible noise factor. The gain of a TWPA is usually low. Therefore, further amplifications are required. Finally, the signal is downconverted to a lower frequency using a mixer and an LO for signal processing to distinguish |0) and |1) states in classical computers and electronics.
+I would also highlight two important aspects related to electrical engineering in this system. Firstly, a high-electron-mobility transistor (HEMT) amplifier is commonly used in quantum computers to amplify readout signals. This is because it has a low noise factor. Secondly, superconducting qubits are usually fabricated through integrated circuit (IC) technologies. The knowledge in IC can be applied readily to superconducting qubit design except that microwave analysis is required and it is built on materials usually not used in a traditional silicon IC chip. It is also worth noting that a superconducting qubit chip has most of the area occupied by classical microwave components such as capacitors, inductors, transmission lines, and resonators. Readers can see a design example in Chap. 24.
+
+1.4.1 Scaling of Quantum Computers
+
+After understanding what a quantum computer looks like, it is natural to see that the scaling of a quantum computer is not trivial. How can we increase the number of qubits to realize a powerful quantum computer? There are three issues.
+Firstly, too many transmission lines need to be wired from room temperature to cryogenic temperature to control each qubit. While multiplexing is possible, this will eventually post a bottleneck to the throughput and speed. Throughput refers to the amount of signal that can be processed per unit amount of time. This requires us to miniaturize the classical control electronics and place them in the proximity of the qubits and, thus, need to be cooled down to cryogenic temperature.
+
+Secondly, even if we can miniaturize the control electronics, a typical dilution refrigerator can only have a cooling power of less than 1 mW [7]. A typical classical CPU has a power of 100 W. It is thus almost impossible to put all control electronics in mK-regime. But it is still desirable to bring the electronics as close to the qubit as possible (to increase the throughput) and as cold as possible (to reduce thermal noise). Therefore, cryogenic electronics at 4.2 K (boiling point of liquid He) has been widely studied [8).
+Finally, due to decoherence, error-protected qubits are required. In theory, it requires about 100-1000 physical qubits to create an error-protected qubit. This increases the scaling requirement by 100-1000 times to have a useful quantum computer.
+
+1.5 Summary
+
+In this chapter, we give an overview of the operations of a typical quantum computer. A quantum computer has three basic operations, namely, initialization, manipulation, and readout. Any architecture needs to fulfill DiVincenzo's criteria to be a useful quantum computer. Besides being able to perform basic operations, the qubits need to have well-separated levels and long decoherence time. We then use the superconducting qubit as an example to demonstrate the basic operations and constraints of a quantum computer. At the moment of writing, a quantum computer is still just a well-organized sophisticated physics laboratory. To build a quantum computer with many qubits and with error correction is not trivial. This requires a lot of engineering work and engineers are expected to play an important role. In the following chapters, we will review the basics of quantum computing and physics.
+We will then study the details of how spin qubits and superconducting qubits fulfill
+DiVincenzo's criteria.
+
+Problems
+1.1 Thermal Noise
+
+If we want to operate a superconducting qubit at room temperature, what should be the energy separation between 10) and |1) (i.e., qubit energy) if we want it to be at least 10 times the thermal noise. What is the corresponding frequency? Is this feasible? If you do not know the equations, you can refer to Fig. 1.2 and the discussion in Sect. 1.3. Note that noise energy is proportional to temperature and qubit energy is proportional to the qubit frequency.
+
+References
+1. Hiu-Yung Wong. Introduction to Quantum Computing. Springer, 2024.
+2. M. A. Nielsen and I. L. Chuang. Quantum Computation and Quantum Information: 10th Anniversary Edition. Cambridge University Press, 2011.
+3. David P. DiVincenzo. The physical implementation of quantum computation. Fortschritte der Physik, 48(9-11):771-783, 2000.
+4. Hiu Yung Wong, Prabjot Dhillon, Kristin M. Beck, and Yaniv J. Rosen. A simulation methodology for superconducting qubit readout fidelity. Solid-State Electronics, 201:108582, 2023.
+5. Behzad Razavi. RF Microelectronics. Pearson, 2011.
+6. C. Macklin, K. O'Brien, D. Hover, M. E. Schwartz, V. Bolkhovsky, X. Zhang, W. D. Oliver, and I. Siddiqi. A near-quantum-limited josephson traveling-wave parametric amplifier. Science,
+350(6258):307-310, 2015.
+7. H. Zu, W. Dai, and A.T.A.M. de Waele. Development of dilution refrigerators-a review.
+Cryogenics, 121:103390, 2022.
+8. Tom Jiao, Edwin Antunez, and Hiu Yung Wong. Study of cryogenic mosfet sub-threshold swing using ab initio calculation. IEEE Electron Device Letters, 44(10):1604-1607, 2023.
+
+
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

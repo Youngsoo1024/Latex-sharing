@@ -1,0 +1,127 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb,braket,url,hyperref,booktabs,graphicx}
+\usepackage[style=nature]{biblatex}
+\addbibresource{12_ref.bib}
+\newcommand{\bfit}[1]{\textit{\textbf{#1}}}
+\begin{document}
+\medskip
+\noindent
+\begin{document}
+Chapter 2
+Linear Algebra-Vectors, States, and Measurement
+
+2.1 Introduction
+
+In this and the next few chapters, we will review linear algebra basics. In this chapter, we will review the definitions of vector space, inner product space, and Hilbert space. Although it is not necessary to understand them thoroughly if you feel comfortable with using the equations and mathematical tools given, it is still very instructive if you want to have a basic idea of the foundation of quantum computing and quantum physics. We will also practice bra-ket notation and their representations in row and column vectors. We will study how to represent a vector in different bases. Then, we will discuss the effect of measurement in quantum mechanics and the importance of orthonormal basis and normalized vectors. Finally, we will review how to combine two spaces (of two physical systems) into a larger one using the tensor product.
+
+2.1.1 Learning Outcomes
+Know how to represent vectors in different bases; be more familiar with bra-ket operations; able to perform tensor products.
+
+2.1.2 Teaching Videos
+• Search for Ch2 in this playlist
+- https://tinyurl.com/3yhze3jn
+- Other videos
+- https://youtu.be/Xireluiir9Y
+- https://youtu.be/cEpjouPIuQY
+- https://youtu.be/Wrmigi645J4
+
+2.2 Vector Space, Inner Product, and Hilbert Space
+A vector space (or linear space), in general, has a set of vectors, (u, v, w, •••), and a set of scalars, (a, b,c,•••}. There is an addition operation, +, for the vectors,
+resulting in another vector in the space (e.g., w = u+v ). The vector can be scaled
+by the scalars (e.g., av). They need to obey the following vector axioms
+
+We will not discuss the details and interested readers can refer to standard textbooks or Wikipedia [2]. However, we will emphasize a few things. - v refers to the requirement that an inverse vector must exist for v. Therefore —v is just - v.
+Moreover, there exists a zero vector O and there should be a multiplicative identity, 1, in the scalar set.
+If the scalars are only real numbers, then the space is called a real vector space. If they include complex numbers, the corresponding space is called a complex vector
+space.
+We can further require that a certain vector space has an operation called the inner product defined for its vectors. Then it is called an inner product space. The inner product between two vectors u and v is written as <u|v> which is a scalar.
+Before we continue to study the properties of inner products, let us discuss how our 3D space behaves as an inner product space.
+
+Example 2.1 Euclidean vector space is an inner product space. The 3D space we live in is a Euclidean vector space. Discuss how it fulfills the definition of an inner product space.
+
+For any position vectors in the space, v⃗ and w⃗, we already know from our daily experience that they obey Eq. (2.1) with real number scales. So it is a vector space.
+We can set x̂, ŷ and ẑ as its basis vectors (see Chapter 3 in [1]) and they are orthonormal (to be discussed in Sect. 2.3.4) Then for any position vectors in the space, v⃗ and w⃗, they can be written as a linear combination of the basis vectors,
+
+Where the second equation just tells us that any vector has a zero or positive length.
+Now, we formally define a general Euclidean vector space as a finite inner product space with real scalars. A finite inner product space means that the number of basis vectors (e.g., 3 in our 3D real space) is finite instead of infinite.
+Based on our experience with the real 3D Euclidean vector space, we can generalize the criteria of the inner product in Eq. (2.5) to any inner product space with complex scalars and with an arbitrary number of dimensions. For simplicity, we will remove the arrow in the vector notation now. Since ⟨u⃗|v⃗⟩ = u⃗∙v⃗  can be a complex number, the definition of an inner product is an operation that obeys the following rules:
+which is just the norm or the length of their difference.
+I introduce norm and distance because I would like to give a more formal definition of Hilbert Space. A Hilbert space is a real or complex inner product space that is complete with respect to its distance. The definition of “completeness” here is different from the completeness of basis vector (e.g., Section 10.4 in [1]). It is pretty involving mathematically. We can approximately explain it as the following. There is something called the Cauchy sequence. This sequence has its elements eventually become arbitrarily close to the next one (converged). For an inner product space, we can create many Cauchy sequences of its vectors. Each Cauchy sequence will converge to a vector (in other words, its distance to other elements will converge to 0). If the converged vector is also a vector in the inner product space, i.e., the inner product space contains that converged vector, then it is said to be complete. Since we measure the convergence using distance, it is said to be complete with respect to its distance.
+Note that any finite-dimensional inner product space is complete. Therefore, a Euclidean vector space is a Hilbert space because it is complete.
+Figure 2.1 summarizes the properties of the space discussed.
+
+
+
+
+
+
+
+
+Fig. 2.1 summary of the properties of various spaces discussed in this section
+
+2.3 Review of Vector Basics
+
+Here we will succinctly list the basic concepts in linear algebra that are relevant to quantum computing. For a more detailed discussion, please see [1].
+
+2.3.1 Basis Vectors/States, Bra-ket Notation, and Representation of Vectors/States
+
+A state in a quantum system is represented by a vector. In other words, every vector in a Hilbert space is also a state. We may choose some vectors to be the basis vectors and every vector in the space can be represented as a linear combination of the basis vectors. For example, in real 3D space, a vector v⃗ can be expressed as the combination of the unit vectors (as basis vectors), x̂, ŷ, and ẑ, as
+
+			(2.9)
+
+where v1, v2, and v3 are scalars,
+To write a vector, besides putting an arrow on top of the variable (e.g., ),
+
+ 		(2.10)
+
+We may also use the bra-ket notation in which the variable is written in a ket,
+
+		(2.11)
+
+It should be noted that anything inside the kettle is just a name. As long as it is not ambiguous, we may write anything that is convenient. For example, if  is the vector for a photon polarization state, and  and  are the horizontal and vertical polarization states of a photon, respectively, we may write Eq. (2.11) as, 
+
+
+(2.12)
+
+If a different basis vector set is chosen, the representation will be different. For example, in Fig.2.2,  can be expressed as a linear combination of the basis vectors in one of the two bases, .
+
+		(2.13)
+
+
+Fig.2.2 Vector  can be represented in two different bases, 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		(2.14)
+
+
+It should be noted that it has different column vectors in different bases. This is because each row represents the amount of basis vector, indicated after the right arrows, the vector contains. Also, we have used the bra-ket notation. It should be emphasized that while we label the basis vectors as  in a qubit space, even thought they are related through the same equations.
+
+Example 2.2. Change of Basis: Derive Eq. (2.14) from Eq. (2.13).
+Here we assume that we already know that  and . We could have derived them using trigonometry in Fig. 2.2 but we assume the readers know how to do it. Then,
+		(2.15)
+
+In Sect. 3.3.5m we will give a transformation matrix to facilitate basis transformation and discuss its properties.
+
+\end{document}
+
+
