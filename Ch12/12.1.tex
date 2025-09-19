@@ -109,5 +109,203 @@ where $\phi$ is the phase. We will discuss how to implement it soon. We will fir
 We have learned that we can use $C N O T$ gate, $\boldsymbol{U_{XOR}}$ to make two qubits entangled (Section 15.4 in \cite{WongHuiYong} and Sect.4.6). This is
 realized with the help of a Hadamard gate, \bfit{H}. This circuit is shown in Fig. 12.2.
 
+The circuit implement the following operations:
+\begin{align*}\label{eq 12.2}
+  \boldsymbol{U_{XOR}}(\ket{0}\otimes\ket{0})&=\boldsymbol{U_{XOR}}(\frac{1}{\sqrt{2}}(\ket{0}+\ket{1})\otimes\ket{0}).\\
+  &=\boldsymbol{U_{XOR}}\frac{1}{\sqrt{2}}(\ket{00}+\ket{10}),\\
+  &=\frac{1}{\sqrt{2}}(\ket{00}+\ket{11}),\tag{12.2}
+\end{align*}
+where we used the difinitions of $\boldsymbol{H}$ and $\boldsymbol{U_{XOR}}$ in line 1 and line 3, respectively.
+We can use \textbf{controlled phase shift gate} with a phase shift of $\pi$ ($\boldsymbol{U_{CPS,\pi}}$) (see Section 16.4
+in \cite{WongHuiYong}) to implement the $\boldsymbol{U_{XOR}}$ gate \textit{by combining it with other 1-qubit gates}.
+\\\\
+\textbf{Example 12.1} Show that $\boldsymbol{U_{XOR}}=(\boldsymbol{I}\otimes\boldsymbol{H})\boldsymbol{U_{CPS,\pi}}(\boldsymbol{I}\otimes\boldsymbol{H})$.
 
+Firstly the matrix form of $\boldsymbol{U_{XOR}}$ is
+\begin{equation}\label{eq 12.3}
+  \boldsymbol{U_{XOR}}=\begin{pmatrix}
+    1\ 0\ 0\ 0\\ 0\ 1\ 0\ 0\\ 0\ 0\ 0\ 1\\ 0\ 0\ 1\ 0
+  \end{pmatrix}\tag{12.3}
+\end{equation}
+\\
+
+\includegraphics[scale=0.4]{Fig.12.2.jpeg}\\
+\textbf{Fig.12.2} An entanglement circuit implemented  using a $\boldsymbol{U_{XOR}}$ gate and an $\boldsymbol{H}$ gate.
+Note that the least significant bit (LSB) and the most significant bit (MSB) are on the top and bottom, respectively
+\\\\
+and the matrix form of $\boldsymbol{U_{CPS,\pi}}$ is
+\begin{align*}\label{eq 12.4}
+  \boldsymbol{U_{CPS,\pi}}&=\begin{pmatrix}
+    1&0&0&0\\0&1&0&0\\0&0&1&0\\0&0&0&e^{i\pi}
+  \end{pmatrix},\\
+  &= \begin{pmatrix}
+    1&0&0&0\\0&1&0&0\\0&0&1&0\\0&0&0&-1
+  \end{pmatrix},\tag{12.4}
+\end{align*}
+as $e^{i\pi}=\cos\pi+i\sin\pi=-1$. Therefore,
+\begin{align*}\label{eq 12.5}
+  &(\boldsymbol{I}\otimes\boldsymbol{H})\boldsymbol{U_{CPS,\pi}}(\boldsymbol{I}\otimes\boldsymbol{H})\\[5pt]
+  &=\begin{pmatrix}
+    1\ 0\\ 0\ 1
+  \end{pmatrix}\otimes\frac{1}{\sqrt{2}}
+  \begin{pmatrix}
+    1&1\\1&-1
+  \end{pmatrix}\boldsymbol{U_{CPS,\pi}}
+  \begin{pmatrix}
+    1\ 0\\ 0\ 1
+  \end{pmatrix}\otimes\frac{1}{\sqrt{2}}
+  \begin{pmatrix}
+    1&1\\1&-1
+  \end{pmatrix},\\[5pt]
+  &=\frac{1}{\sqrt{2}}\begin{pmatrix}
+    1&1&0&0\\1&-1&0&0\\0&0&1&1\\0&0&1&-1
+  \end{pmatrix}
+  \begin{pmatrix}
+    1&0&0&0\\0&1&0&0\\0&0&1&0\\0&0&0&-1
+  \end{pmatrix}
+  \frac{1}{\sqrt{2}}
+  \begin{pmatrix}
+    1&1&0&0\\1&-1&0&0\\0&0&1&1\\0&0&1&-1
+  \end{pmatrix},\\[5pt]
+  &=\frac{1}{2}\begin{pmatrix}
+    1&1&0&0\\1&-1&0&0\\0&0&1&1\\0&0&1&-1
+  \end{pmatrix}
+  \begin{pmatrix}
+    1&1&0&0\\1&-1&0&0\\0&0&1&1\\0&0&1&-1
+  \end{pmatrix},\\[5pt]
+  &=\frac{1}{2}\begin{pmatrix}
+    2\ 0\ 0\ 0\\ 0\ 2\ 0\ 0\\0\ 0\ 0\ 2\\ 0\ 0\ 2\ 0
+  \end{pmatrix},\\[5pt]
+  &=\begin{pmatrix}
+    1\ 0\ 0\ 0\\ 0\ 1\ 0\ 0\\0\ 0\ 0\ 1\\ 0\ 0\ 1\ 0
+  \end{pmatrix},\\[5pt]
+  &=\boldsymbol{U_{XOR}}. \tag{12.5}
+\end{align*}
+
+Now, we will show that we can implemenet $\boldsymbol{U_{CPS,\pi}}$ using $\boldsymbol{U_{Cphase}}$
+and \textit{other 1-qubit gates}.
+\\\\
+\textbf{Example 12.2} Show that $\boldsymbol{U_{CPS,\pi}}=\boldsymbol{U_{Cphase}}(\boldsymbol{I}\otimes\boldsymbol{U_{PS,-\phi}})
+(\boldsymbol{U_{PS,\phi-\pi}}\otimes\boldsymbol{I})$.
+
+Recall that the matrix form of the pahse shift gate, $\boldsymbol{U_{PS,\phi}}$, is
+\begin{equation}\label{eq 12.6}
+  \begin{pmatrix}
+    1&0\\0&e^{i\phi}
+  \end{pmatrix}.\tag{12.6}
+\end{equation}
+
+Therefore,
+\begin{equation}\label{eq 12.7}
+  \boldsymbol{I}\otimes\boldsymbol{U_{PS,-\phi}}=\begin{pmatrix}
+    1\ 0\\ 0\ 1
+  \end{pmatrix}\otimes
+  \begin{pmatrix}
+    1&0\\0&e^{-i\phi}
+  \end{pmatrix}=
+  \begin{pmatrix}
+    1&0&0&0\\0&e^{-i\phi}&0&0\\0&0&1&0\\0&0&0&e^{-i\phi}
+  \end{pmatrix},\tag{12.7}
+\end{equation}
+and
+\begin{equation}\label{eq 12.8}
+  (\boldsymbol{U_{PS,\phi-\pi}}\otimes\boldsymbol{I})=
+  \begin{pmatrix}
+    1&0\\0&e^{i(\phi-\pi)}
+  \end{pmatrix}\otimes
+  \begin{pmatrix}
+    1\ 0\\ 0\ 1
+  \end{pmatrix}=
+  \begin{pmatrix}
+    1&0&0&0\\0&1&0&0\\0&0&e^{i(\phi-\pi)}&0\\0&0&0&e^{i(\phi-\pi)}
+  \end{pmatrix}.\tag{12.8}
+\end{equation}
+
+Using Eqs.(\ref{eq 12.1}),(\ref{eq 12.7}), and (\ref{eq 12.8}), we have
+\begin{align*}\label{eq 12.9}
+ & \boldsymbol{U_{Cphase}}(\boldsymbol{I}\otimes\boldsymbol{U_{PS,-\phi}})
+(\boldsymbol{U_{PS,\phi-\pi}}\otimes\boldsymbol{I})\\[5pt]
+&=\begin{pmatrix}
+  1&0&0&0\\0&e^{i\phi}&0&0\\0&0&e^{i(\pi-\phi)}&0\\0&0&0&1
+\end{pmatrix}
+\begin{pmatrix}
+  1&0&0&0\\0&e^{-i\phi}&0&0\\0&0&1&0\\0&0&0&e^{-i\phi}
+\end{pmatrix}
+\begin{pmatrix}
+  1&0&0&0\\0&1&0&0\\0&0&e^{i(\phi-\pi)}\\0&0&0&e^{i(\phi-\pi)}
+\end{pmatrix},\\[5pt]
+&=\begin{pmatrix}
+  1&0&0&0\\0&e^{i\phi}&0&0\\0&0&e^{i(\pi-\phi)}&0\\0&0&0&1
+\end{pmatrix}
+\begin{pmatrix}
+  1&0&0&0\\0&e^{-i\phi}&0&0\\0&0&e^{i(\phi-\pi)}&0\\0&0&0&e^{-i\pi}
+\end{pmatrix},\\[5pt]
+&=\begin{pmatrix}
+  1&0&0&0\\0&1&0&0\\0&0&1&0\\0&0&0&e^{-i\pi}
+\end{pmatrix},\\[5pt]
+&=\begin{pmatrix}
+  1&0&0&0\\0&1&0&0\\0&0&1&0\\0&0&0&e^{i\pi}
+\end{pmatrix}=
+\begin{pmatrix}
+  1&0&0&0\\0&1&0&0\\0&0&1&0\\0&0&0&-1
+\end{pmatrix},\\[5pt]
+&=\boldsymbol{U_{CPS,\pi}},\tag{12.9}
+\end{align*}
+
+\includegraphics[scale=0.45]{Fig.12.3.jpeg}\\
+\textbf{Fig.12.3} The equibalent circuit of Fig.12.2 implemented by 1-qubit gates and a $\boldsymbol{U_{Cphase}}$ gate
+\\[10pt]
+where at the end, we used the face that $e^{-i\pi}=e^{i\pi}$. \hfill $\blacksquare$
+
+Therefore, we have successfully impelmented a $\boldsymbol{U_{XOR}}$ gate for entanglement Creation
+using the native 2-qubit gate for electron spin. Figure 12.3 shows the full entanglement circuit using
+1-qubit gates and a $\boldsymbol{U_{Cphase}}$ gate.
+\\[30pt]
+\bfit{\large 12.3.2 Physical Impelementation of $\boldsymbol{U_{Cphase}}$ Gate}
+\\\\
+\textbf{12.3.2.1 Setup and Individual 1-Qubit Operations}\\\\
+We now will try to omplement the $\boldsymbol{U_{Cphase}}$ gate in Eq. (\ref{eq 12.1}). We will following
+the appropriate in \cite{meunier2011efficient} and \cite{veldhorst2015two}, however, with pretty significant
+modifications and simplifications. If there is only on thing that you can remember from this subsection, I hope 
+you can appreciate that fact that \textit{we need to use the physics of a system to realize an entanglement gate and we need to adjust the condition so
+that it can achieve the purpose most effectively}. The process of using the right physics and adjusting the conditions
+is called \textbf{Hamiltonian engineering}. Again, Hamiltonian refers to the total energy of the system. So the fancy
+word "Hamiltonian engineering" is nothing but setting up the system at the right energy at the right time to let it evolve
+in a desirable way.
+
+Figure 12.4 shows the schematic of two qubits on a silicon wafer. The barrier gate is not shown for
+clarity. Same as the 1-qubit example in Sect. 12.2, $T=50$ mK and $B_0=1.4T$ and highly purified Si is used 
+(with only 800 ppm of $^{29}Si$).
+
+Before working on a 2-qubit gate, we need to make sure we can perform 1-qubit operation on \textit{individual} qubit.
+To do so, we need to have different \textit{electron spin resonance frequency}, which is the Larmor frequency,
+$\omega_L$, for each qubit. Otherwise, we will be applying the same 1-qubit gate to both qubits at the same time.
+Equation (8.11) tells us that $\omega_L$ depends on $B_0$, the g-factor, $g$, and the effective mass of the electron, 
+$m^*$, which is repeated here for convenience.\\[6pt]
+
+\includegraphics[scale=0.45]{Fig.12.4.jpeg}
+\\
+\textbf{Fig.12.4} Schematic showing a 2-qubit system. The barrier gate is not used
+\\[10pt]
+\begin{equation}\label{eq 12.10}
+  \omega_L=\left|\frac{2ge\hbar}{4m^*}B_o\right|/\hbar. \tag{12.10}
+\end{equation}
+
+$B_0$ can be set to be different at each qubit by putting a micro-magent with a diffetent
+strength nex to each qubit. However, this is not very scalable when millions of qubits need to
+be integrated. Instead of using micro-magnet, with some engineering, it is also possible to create
+a non-constant DC magnetic field (but still constant and pointing in $-\hat{z}$ direction) from
+qubit to qubit. $m^*$ is likely to be the sam ebecause the crystal properties would not change
+much across the chip. Another approach is to change $g$ which can be affected by the electric field
+it experiences through \textbf{Stark effect} \cite{veldhorst2014addressable}. This is very convenient 
+because it means that we can just apply different plunger gate boltages (in combination with other electrodes)
+to achieve different plunger gate voltages (in combination with other electrodes) to achieve different
+$\omega_L$ for each qubit. We can then change the frequency of $I_{ESR}$ so that we can address individual qubits.
+This is called \textbf{spectral selectivity} as we are selecting qubits based on frequency.
+
+For example, qubit 1 might have $\omega_L=0.34MHz$ and qubit 1 might have $\omega_L=0.36MHz$.
+By setting $I_{ESR}$ to oscillate at $0.34MHz$, only qubit 1 will perform Rabi oscillation as it
+is at its spin resonance. Qubit 2 wil not as it is off-resonant.\\[15pt]
+\textbf{12.3.2.2 2-Qubit Physics}\\\\
+The physics and the mathematics of implementing the 2-qubit 
 \end{document}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  19 SEP 2025 08:21
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  19 SEP 2025 07:25
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -732,135 +732,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 132--137
 
 
 [4 <./Fig.12.2.jpeg>]
-Underfull \hbox (badness 10000) in paragraph at lines 185--190
 
- []
-
-
-pdfTeX warning (ext4): destination with the same identifier (name{equation.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.192 \begin{equation}
-                      \label{eq 12.6}
-pdfTeX warning (ext4): destination with the same identifier (name{equation.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.192 \begin{equation}
-                      \label{eq 12.6}
-pdfTeX warning (ext4): destination with the same identifier (name{equation.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.192 \begin{equation}
-                      \label{eq 12.6}
-pdfTeX warning (ext4): destination with the same identifier (name{equation.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.192 \begin{equation}
-                      \label{eq 12.6}
-pdfTeX warning (ext4): destination with the same identifier (name{equation.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.199 \begin{equation}
-                      \label{eq 12.7}
-pdfTeX warning (ext4): destination with the same identifier (name{equation.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.199 \begin{equation}
-                      \label{eq 12.7}
-pdfTeX warning (ext4): destination with the same identifier (name{equation.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.199 \begin{equation}
-                      \label{eq 12.7}
-pdfTeX warning (ext4): destination with the same identifier (name{equation.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.199 \begin{equation}
-                      \label{eq 12.7}
-pdfTeX warning (ext4): destination with the same identifier (name{equation.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.211 \begin{equation}
-                      \label{eq 12.8}
-pdfTeX warning (ext4): destination with the same identifier (name{equation.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.211 \begin{equation}
-                      \label{eq 12.8}
-pdfTeX warning (ext4): destination with the same identifier (name{equation.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.211 \begin{equation}
-                      \label{eq 12.8}
-pdfTeX warning (ext4): destination with the same identifier (name{equation.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.211 \begin{equation}
-                      \label{eq 12.8}
-
-[5]
-<Fig.12.3.jpeg, id=67, 685.6014pt x 299.9205pt>
-File: Fig.12.3.jpeg Graphic file (type jpg)
-<use Fig.12.3.jpeg>
-Package pdftex.def Info: Fig.12.3.jpeg  used on input line 255.
-(pdftex.def)             Requested size: 308.51778pt x 134.96297pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 260--275
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 260--275
-
- []
-
-
-
-[6 <./Fig.12.3.jpeg>]
-Underfull \hbox (badness 10000) in paragraph at lines 280--285
-
- []
-
-<Fig.12.4.jpeg, id=78, 644.4075pt x 320.8788pt>
-File: Fig.12.4.jpeg Graphic file (type jpg)
-<use Fig.12.4.jpeg>
-Package pdftex.def Info: Fig.12.4.jpeg  used on input line 286.
-(pdftex.def)             Requested size: 289.9807pt x 144.39412pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 286--290
-
- []
-
-
-pdfTeX warning (ext4): destination with the same identifier (name{equation.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.290 \begin{equation}
-                      \label{eq 12.10}
-pdfTeX warning (ext4): destination with the same identifier (name{equation.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.290 \begin{equation}
-                      \label{eq 12.10}
-pdfTeX warning (ext4): destination with the same identifier (name{equation.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.290 \begin{equation}
-                      \label{eq 12.10}
-pdfTeX warning (ext4): destination with the same identifier (name{equation.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.290 \begin{equation}
-                      \label{eq 12.10}
-
-[7 <./Fig.12.4.jpeg>]
-Underfull \hbox (badness 10000) in paragraph at lines 306--311
-
- []
-
-
-
-[8] (./12.1.aux)
+[5] (./12.1.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
@@ -872,16 +745,13 @@ Package logreq Info: Writing requests to '12.1.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 17256 strings out of 473190
- 299773 string characters out of 5715801
- 1149168 words of memory out of 5000000
- 40293 multiletter control sequences out of 15000+600000
- 572246 words of font info for 85 fonts, out of 8000000 for 9000
+ 17186 strings out of 473190
+ 298889 string characters out of 5715801
+ 1133009 words of memory out of 5000000
+ 40247 multiletter control sequences out of 15000+600000
+ 565139 words of font info for 59 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,14n,81p,750b,1173s stack positions out of 10000i,1000n,20000p,200000b,200000s
-
-pdfTeX warning (dest): name{cite.0@veldhorst2015two} has been referenced but does not exist, replaced by a fixed one
-
+ 75i,14n,81p,750b,1172s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 pdfTeX warning (dest): name{cite.0@meunier2011efficient} has been referenced but does not exist, replaced by a fixed one
 
@@ -891,11 +761,11 @@ pdfTeX warning (dest): name{cite.0@veldhorst2014addressable} has been referenced
 
 pdfTeX warning (dest): name{cite.0@WongHuiYong} has been referenced but does not exist, replaced by a fixed one
 
-</usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmbsy7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on 12.1.pdf (8 pages, 4018750 bytes).
+</usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on 12.1.pdf (5 pages, 1713921 bytes).
 PDF statistics:
- 174 PDF objects out of 1000 (max. 8388607)
- 122 compressed objects within 2 object streams
- 24 named destinations out of 1000 (max. 500000)
- 21 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 123 PDF objects out of 1000 (max. 8388607)
+ 85 compressed objects within 1 object stream
+ 15 named destinations out of 1000 (max. 500000)
+ 11 words of extra memory for PDF output out of 10000 (max. 10000000)
 

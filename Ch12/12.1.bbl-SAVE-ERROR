@@ -116,7 +116,6 @@
       \strng{authornamehash}{df4d618cdc521938e2a04e4dd90a4336}
       \strng{authorfullhash}{e9a94474348037c396915af0bff8d136}
       \strng{authorfullhashraw}{e9a94474348037c396915af0bff8d136}
-      \field{extraname}{1}
       \field{sortinit}{2}
       \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
@@ -169,85 +168,6 @@
       \field{year}{2011}
       \field{pages}{121403}
       \range{pages}{1}
-    \endentry
-    \entry{veldhorst2015two}{article}{}{}
-      \true{moreauthor}
-      \true{morelabelname}
-      \name{author}{10}{}{%
-        {{hash=2720e6f0bf9e177b77e69da800436e39}{%
-           family={Veldhorst},
-           familyi={V\bibinitperiod},
-           given={Menno},
-           giveni={M\bibinitperiod}}}%
-        {{hash=f4687e40a665d6a148ea4dd33ed9f687}{%
-           family={Yang},
-           familyi={Y\bibinitperiod},
-           given={CH},
-           giveni={C\bibinitperiod}}}%
-        {{hash=2b59a3e61f3cc863931e5a2ebf11b488}{%
-           family={Hwang},
-           familyi={H\bibinitperiod},
-           given={JCCea},
-           giveni={J\bibinitperiod}}}%
-        {{hash=369d6bcdceee817a8d812364032e7b23}{%
-           family={Huang},
-           familyi={H\bibinitperiod},
-           given={W},
-           giveni={W\bibinitperiod}}}%
-        {{hash=a07d88ad2c2bb26066520531b32b1d15}{%
-           family={Dehollain},
-           familyi={D\bibinitperiod},
-           given={JP},
-           giveni={J\bibinitperiod}}}%
-        {{hash=815de6141a40d8cc1ebcfc61263fe5bb}{%
-           family={Muhonen},
-           familyi={M\bibinitperiod},
-           given={JT},
-           giveni={J\bibinitperiod}}}%
-        {{hash=e2f2c7b31069c9fcb75931be4bacdf4a}{%
-           family={Simmons},
-           familyi={S\bibinitperiod},
-           given={S},
-           giveni={S\bibinitperiod}}}%
-        {{hash=ec350a165d9a433adc6b8ff65a9320c7}{%
-           family={Laucht},
-           familyi={L\bibinitperiod},
-           given={A},
-           giveni={A\bibinitperiod}}}%
-        {{hash=5c18da544f762e93c7ba7e64e8ae14a8}{%
-           family={Hudson},
-           familyi={H\bibinitperiod},
-           given={FE},
-           giveni={F\bibinitperiod}}}%
-        {{hash=1f785565010d391548938e89c822afd2}{%
-           family={Itoh},
-           familyi={I\bibinitperiod},
-           given={Kohei\bibnamedelima M},
-           giveni={K\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {Nature Publishing Group UK London}%
-      }
-      \strng{namehash}{d19e77d22f1dfa7821cb3558b59d0cfd}
-      \strng{fullhash}{b7ad0fa827367effc4188713bbf76de8}
-      \strng{fullhashraw}{b7ad0fa827367effc4188713bbf76de8}
-      \strng{bibnamehash}{d19e77d22f1dfa7821cb3558b59d0cfd}
-      \strng{authorbibnamehash}{d19e77d22f1dfa7821cb3558b59d0cfd}
-      \strng{authornamehash}{d19e77d22f1dfa7821cb3558b59d0cfd}
-      \strng{authorfullhash}{b7ad0fa827367effc4188713bbf76de8}
-      \strng{authorfullhashraw}{b7ad0fa827367effc4188713bbf76de8}
-      \field{extraname}{2}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{Nature}
-      \field{number}{7573}
-      \field{title}{A two-qubit logic gate in silicon}
-      \field{volume}{526}
-      \field{year}{2015}
-      \field{pages}{410\bibrangedash 414}
-      \range{pages}{5}
     \endentry
   \enddatalist
 \endrefsection
