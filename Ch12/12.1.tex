@@ -307,5 +307,127 @@ For example, qubit 1 might have $\omega_L=0.34MHz$ and qubit 1 might have $\omeg
 By setting $I_{ESR}$ to oscillate at $0.34MHz$, only qubit 1 will perform Rabi oscillation as it
 is at its spin resonance. Qubit 2 wil not as it is off-resonant.\\[15pt]
 \textbf{12.3.2.2 2-Qubit Physics}\\\\
-The physics and the mathematics of implementing the 2-qubit 
+The physics and the mathematics of implementing the 2-qubit $\boldsymbol{U_{Cphase}}$ gate is pretty 
+complicated and lenghty. We will not go thorough all the derivation here. We will only highlight the critical concpets so we 
+can appreciate what the enabler is.
+
+Figure 12.5 shows the corss section of the 2-qubit array. The gates are biased at different voltages.
+As a result, they have different $\omega_L$ as discussed earlier due to \textit{Stark effect}.\\[5pt]
+
+\includegraphics[scale=0.5]{Fig.12.5.jpeg}\\
+\textbf{Fig. 12.5} Cut plane in Fig. 12.4 and the corresponding electron potential energy along the quantum dot.
+$V_{G2}$ is more positive than $V_{G1}$\\[5pt]
+
+Since this is a 2-qubit system. it has four basis states. One of the choices of the basis state
+is $\ket{\uparrow\uparrow},\ket{\uparrow\downarrow},\ket{\downarrow\uparrow},$ and $\ket{\downarrow\downarrow}$.
+When we write them in $bra-ket$ notation, the first one refers to the electron in the left quantum
+dot and the second on refers to the electron in the right quantum dot. For each qubit, according to Eqs.(8.4) and (8.11),
+its Hamiltonian is,
+\begin{align*}\label{eq 12.11}
+  \boldsymbol{H_i}&=B_0\frac{\text{g}e\hbar}{4m}\begin{pmatrix}
+    1& 0\\ 0& -1
+  \end{pmatrix},\\
+  &=-\frac{\hbar\omega_{Li}}{2}\begin{pmatrix}
+    1&0\\0&-1
+  \end{pmatrix}\\
+  &= \begin{pmatrix}
+    -\frac{\hbar\omega_{Li}}{2}&0\\0&\frac{\hbar\omega_{Li}}{2}
+  \end{pmatrix},\tag{12.11}
+\end{align*}
+where $i=1$ and $i=2$ for the qubit in QDOT1 and QDOT2, respectively.
+
+Therefore, the Hamiltonian of the system, which can be obtained by the tensor product
+of the individual Hamiltonian, is
+\begin{equation}\label{eq 12.12}
+  \boldsymbol{H}=\begin{pmatrix}
+    -E_z&0&0&0\\0&\frac{-dE_z}{2}&0&0\\0&0&\frac{dE_z}{2}&0\\0&0&0&E_z
+  \end{pmatrix},\tag{12.12}
+\end{equation}
+with $E_z=\hbar\frac{\omega_{L1}+\omega_{L2}}{2}$, which is the average of their Zeeman energies and
+$dE_z=\hbar\omega_{L1}-\hbar\omega_{L2}$, which is the difference of their Zeeman energies. For example, 
+the third term along the diagoanl corresponds to the energy of the state, $\ket{\uparrow\downarrow}$. Since
+the energy of $\ket{\downarrow}$ in QDOT1 is $\frac{\hbar\omega_{L1}}{2}$ and the energy of $\ket{\uparrow}$
+in the QDOT2 is $-\frac{\hbar\omega_{L2}}{2}$, then the total energy of the system is $\frac{\hbar\omega_{L1}}{2}-\frac{\hbar\omega_{L2}}{2}=\frac{dE_z}{2}$.
+
+However, this is $NOT$ enough to construct the $\boldsymbol{U_{Cphase}}$ gate. We need to borrow another two states 
+\textit{outside of the computational Hiblert space}. The two states are that both electrons
+can be in the quantum dot (QDOT1), $\ket{S(2,0)}$, or in the right quantum dot
+(QDOT2), $\ket{S(0,2)}$. $S$ refers to the singlet state but we do not need to fully
+understand it as we do not plan to derive the mathematics rigorously. We will just
+accept that these are another two possible states that the two-electron system can have.
+In physics, when we say they might be at a certain state, it means that it is accessible
+for the given energy we have. There are other states (triple states) that have a higher energy
+and the probability of going into those states is low.
+
+Since the system has six states now, we need a larger matrix to describe the Hamiltonian.
+Again, it has more than four because it has extra degrees of freedon, namely, where to put
+the electrons. The Hamiltonian is,
+\begin{equation}\label{eq 12.13}
+  \boldsymbol{H}=\begin{pmatrix}
+    -E_z&0&0&0&0&0\\[3pt]0&\frac{-dE_z}{2}&0&0&t&t\\[3pt]0&0&\frac{dE_z}{2}&0&-t&-t\\[3pt]
+    0&0&0&E_z&0&0\\[3pt]0&t&-t&0&U-\epsilon&0\\[3pt]0&t&-t&0&0&U+\epsilon
+  \end{pmatrix}
+  \begin{matrix}
+    \ket{\uparrow\uparrow}\\[3pt]
+    \ket{\uparrow\downarrow}\\[3pt]
+    \ket{\downarrow\uparrow}\\[3pt]
+    \ket{\downarrow\downarrow}\\[3pt]
+    S(0,2)\\[3pt]
+    S(2,0)
+  \end{matrix},\tag{12.13}
+\end{equation}
+where $U$ is the energy cost to move the two electrons to the same quantum dot (see the
+\textbf{charging energy} and \textbf{Coulomb blockade} discussed in Sect. 11.3) and $\epsilon$
+is the energy difference between the two dots as shown in Fig.12.5. The fifth and the sixth
+term along the diagonal are the energy of $\ket{S(0,2)}$ and $\ket{(2,0)}$. For example, to put
+both electrons in QDOT2 ($\ket{S(0,2)}$), we need an energy of $U$. However, it has a lower energy 
+due to the tilted potential by $\epsilon$. Therefore, its energy is $U-\epsilon$.
+
+The state associated with each row is also given. We see that there are off-diagoanl terms connecting the
+anti-parallel spin states ($\ket{\uparrow\downarrow}$ and $\ket{\downarrow\uparrow}$ to $\ket{S(0,2)}$
+and $\ket{S(2,0)})$. This is due to \textbf{tunneling} and the value $t$ is related to the tunneling rate.
+This is easy to understand as to have a state with both electrons in QDOT1 or QDOT2, tunneling through the 
+barrier is required. Therefore, $t$ is called the interdot tunnel coupling. Tunneling enables the two qubits to 
+interact and the tunneling rate is contolled by the barrier height between the two quantum dots through
+the barrier gate voltage (not drawn in Fig. 12.5). But why there is no coupling between
+the parallel spin states ($\ket{\uparrow\uparrow}$ and $\ket{\downarrow\downarrow}$) to $\ket{S(0,2)}$
+and $\ket{S(2,0)}$? This is because $\ket{S(0,2)}$ and $\ket{S(2,0)}$ are singlet states in which the spins are 
+anti-parallel. Therefore, parallel spin states of $\ket{\uparrow\uparrow}$ and $\ket{\downarrow\downarrow}$ cannot
+transit to $\ket{S(0,2)}$ and $\ket{S(2,0)}$ easily as spin flipping is needed.
+
+Now, if we chagne $\epsilon$ fro zero, the energies of the anti=parallel states will change
+due to the coupling to $\ket{S(0,2)}$ and $\ket{S(2,0)}$. However, the energies of the parallel
+states will NOT change as they are not coupled to $\ket{S(0,2)}$ and $\ket{S(2,0)}$. Therefore,
+\textbf{additional phase shift will be added to the anti-parallel spin states}, $\ket{\uparrow\downarrow}$ \textbf{and}
+$\ket{\downarrow\uparrow}$ but not the paralle state after solving the Schr\"{o}dinger equation (using the Schrieffer
+-Wolff transformation) and the gate has the following form:
+\begin{equation}\label{eq 12.14}
+  \begin{pmatrix}
+    1&0&0&0\\0&e^{i\phi_1}&0&0\\0&0&e^{i\phi_2}&0\\0&0&0&1
+  \end{pmatrix}.\tag{12.14}
+\end{equation}
+where $\phi_1$ and $\phi_2$ are phases. By applying large enough $dE_z$, we can set $\phi_1=
+\pi-\phi_2$ and thus create the $\boldsymbol{U_{Cphase}}$ gate in Eq.(\ref{eq 12.1}).
+\\[20pt]
+\textbf{\large 12.4 Summary}
+\\\\
+In this chapter, we have discussed how to implement Rabi oscillation on electron spin qubits integrated on a silicon chip.
+An external DC magnetic field (can be due to micro-magnet) is applied for Zeeman splitting. A wire conducting
+AC electric current is used to generate an AC perturbation field for Rabi oscillation. We also discuss
+how to implement a 2-qubit entanglement gate ($\boldsymbol{U_{Cphase}}$) through the coupling of the anti-parallel
+spin state to $\ket{S(0,2)}$ and $\ket{S(2,0)}$. $\boldsymbol{U_{Cphase}}$ is just one of the possible
+entanglement gates but it highlights the importance of Hamiltonian engineering.
+\\[20pt]
+\textbf{\large Problems}
+\\\\
+\textbf{12.1 2-Qubit Hamiltonian}\\
+Derivce Eq.(\ref{eq 12.12}) using the tensor product of $\boldsymbol{H_1}$ and $\boldsymbol{H_2}$.
+\\\\
+\textbf{12.2 Oscillating MAgnetic Field Generation}
+\\
+What is the peak current required to create 0.01T of peak oscillating magnetic field
+if the conducting wire is 1$\mu m$ away from the qubit? Assume an effective dielectric constant
+of 6.1. You may use Eq. (24.17).
+
+\printbibliography
 \end{document}
