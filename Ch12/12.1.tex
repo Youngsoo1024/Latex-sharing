@@ -31,12 +31,12 @@ silicon spin qubits and other 1-qubit gates.
 \bfit{\large 12.1.2 Teaching Videos}\\\\
 $\bullet$ Search for Ch12 in this playlist\\
 
-- \url{https//tinyurl.com/3yhze3jn}\\\\
+- \url{https://tinyurl.com/3yhze3jn}\\\\
 $\bullet$ Other Videos\\
 
 - \url{https://youtu.be/0JVw4xICV10}
 
-- \url{https//youtu.be/_CpQ-Uy0Kgo}
+- \url{https://youtu.be/_CpQ-Uy0Kgo}
 \\\\\\
 \textbf{\large 12.2 1-Qubit Gate Implementation}
 \\\\
@@ -79,7 +79,35 @@ frequency is the same as the Larmor frequency due to $\vec{B}$ (see Sect.9.4). T
 magnetic field about the wire due to the \textbf{Biot-Savart law} (see
 also Example 24.2). Although it is circular, at the point where it touches the qubit, it is pointing
 at the tangential direction of the circle and thus it is pointing in the $\hat{x}$ direction and perpendicular
-to the Si substrate. 
+to the Si substrate. Since $I_{ESR}$ in an AC current, the magnetic field at the qubit oscillates up and down
+and has the equation form given in the first term of Eq. (9.5). And as discussed in Sect. 9.6, in therotating frame,
+any state will rotate about the $\hat{x^\prime}$ due to Rabi oscillation. Combined with Larmor precession, it can be used
+to implement any 1-qubit gate.\\\\\\
+\textbf{\large 12.3 2-Qubit Gate for Spin Inmplementation}\\\\
+A 2-qubit gate is usually much more difficult to implement than a 1-qubit gate. We also need to recall that, to form
+a universal set of quantum gates, what we need is not an arbitary 2-qubit gate but an \textbf{entanglement gate}, which 
+can be used to create entanglements (see Sect. 4.6). Entanglement is one of the reasons that makes quantum computing superior
+to classical computing.
 
-\printbibliography
+A 2-qubit gate requires the interaction between two qubits and the external excitation under an appropriate Hamiltonian.
+It is not difficult to appreciate that different quatum computer architectures have different "native" entnaglement gates because 
+the physics is fairly different in different quantum computing archtectures. Here, a \textbf{native entanglement gate} is a gate that 
+can be implemented easily using the physics relevant to a given architecture and its controls.
+
+\textit{One of thenative entanglement gates} for an electron spin qubit is a special form of the controlled
+phase shift gate. We will call it $\boldsymbol{U_{Cphase}}$ \cite{meunier2011efficient} to distinguish it from 
+$\boldsymbol{U_{C P S, \pi}}$ in Section 16.4 in \cite{WongHuiYong},
+\begin{equation}\label{eq 12.1}
+  \boldsymbol{U_{Cphase}}=\begin{pmatrix}
+    1&0&0&0\\0&e^{i\phi}&0&0\\0&0&e^{i(\pi-\phi)}&0\\0&0&0&1
+  \end{pmatrix}.\tag{12.1}
+\end{equation}
+where $\phi$ is the phase. We will discuss how to implement it soon. We will first show how it can be used to create an entanglement.
+\\\\\\
+\bfit{\large 12.3.1 Creation of Entanglement}
+\\\\
+We have learned that we can use $C N O T$ gate, $\boldsymbol{U_{XOR}}$ to make two qubits entangled (Section 15.4 in \cite{WongHuiYong} and Sect.4.6). This is
+realized with the help of a Hadamard gate, \bfit{H}. This circuit is shown in Fig. 12.2.
+
+
 \end{document}

@@ -21,11 +21,11 @@
   \datalist[entry]{none/global//global/global/global}
     \entry{WongHuiYong}{book}{}{}
       \name{author}{1}{}{%
-        {{hash=640624132e4fb8af61f42117a12cc0d7}{%
-           family={Hui-Yong},
-           familyi={H\bibinithyphendelim Y\bibinitperiod},
-           given={Wong},
-           giveni={W\bibinitperiod}}}%
+        {{hash=16e24a10b24ac45f55d0be42968c7ea6}{%
+           family={Wong},
+           familyi={W\bibinitperiod},
+           given={Hui-Yong},
+           giveni={H\bibinithyphendelim Y\bibinitperiod}}}%
       }
       \list{location}{1}{%
         {London}%
@@ -33,14 +33,14 @@
       \list{publisher}{1}{%
         {Springer}%
       }
-      \strng{namehash}{640624132e4fb8af61f42117a12cc0d7}
-      \strng{fullhash}{640624132e4fb8af61f42117a12cc0d7}
-      \strng{fullhashraw}{640624132e4fb8af61f42117a12cc0d7}
-      \strng{bibnamehash}{640624132e4fb8af61f42117a12cc0d7}
-      \strng{authorbibnamehash}{640624132e4fb8af61f42117a12cc0d7}
-      \strng{authornamehash}{640624132e4fb8af61f42117a12cc0d7}
-      \strng{authorfullhash}{640624132e4fb8af61f42117a12cc0d7}
-      \strng{authorfullhashraw}{640624132e4fb8af61f42117a12cc0d7}
+      \strng{namehash}{16e24a10b24ac45f55d0be42968c7ea6}
+      \strng{fullhash}{16e24a10b24ac45f55d0be42968c7ea6}
+      \strng{fullhashraw}{16e24a10b24ac45f55d0be42968c7ea6}
+      \strng{bibnamehash}{16e24a10b24ac45f55d0be42968c7ea6}
+      \strng{authorbibnamehash}{16e24a10b24ac45f55d0be42968c7ea6}
+      \strng{authornamehash}{16e24a10b24ac45f55d0be42968c7ea6}
+      \strng{authorfullhash}{16e24a10b24ac45f55d0be42968c7ea6}
+      \strng{authorfullhashraw}{16e24a10b24ac45f55d0be42968c7ea6}
       \field{sortinit}{1}
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
@@ -127,6 +127,47 @@
       \field{year}{2014}
       \field{pages}{981\bibrangedash 985}
       \range{pages}{5}
+    \endentry
+    \entry{meunier2011efficient}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=5449607f679ee989f804a20ffe6f140a}{%
+           family={Meunier},
+           familyi={M\bibinitperiod},
+           given={Tristan},
+           giveni={T\bibinitperiod}}}%
+        {{hash=0e449d4ef1aeda10989ef3e8bb915046}{%
+           family={Calado},
+           familyi={C\bibinitperiod},
+           given={Victor\bibnamedelima E},
+           giveni={V\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=32374120f06a95944f0ca5e62ad87444}{%
+           family={Vandersypen},
+           familyi={V\bibinitperiod},
+           given={Lieven\bibnamedelima MK},
+           giveni={L\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {APS}%
+      }
+      \strng{namehash}{18411e8c91e4004159380748328b88ab}
+      \strng{fullhash}{900b6a5ec3b2474c355926aa61e2824b}
+      \strng{fullhashraw}{900b6a5ec3b2474c355926aa61e2824b}
+      \strng{bibnamehash}{900b6a5ec3b2474c355926aa61e2824b}
+      \strng{authorbibnamehash}{900b6a5ec3b2474c355926aa61e2824b}
+      \strng{authornamehash}{18411e8c91e4004159380748328b88ab}
+      \strng{authorfullhash}{900b6a5ec3b2474c355926aa61e2824b}
+      \strng{authorfullhashraw}{900b6a5ec3b2474c355926aa61e2824b}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Physical Review B—Condensed Matter and Materials Physics}
+      \field{number}{12}
+      \field{title}{Efficient controlled-phase gate for single-spin qubits in quantum dots}
+      \field{volume}{83}
+      \field{year}{2011}
+      \field{pages}{121403}
+      \range{pages}{1}
     \endentry
   \enddatalist
 \endrefsection
