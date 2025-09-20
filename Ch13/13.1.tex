@@ -82,7 +82,113 @@ we need to keep in mind and accept the fact that they are applicable to generali
 \\[20pt]
 \bfit{\large 13.2.2 Lagrangian and Lagrange's Equations}
 \\\\
-We will
+We will first introduce a neqy quantity called \textbf{Lagrangian}, $\mathcal{L}$, which is defined as,
+\begin{equation}\label{eq 13.2}
+    \mathcal{L}=T-V, \tag{13.2}
+\end{equation}  
+where T and V and the \textbf{kinetic energy} and \textbf{potential energy} of the system,
+respectively. Naturally, $\mathcal{L}$ has the unit of energy. Since T is a function of velocities,
+$\vec{\dot{q}}$, and V is a function of coordinates, $\vec{q}$, $\mathcal{L}$ is a function of both 
+velocities and coordinates. Of course, they are all functions of time, $t$. Therefore,
+\begin{align*}\label{eq 13.3}
+    \mathcal{L}&=T(\vec{\dot{q}},t)-V(\vec{\dot{q}},t),\\
+    &=\mathcal{L}(\vec{q},\vec{\dot{q}},t),\\
+    &=\mathcal{L}(q_1,q_2,\cdots,\dot{q_1},\dot{q_2},\cdots,t). \tag{13.3}
+\end{align*}
 
+It is given that one can derive the \textbf{equations of motion} of the system by solving 
+the \textbf{Lagrangian's equation} \cite{goldstein2001pearson},
+\begin{equation}\label{eq 13.4}
+    \frac{d}{dt}\left(\frac{\partial \mathcal{L}}{\partial \dot{q_i}}\right)
+    -\frac{\partial \mathcal{L}}{\partial q_i}=0,\tag{13.4}
+\end{equation}
+fot $i$ from 1 to 3$N$. Lagrange's equation contain the Lagrangian of the system with
+the \textit{coordinates and velocities being the independent variables}. This forms the basics of
+Lagrangian mechanics. It should be noted that when working with Lagrangian 
+mechanics, one needs to make sure to \textbf{express the Lagrangian explicitly as a
+function of coordinates and velocities}. Of course, this includes the \textit{generalized} coordinates
+and velocities.
+
+It should also be noted that the Lagrangian of a system is \textit{not unique}. As long as it 
+gives the correct equations of motion through Eq. (\ref{eq 13.4}), it is a valid Lagrangian.
+
+In this book, we take Lagrangian's equation as given like how we trust $F=ma$ when we study
+\textbf{Newtonian mechanics}. But Lagrangian's equation can be derived from a more
+fundamental principle, namely, the \textbf{principle of least action} or \textbf{Hamiltonian's principle}
+\cite{Landau}. The principle defines \textbf{action} $S$, as,
+]\begin{equation}\label{eq 13.5}
+    S=\int_{t_1}^{t_2}\mathcal{L}(\vec{q},\vec{\dot{q}},t)  \,dt.\tag{13.5} 
+\end{equation}
+
+The action, $S$, integrates the Lagrangian of a system from time $t_1$ to time $t_2$ and
+mandates that the system should evolve from time $t_1$ to time $t_2$ in a way such that $S$
+is minimal based on which the Lagrange's equation to Eq. (\ref{eq 13.4}) are derived \cite{Landau}.
+
+Again, for the purpose of this book, we just need to learn the skills to construct the Lagrangian and solve
+the Lagrange's equation of a given system. Let us look at two examples.
+\\\\
+\textbf{Example 13.1} Find the equations of motion of a free particle with mass, $m$.
+Assume that the particle is moving in the $\hat{x}$-direction with speed $v$ at time $t_0$.
+
+We already know from Newton's first law that a free particle will keep moving at a constant
+speed. Let us see if we will obtain the same result by using Lagrangian mechanics.
+
+Set $\vec{q}= \{ q_1=x, q_2=y, q_3=z \}$. Its velocity is $\vec{\dot{q}}=\{\dot{q_1},\dot{q_2},\dot{q_3} \}$.
+As a free particle, there is no external force and thus it experiences a constant potential energy that can be set to a constant $\phi$. 
+Therefore, its kinetic energy is
+\begin{equation}\label{eq 13.6}
+    T=\frac{1}{2}m\dot{q_1}^2+\frac{1}{2}m\dot{q_2}^2+\frac{1}{2}m\dot{q_3}^2,\tag{13.6}
+\end{equation}
+and its potential energy is
+\begin{equation}\label{eq 13.7}
+    V=\phi.\tag{13.7}
+\end{equation}
+The Lagrangian of the system is
+\begin{align*}\label{eq 13.8}
+    \mathcal{L}&=T-V,\\
+    &=\frac{1}{2}m\dot{q_1}^2+\frac{1}{2}m\dot{q_2}^2+\frac{1}{2}m\dot{q_3}^2-\phi.\tag{13.8}
+\end{align*}
+To find its equation of motion, we solve Lagrange's equations in Eq. (\ref{eq 13.4}). 
+Note that there are three coordinates (for $i=1$ to $i=3$ with $q_1=x,q_2=y,q_3=z$).
+Therefore, we have three equations,
+\begin{align*}\label{eq 13.9}
+     \frac{d}{dt}\left(\frac{\partial \mathcal{L}}{\partial \dot{q_1}}\right)
+    -\frac{\partial \mathcal{L}}{\partial q_1}=0,\tag{13.9}\\[5pt]
+     \frac{d}{dt}\left(\frac{\partial \mathcal{L}}{\partial \dot{q_2}}\right)
+    -\frac{\partial \mathcal{L}}{\partial q_2}=0,\tag{13.10}\\[5pt]
+     \frac{d}{dt}\left(\frac{\partial \mathcal{L}}{\partial \dot{q_3}}\right)
+    -\frac{\partial \mathcal{L}}{\partial q_3}=0,\tag{13.11}\\
+\end{align*}
+The equation involve partial derivatives with respect to $q_1,q_2,q_3,\dot{q_1},\dot{q_2}$, and $\dot{q_3}$.
+But none of the erms in Eq. (\ref{eq 13.8}) depends on $q_1,q_2,$ and $q_3$ as $\phi$ is a constant.
+$\mathcal{L}$ only depends on $\dot{q_1},\dot{q_2},$ and $\dot{q_3}$. Therefore, the three Lagrange's equation becomes,
+\begin{align*}\label{eq 13.12}
+      \frac{d}{dt}\left(\frac{\partial \mathcal{L}}{\partial \dot{q_1}}\right)
+    -0=0,\tag{13.12}\\[5pt]
+     \frac{d}{dt}\left(\frac{\partial \mathcal{L}}{\partial \dot{q_2}}\right)
+    -0=0,\tag{13.13}\\[5pt]
+     \frac{d}{dt}\left(\frac{\partial \mathcal{L}}{\partial \dot{q_3}}\right)
+    -0=0,\tag{13.14}\\
+\end{align*}
+Let us only solve Eq. (\ref{eq 13.12}),
+\begin{align*}\label{eq 13.15}
+    \frac{d}{dt}\left(\frac{\partial \mathcal{L}}{\partial \dot{q_1}}\right)&=0,\\
+    \frac{d}{dt}\left(\frac{\partial(\frac{1}{2}m\dot{q_1}^2+\frac{1}{2}m\dot{q_2}^2+
+    \frac{1}{2}m\dot{q_3}^2-\phi)}{\partial \dot{q_1}}\right)&=0,\\
+    \frac{d(m\dot{q_1})}{dt}&=0,\\
+    \ddot{q_1}&=0.\tag{13.15}
+\end{align*}
+$\ddot{q_1}$ is the time derivative of velocity, which is the acceleration in the $\hat{x}$ direction.
+It means the particle will move at a constant velocity in the $\hat{x}$ direction. Since at 
+$t=t_0,\dot{q_1}=v$, then it will be moving at speed $v$ in the $\hat{x}$ direction forever. Similarly,
+$\ddot{q_2}=\ddot{q_3}=0$; therefore, $q_2=q_3=0$ at all time.
+
+Using Lagrangian mechanics, we obtain the same conclusion as Newton's first law.
+\\\\
+\textbf{Example 13.2} Find the euqation of motion of a mass, $m$, attached to a fixed wall through a spring with a spring 
+with a spring constant of $k$ (Fig. 13.1). This is the famous \textbf{simple harmonic oscillator (SHO)}
+problem.
+
+This is a 1D system
 \printbibliography
 \end{document}

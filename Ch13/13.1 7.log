@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  20 SEP 2025 12:39
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  20 SEP 2025 12:07
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -636,57 +636,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 127--132
  []
 
 
-pdfTeX warning (ext4): destination with the same identifier (name{equation.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.139 \begin{equation}
-                      \label{eq 13.6}
-pdfTeX warning (ext4): destination with the same identifier (name{equation.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.139 \begin{equation}
-                      \label{eq 13.6}
-pdfTeX warning (ext4): destination with the same identifier (name{equation.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.139 \begin{equation}
-                      \label{eq 13.6}
-pdfTeX warning (ext4): destination with the same identifier (name{equation.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.139 \begin{equation}
-                      \label{eq 13.6}
-pdfTeX warning (ext4): destination with the same identifier (name{equation.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.143 \begin{equation}
-                      \label{eq 13.7}
-pdfTeX warning (ext4): destination with the same identifier (name{equation.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.143 \begin{equation}
-                      \label{eq 13.7}
-pdfTeX warning (ext4): destination with the same identifier (name{equation.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.143 \begin{equation}
-                      \label{eq 13.7}
-pdfTeX warning (ext4): destination with the same identifier (name{equation.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.143 \begin{equation}
-                      \label{eq 13.7}
 
-[4]
-Underfull \hbox (badness 10000) in paragraph at lines 186--191
-
- []
-
-
-
-[5]
-
-[6] (./13.1.aux)
+[4] (./13.1.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
@@ -698,18 +649,18 @@ Package logreq Info: Writing requests to '13.1.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 17177 strings out of 473190
- 298652 string characters out of 5715801
- 1127169 words of memory out of 5000000
- 40234 multiletter control sequences out of 15000+600000
+ 17159 strings out of 473190
+ 298525 string characters out of 5715801
+ 1122019 words of memory out of 5000000
+ 40228 multiletter control sequences out of 15000+600000
  563295 words of font info for 53 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,12n,81p,750b,1458s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,12n,81p,750b,1171s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on 13.1.pdf (6 pages, 169837 bytes).
+Output written on 13.1.pdf (4 pages, 163548 bytes).
 PDF statistics:
- 132 PDF objects out of 1000 (max. 8388607)
- 99 compressed objects within 1 object stream
- 26 named destinations out of 1000 (max. 500000)
+ 109 PDF objects out of 1000 (max. 8388607)
+ 78 compressed objects within 1 object stream
+ 14 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
